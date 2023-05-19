@@ -1,0 +1,79 @@
+Uranium-235: 200 MeV per fission
+Uranium-233: 197 MeV per fission
+Plutonium-239: 210 MeV per fission
+
+The amount of energy needed to reach 15,111 megatons is:
+E = 15.111 × 10^6 × 4.184 × 10^12 Joules, where 4.184 × 10^12 Joules
+is the conversion of 1 megaton to Joules.
+
+Now we can calculate the number of fissions needed to
+each element, considering the efficiency of 0.147:
+
+For Uranium-235:
+N_fissions_Uranium-235 = E / (Efficiency × Energy per fission)
+N_fissions_Uranium-235 = 15.111 × 10^6 × 4.184 × 10^12 / (0.147 × 200)
+N_fissions_Uranium-235 ≈ 5,351 × 10^17 fissions
+
+For Uranium-233:
+N_fissions_Uranium-233 = E / (Efficiency × Energy per fission)
+N_fissions_Uranium-233 = 15.111 × 10^6 × 4.184 × 10^12 / (0.147 × 197)
+N_fissions_Uranium-233 ≈ 5,442 × 10^17 fissions
+
+For Plutonium-239:
+N_fissions_Plutonium-239 = E / (Efficiency × Energy per fission)
+N_fissions_Plutonium-239 = 15.111 × 10^6 × 4.184 × 10^12 / (0.147 × 210)
+N_fissions_Plutonium-239 ≈ 5057 × 10^17 fissions
+
+Finally, we can calculate the amount of mass of each element needed,
+considering the number of fissions and the molar mass of each element:
+
+For Uranium-235:
+m_Uranium-235 = N_fissions_Uranium-235 × Molar mass of Uranium-235 / Avogadro's number
+
+The molar mass of Uranium-235 is approximately 235 g/mol.
+
+For Uranium-233:
+m_Uranium-233 = N_fissions_Uranium-233 × Molar mass of Uranium-233 / Avogadro's number
+
+The molar mass of Uranium-233 is approximately 233 g/mol.
+
+For Plutonium-239:
+m_Plutonium-239 = N_fissions_Plutonium-239 × Molar Mass of Plutonium-239 / Avogadro's Number
+
+The molar mass of Plutonium-239 is approximately 239 g/mol.
+
+Now we can calculate the masses:
+
+For Uranium-235:
+m_Uranium-235 = 5.351 × 10^17 × 235 / 6.022 × 10^23
+m_Uranium-235 ≈ 21.04 kg
+
+For Uranium-233:
+m_Uranium-233 = 5.442 × 10^17 × 233 / 6.022 × 10^23
+m_Uranium-233 ≈ 21.43 kg
+
+For Plutonium-239:
+m_Plutonium-239 = 5.057 × 10^17 × 239 / 6.022 × 10^23
+m_Plutonium-239 ≈ 19.97
+
+Now we can calculate the required masses of each element
+to reach 15,111 megatons of energy:
+
+For Uranium-235:
+m_Uranium-235 = 5.351 × 10^17 × 235 / 6.022 × 10^23
+m_Uranium-235 ≈ 21.04 kg
+
+For Uranium-233:
+m_Uranium-233 = 5.442 × 10^17 × 233 / 6.022 × 10^23
+m_Uranium-233 ≈ 21.43 kg
+
+For Plutonium-239:
+m_Plutonium-239 = 5.057 × 10^17 × 239 / 6.022 × 10^23
+m_Plutonium-239 ≈ 19.97 kg
+
+Therefore, to reach 15,111 megatons of energy,
+It would take approximately:
+
+     21.04 kg of Uranium-235
+     21.43 kg of Uranium-233
+     19.97 kg of Plutonium-239

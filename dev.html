@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="./css/dev.css">
+  <head>
+	  <title>0xUniversallis
+	  </title>
+	  <meta charset="utf-8" name="viewport" content="width=100%, height=100%, initial-scale=1" http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" http-equiv="Pragma" content="no-cache" http-equiv="Expires" content="-1" />
+  <link href="./css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="./js/main/funcs/protect.js"></script>
+  <script src="./js/main/funcs/elements.js"></script>
+  
+  <script src="./js/main/jqueries/jquery.min.js"></script>
+  <script src="./js/main/jqueries/jquery2.min.js"></script>
+  <script src="./js/main/jqueries/jquery-ui.min.js"></script>
+  
+<script type="text/javascript" src="./js/main/funcs/funcs.js"></script>
+</head>
+<body class="dark-mode">
+<p style='float: left; padding-bottom: 20px;margin-top: -1.7%;'>
+<p></p>
+<button onclick="onelement1()">Tools</button>
+<button onclick="onelement2()"></button>
+<a href="./url/"><button></button></a>
+<span>&nbsp;</span>
+<a href="./index.html" rel="noopener noreferrer"><button>Home</button></a>
+<button id="dark-mode-btn" onclick="toggleDarkMode()">Lights</button>
+</p>
+<div>
+
+<div id="divResize1" style="position: absolute; left: 0.2%; top: 5%; height: 98%; width: 98%;">
+<header>
+<button onclick="onelement2()">IMG > Base64</button>
+<button onclick="onelement4()">CSV To HTML</button>
+<button onclick="onelement3()">CSV Generator</button>
+<button onclick="onelement5()">Mol Gen (C-O-N)</button>
+<button onclick="onelement7()">Mol Gen (All Periodic Table)</button>
+<button onclick="onelement6()">Molecule Researcher</button>
+<a href="https://molview.org/?"  target="_blank" rel="noopener noreferrer"><button>molViwer</button></a>
+</header>
+<div id="divResize2" style="position: absolute; left: 1%; top: 5%; height: 13%; width: 11%; display: none">
+<input type="file" id="imageInput" />
+<button onclick="convertToBase64()">Convert to Base64</button>
+<textarea id="base64Output" readonly></textarea>
+<button onclick="copyToClipboard()">Copy to Clipboard</button>
+</div>
+
+<div id="divResize3" style="position: absolute; left: 75%; top: 1%; height: 81%; width: 23%; display: none">
+  <form>
+    <label for="formula">Formula:</label>
+    <input type="text" id="formula" name="formula"><br><br>
+    <label for="molecular-weight">Molecular weight:</label>
+    <input type="text" id="molecular-weight" name="molecular-weight"><br><br>
+    <label for="hydrogen-bond-donors">Hydrogen bond donors:</label>
+    <input type="text" id="hydrogen-bond-donors" name="hydrogen-bond-donors"><br><br>
+    <label for="hydrogen-bond-acceptors">Hydrogen bond acceptors:</label>
+    <input type="text" id="hydrogen-bond-acceptors" name="hydrogen-bond-acceptors"><br><br>
+    <label for="percent-composition">Percent composition:</label>
+    <textarea id="percent-composition" name="percent-composition"></textarea><br><br>
+    <label for="canonical-smiles">Canonical SMILES:</label>
+    <input type="text" id="canonical-smiles" name="canonical-smiles"><br><br>
+    <label for="isomeric-smiles">Isomeric SMILES:</label>
+    <input type="text" id="isomeric-smiles" name="isomeric-smiles"><br><br>
+    <label for="inchikey">InChIKey:</label>
+    <input type="text" id="inchikey" name="inchikey"><br><br>
+    <label for="inchi">InChI:</label>
+    <input type="text" id="inchi" name="inchi"><br><br>
+    <button type="button" onclick="createCSV()">Create CSV</button>
+  </form>
+</div>
+
+<div id="divResize4" style="position: absolute; left: 28%; top: 1%; height: 81%; width: 45%; display: none">
+  <input type="file" id="csv-file">
+  <button id="save-button">Save as HTML</button>
+  <div id="table-container"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</div>
+
+<div id="divResize5" style="position: absolute; left: 0.5%; top: 5%; height: 75%; width: 51%; display: none">
+    <textarea id="outputTextarea" rows="43" cols="71"></textarea>
+    <button onclick="generateMolecule()">Gerar Molécula</button>
+    <button onclick="copymolecule()">Copy Molecule</button>
+    <button onclick="saveMolecule()">Salvar em .mol</button>
+</div>
+
+<div id="divResize6" style="position: absolute; left: 51%; top: 5%; height: 75%; width: 51%; display: none">
+<button onclick="toggleCrossSite()">Toggle Cross-Site</button>
+</div>
+
+<div id="divResize7" style="position: absolute; left: 0.5%; top: 5%; height: 75%; width: 51%; display: none">
+    <textarea id="outputTextarea2" rows="43" cols="71"></textarea>
+    <button onclick="generateMolecule2()">Gerar Molécula</button>
+    <button onclick="copymolecule2()">Copy Molecule</button>
+    <button onclick="saveMolecule2()">Salvar em .mol</button>
+</div>
+
+</div> 
+
+</div>
+</body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script type="text/javascript" src="./js/dev/mol/molGen.js"></script>
+<script type="text/javascript" src="./js/dev/dev/devmod.js"></script>
+<script type="text/javascript" src="./js/main/funcs/lights.js"></script>
+<script type="text/javascript" src="./js/main/funcs/mr.js"></script>
+</html>
