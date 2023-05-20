@@ -212,11 +212,11 @@ textarea.value = "";
 
 // ViewMOL
         function generateURL() {
-            var smilesInput = document.getElementById("smiles").value;
-            var url = "https://embed.molview.org/v1/?mode=balls&smiles=" + encodeURIComponent(smilesInput.trim());
-            console.log(url);  // Exibe o URL gerado no console (opcional)
-
-            showMOL(url);
+            var smilesInput = document.getElementById("vsmiles").value;
+			const baseUrl = "https://embed.molview.org/v1/?mode=balls&smiles=";
+			const smiles = document.getElementById("vsmiles").value.trim();
+			const url = baseUrl + smiles;
+			showMOL(url);
         }
 
         function showMOL(url) {
