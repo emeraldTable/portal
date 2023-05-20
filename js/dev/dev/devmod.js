@@ -194,8 +194,61 @@ saveButton.addEventListener('click', () => {
       return html;
     }
 
+// Function CopyVAR
+function copyToClipboard(output) {
+  const el = document.createElement('textarea');
+  el.value = output;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+}
+
 // STYLE EDITOR
 const textarea = document.getElementById("outputTextarea");
 textarea.style.backgroundColor = "black";
 textarea.style.opacity = "0.5";
 textarea.value = "";
+
+// ViewMOL
+        function generateURL() {
+            var smilesInput = document.getElementById("smiles").value;
+            var url = "https://embed.molview.org/v1/?mode=balls&smiles=" + encodeURIComponent(smilesInput.trim());
+            console.log(url);  // Exibe o URL gerado no console (opcional)
+
+            showMOL(url);
+        }
+
+        function showMOL(url) {
+				var targetDiv = document.getElementById('divResize11');
+					if (iframe) {
+						iframe.parentNode.removeChild(iframe);
+						iframe = null;
+						//location.reload();
+					} else {
+						iframe = document.createElement('iframe');
+						iframe.src = url;
+						iframe.style.width = '100%';
+						iframe.style.height = '95%';
+						targetDiv.appendChild(iframe);
+					}
+		}
+		
+		function offMOL() {
+				var targetDiv = document.getElementById('divResize11');
+				var url = url
+					if (iframe) {
+						iframe.parentNode.removeChild(iframe);
+						iframe = null;
+						//location.reload();
+					} else {
+						iframe = document.createElement('iframe');
+						iframe.src = url;
+						iframe.style.width = '100%';
+						iframe.style.height = '95%';
+						targetDiv.appendChild(iframe);
+					}
+		}
+//function vmol1() {
+//	showContent('https://embed.molview.org/v1/?mode=balls&smiles=NCO(O)N');
+//}

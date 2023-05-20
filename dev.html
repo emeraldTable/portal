@@ -18,7 +18,7 @@
 <body class="dark-mode">
 <p style='float: left; padding-bottom: 20px;margin-top: -1.7%;'>
 <p></p>
-<button onclick="onelement1()">Tools</button>
+<button onclick="onelement1()">Synthesis Dev</button>
 <button onclick="onelement2()"></button>
 <a href="./url/"><button></button></a>
 <span>&nbsp;</span>
@@ -34,7 +34,9 @@
 <button onclick="onelement3()">CSV Generator</button>
 <button onclick="onelement5()">Mol Gen (C-O-N)</button>
 <button onclick="onelement7()">Mol Gen (All Periodic Table)</button>
-<button onclick="onelement8()">Mol Gen (Smile)</button>
+<button onclick="onelement8()">Mol Gen (High Energy Smile)</button><span>&nbsp;</span>
+<button onclick="onelement9()">Mol Energy Calculator</button><span>&nbsp;</span>
+<button onclick="onelement10()">Mol Viwer</button>
 <button onclick="onelement6()">Molecule Researcher</button>
 <a href="https://molview.org/?"  target="_blank" rel="noopener noreferrer"><button>molViwer</button></a>
 </header>
@@ -94,12 +96,32 @@
     <button onclick="saveMolecule2()">Salvar em .mol</button>
 </div>
 
-<div id="divResize8" style="position: absolute; left: 0.5%; top: 6%; height: 15%; width: 21%; display: none">
+<div id="divResize8" style="position: absolute; left: 0.5%; top: 7%; height: 15%; width: 21%; display: none">
     <p id="outputTextarea3"></p>
-    <button onclick="gerarSMILES()">Gerar Smile</button>
+    <button onclick="gerarHEsmiles()">Generate HE Smile</button>
     <button onclick="copyOutput3()">Copy Smile</button>
-    <button onclick="saveMolecule3()">Salvar Smile</button>
+    <button onclick="saveMolecule3()">Save Smile</button>
 </div>
+
+<div id="divResize9" style="position: absolute; left: 0.5%; top: 24%; height: 15%; width: 21%; display: none">
+    <label for="smiles">Insira o SMILES da molécula:</label>
+    <input type="text" id="smiles">
+    <button onclick="calcularEnergiaMolecula()">Calcular Energia</button>
+    <button id="molEnergycaleV">Copy Result</button>
+    <p id="outputMolEnergy"></p> 
+</div>
+
+<div id="divResize10" style="position: absolute; left: 23%; top: 7%; height: 15%; width: 19.7%; display: none">
+		<p>Enter a SMILES string:</p>
+		<input type="text" id="vsmiles"/>
+		<button onclick="generateURL(), onelement11()">Generate Mol</button>
+		<button onclick="offMOL(), onelement11()">On/Off Connection</button>
+		<br />
+</div>
+
+	<div id="divResize11" style="position: absolute; left: 44%; top: 7%; height: 55%; width: 54%; display: none">
+<!--		<iframe id="molContent-iframe" src="" style="width: 100%; height: 100%;"></iframe>-->
+	</div>
 
 </div> 
 
@@ -108,6 +130,7 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <script type="text/javascript" src="./js/dev/mol/molGen.js"></script>
 <script type="text/javascript" src="./js/dev/mol/smileGen.js"></script>
+<script type="text/javascript" src="./js/dev/mol/molEnergycalc.js"></script>
 <script type="text/javascript" src="./js/dev/dev/devmod.js"></script>
 <script type="text/javascript" src="./js/main/funcs/lights.js"></script>
 <script type="text/javascript" src="./js/main/funcs/mr.js"></script>
