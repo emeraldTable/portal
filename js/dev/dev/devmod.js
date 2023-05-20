@@ -116,7 +116,7 @@ function toggleCrossSite() {
 // INPUT TO CSV
     function createCSV() {
       // Get form data
-      const formula = document.getElementById("formula").value;
+      const formulax = document.getElementById("formula").value;
       const molecularWeight = document.getElementById("molecular-weight").value;
       const hydrogenBondDonors = document.getElementById("hydrogen-bond-donors").value;
       const hydrogenBondAcceptors = document.getElementById("hydrogen-bond-acceptors").value;
@@ -127,11 +127,11 @@ function toggleCrossSite() {
       const inchi = document.getElementById("inchi").value;
 
       // Create CSV content
-      const csvContent = "Formula,CH7N2O2,,\n"
+      const csvContent = `Formula,${formulax},,\n`
         + `Molecular weight,${molecularWeight},,\n`
         + `Hydrogen bond donors,${hydrogenBondDonors},,\n`
         + `Hydrogen bond acceptors,${hydrogenBondAcceptors},,\n`
-        + "Percent composition,,\nC,12.0107 u × 1,15.188 %,,\nH,1.00794 u × 7,8.9223 %,,\nN,14.0067 u × 2,35.425 %,,\nO,15.9994 u × 2,40.465 %,\n"
+        + `Percent composition,,\n${percentComposition},,\n`
         + `Canonical SMILES,${canonicalSmiles},,\n`
         + `Isomeric SMILES,${isomericSmiles},,\n`
         + `InChIKey,${inchikey},,\n`

@@ -3,50 +3,71 @@ function showContent(url) {
      iframe.src = url;
 }
 
-//function showContent2(url) {
-// var iframe = document.getElementById("content2-iframe");
-//     iframe.src = url;
-//}
-
 function mol1() {
 	showContent('https://embed.molview.org/v1/?mode=balls&smiles=NCO(O)N');
-	loaddesc();
-	//showContent2('https://embed.molview.org/v1/?mode=balls&smiles=NCO(O)N');
-	
+  const files = [
+    "./assets/docs/synthesis/molecules/molecules-procedural/desc/ArCmCuHMnOOsPaPtSeTmYb.html"
+  ];
+  const iframes = [
+    document.getElementById("content-iframe")
+  ];
+  for (let i = 0; i < files.length; i++) {
+    loaddesc(files[i], iframes[i]);
+  }
 }
 
-function loaddesc() {
-    // Load CSV file
-    Papa.parse("https://raw.githubusercontent.com/c2V2ZW4K/nukeportal/main/assets/docs/synthesis/molecules/molecules-procedural/csv/data.csv", {
-      download: true,
-      header: true,
-      complete: function(results) {
-        // Convert results to HTML table
-        const table = document.createElement("table");
-        const headerRow = document.createElement("tr");
-        for (const header of results.meta.fields) {
-          const th = document.createElement("th");
-          th.textContent = header;
-          headerRow.appendChild(th);
-        }
-        table.appendChild(headerRow);
-        for (const row of results.data) {
-          const tr = document.createElement("tr");
-          for (const field of results.meta.fields) {
-            const td = document.createElement("td");
-            td.textContent = row[field];
-            tr.appendChild(td);
-          }
-          table.appendChild(tr);
-        }
+function mol2() {
+	showContent('https://embed.molview.org/v1/?mode=balls&smiles=[Pa-2][Se-][Mn][Pt+4][O-3][H+3][Cu][Yb][Cm+4][Tm-3][Os+][Ar+2]');
+  const files = [
+    "./assets/docs/synthesis/molecules/molecules-procedural/desc/ArCmCuHMnOOsPaPtSeTmYb.html"
+  ];
+  const iframes = [
+    document.getElementById("content2-iframe")
+  ];
+  for (let i = 0; i < files.length; i++) {
+    loaddesc(files[i], iframes[i]);
+  }
+}
 
-        // Display HTML table inside iframe
-        const iframe = document.getElementById("content2-iframe");
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        doc.body.innerHTML = "";
-        doc.body.appendChild(table);
+function mol3() {
+	showContent('https://embed.molview.org/v1/?mode=balls&smiles=[O-]O[N+][N-4][O-]O[O+][O-3][N-][N+][C-2][O+2]C[C-3]');
+  const files = [
+    "./assets/docs/synthesis/molecules/molecules-procedural/desc/C3H8N4O7.html"
+  ];
+  const iframes = [
+    document.getElementById("content3-iframe")
+  ];
+  for (let i = 0; i < files.length; i++) {
+    loaddesc(files[i], iframes[i]);
+  }
+}
+
+function loaddesc(file, iframe) {
+  Papa.parse(file, {
+    download: true,
+    header: true,
+    complete: function(results) {
+      const table = document.createElement("table");
+      const headerRow = document.createElement("tr");
+      for (const header of results.meta.fields) {
+        const th = document.createElement("th");
+        th.textContent = header;
+        headerRow.appendChild(th);
       }
-    });
+      table.appendChild(headerRow);
+      for (const row of results.data) {
+        const tr = document.createElement("tr");
+        for (const field of results.meta.fields) {
+          const td = document.createElement("td");
+          td.textContent = row[field];
+          tr.appendChild(td);
+        }
+        table.appendChild(tr);
+      }
+      iframe.contentDocument.body.innerHTML = "";
+      iframe.contentDocument.body.appendChild(table);
+    }
+  });
 }
 
 // Security Cleaner
