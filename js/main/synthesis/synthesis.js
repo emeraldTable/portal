@@ -10,7 +10,7 @@ function showContent2(url) {
 
 function mol1() {
 	showContent('https://embed.molview.org/v1/?mode=balls&smiles=NCO(O)N');
-	showContent2('https://c2v2zw4k.github.io/portal/assets/docs/synthesis/molecules/molecules-procedural/desc/CH7N2O2.html');
+	showContent2('./assets/docs/synthesis/molecules/molecules-procedural/desc/CH7N2O2.html');
 
 }
 
