@@ -1,0 +1,37 @@
+def filtrar_moleculas(entrada, saida, limite_inferior, limite_superior=None):
+    with open(entrada, 'r') as arquivo_entrada, open(saida, 'w') as arquivo_saida:
+        linha_smile = ""
+        linha_energia = ""
+        escrever_molecula = False
+        
+        for linha in arquivo_entrada:
+            if linha.startswith("Smile="):
+                linha_smile = linha
+            elif linha.startswith("Energy="):
+                linha_energia = linha
+                energia = float(linha_energia.split("=")[1].strip().split(" ")[0])
+                
+                if limite_superior is not None:
+                    if limite_inferior <= energia <= limite_superior:
+                        escrever_molecula = True
+                    else:
+                        escrever_molecula = False
+                else:
+                    if energia >= limite_inferior:
+                        escrever_molecula = True
+                    else:
+                        escrever_molecula = False
+                        
+            if escrever_molecula:
+                arquivo_saida.write(linha_smile)
+                arquivo_saida.write(linha_energia)
+                arquivo_saida.write("\n")
+            
+# Filtrar moléculas com energia acima de 200 eV
+filtrar_moleculas('../database/reactor/mol.db', '../database/high-energy/200eV.db', 200)
+
+# Filtrar moléculas com energia entre 100 e 200 eV
+filtrar_moleculas('../database/reactor/mol.db', '../database/high-energy/100eV.db', 100, 200)
+
+# Filtrar moléculas com energia abaixo de 100 eV
+filtrar_moleculas('../database/reactor/mol.db', '../database/low-energy/100eV.db', 0, 100)
