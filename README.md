@@ -1,6 +1,11 @@
-# nukeportal  
-One collection of knowledge and utillity tools about nuclear elements.  
-
+# Portal of Knowledge  
+One collection of knowledge and utillity tools about  
+                  nuclear elements  
+                  energy molecules  
+                  fission process  
+                  Formation of Materia / Elements  
+                  
+   
 # /dev/
    |___>  Generator of Molecules: Generate molecules with random generation
   
