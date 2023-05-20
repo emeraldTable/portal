@@ -34,6 +34,7 @@
 <button onclick="onelement3()">CSV Generator</button>
 <button onclick="onelement5()">Mol Gen (C-O-N)</button>
 <button onclick="onelement7()">Mol Gen (All Periodic Table)</button>
+<button onclick="onelement8()">Mol Gen (Smile)</button>
 <button onclick="onelement6()">Molecule Researcher</button>
 <a href="https://molview.org/?"  target="_blank" rel="noopener noreferrer"><button>molViwer</button></a>
 </header>
@@ -93,12 +94,20 @@
     <button onclick="saveMolecule2()">Salvar em .mol</button>
 </div>
 
+<div id="divResize8" style="position: absolute; left: 0.5%; top: 6%; height: 15%; width: 21%; display: none">
+    <p id="outputTextarea3"></p>
+    <button onclick="gerarSMILES()">Gerar Smile</button>
+    <button onclick="copyOutput3()">Copy Smile</button>
+    <button onclick="saveMolecule3()">Salvar Smile</button>
+</div>
+
 </div> 
 
 </div>
 </body>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <script type="text/javascript" src="./js/dev/mol/molGen.js"></script>
+<script type="text/javascript" src="./js/dev/mol/smileGen.js"></script>
 <script type="text/javascript" src="./js/dev/dev/devmod.js"></script>
 <script type="text/javascript" src="./js/main/funcs/lights.js"></script>
 <script type="text/javascript" src="./js/main/funcs/mr.js"></script>
