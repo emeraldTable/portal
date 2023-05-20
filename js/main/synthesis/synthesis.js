@@ -9,7 +9,7 @@ function mol1() {
     "./assets/docs/synthesis/molecules/molecules-procedural/desc/ArCmCuHMnOOsPaPtSeTmYb.html"
   ];
   const iframes = [
-    document.getElementById("content-iframe")
+    document.getElementById("content2-iframe")
   ];
   for (let i = 0; i < files.length; i++) {
     loaddesc(files[i], iframes[i]);
@@ -35,7 +35,7 @@ function mol3() {
     "./assets/docs/synthesis/molecules/molecules-procedural/desc/C3H8N4O7.html"
   ];
   const iframes = [
-    document.getElementById("content3-iframe")
+    document.getElementById("content2-iframe")
   ];
   for (let i = 0; i < files.length; i++) {
     loaddesc(files[i], iframes[i]);
