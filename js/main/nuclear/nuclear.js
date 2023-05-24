@@ -11,13 +11,13 @@
           document.getElementById("massOutputkg").innerHTML = mass.toFixed(2) + " kg";
           document.getElementById("massOutputTonnes").innerHTML = massInTons.toFixed(2) + " Tonnes";
         } else {
-          document.getElementById("massOutput").innerHTML = "";
+
         }
 
         document.getElementById("joulesOutput").innerHTML = joules.toFixed(2) + " joules";
       } else {
         document.getElementById("joulesOutput").innerHTML = "";
-        document.getElementById("massOutput").innerHTML = "";
+
       }
     }
 
@@ -34,13 +34,13 @@
           document.getElementById("massOutputkg").innerHTML = mass.toFixed(2) + " kg";
           document.getElementById("massOutputTonnes").innerHTML = massInTons.toFixed(2) + " Tonnes";
         } else {
-          document.getElementById("massOutput").innerHTML = "";
+
         }
 
         document.getElementById("megatonsOutput").innerHTML = megatons.toFixed(2) + " megatons";
       } else {
         document.getElementById("megatonsOutput").innerHTML = "";
-        document.getElementById("massOutput").innerHTML = "";
+
       }
     }
 
