@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Lê a fórmula molecular do usuário
+echo "Digite a fórmula molecular:"
+read formula
+
+# Cria um array vazio para armazenar os átomos
+atoms=()
+
+# Loop para percorrer cada caractere da fórmula
+for (( i=0; i<${#formula}; i++ )); do
+    # Verifica se o caractere atual é uma letra maiúscula (representando um átomo)
+    if [[ ${formula:i:1} =~ [A-Z] ]]; then
+        # Obtém o átomo atual e adiciona ao array de átomos
+        atom=${formula:i:1}
+
+        # Verifica se o próximo caractere é uma letra minúscula (representando um subscrito)
+        if [[ ${formula:i+1:1} =~ [a-z] ]]; then
+            atom+="${formula:i+1:1}"
+            ((i++))
+        fi
+
+        # Adiciona o átomo ao array somente se tiver no máximo 4 letras
+        if [[ ${#atom} -le 4 ]]; then
+            atoms+=("$atom")
+        fi
+    fi
+done
+
+# Imprime o Canonical SMILES
+canonical_smiles=""
+for atom in "${atoms[@]}"; do
+    # Verifica a quantidade de ocorrências do átomo no array
+    count=$(grep -o "$atom" <<< "${atoms[@]}" | wc -l)
+    # Concatena o átomo e a contagem no Canonical SMILES
+    canonical_smiles+="[$atom+${count}]"
+done
+
+echo "Canonical SMILES: $canonical_smiles"
+

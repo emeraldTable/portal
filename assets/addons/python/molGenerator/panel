@@ -1,0 +1,80 @@
+#!/bin/bash
+
+while true
+do
+    clear
+    echo "Reactor Panel:"
+    echo "1. MOL Generator"
+    echo "2. MOL Filter"
+    echo "3. MOL Conversor"
+    echo ""
+    echo "v). View mol.db"
+    echo "4. Exit"
+
+    read -p "Enter your choice: " choice
+
+    case $choice in
+        1)
+            echo "You chose Option 1"
+	    python3 ./bin/reactor
+            read -p "Press enter to continue"
+            ;;
+        2)
+            echo "You chose Option 2"
+            python3 ./bin/filter
+            read -p "Press enter to continue"
+            ;;
+        3)
+            echo "You chose Option 3"
+            sh ./bin/addon/conversor
+            read -p "Press enter to continue"
+            ;;
+
+        v)
+            while true
+            do
+                clear
+                echo "Submenu:"
+                echo "1. ALL Db"
+                echo "2. Low Energy Db"
+                echo "3. High Energy Db"
+                echo "4. Back"
+
+                read -p "Enter your choice: " subchoice
+
+                case $subchoice in
+                    1)
+                        echo "You chose Suboption 1"
+                        l3afpad ./database/reactor/mol.db
+                        read -p "Press enter to continue"
+                        ;;
+                    2)
+                        echo "You chose Suboption 2"
+                        l3afpad ./database/low-energy/mol.db
+                        read -p "Press enter to continue"
+                        ;;
+                    3)
+                        echo "You chose Suboption 2"
+                        l3afpad ./database/high-energy/mol.db
+                        read -p "Press enter to continue"
+                        ;;
+                    4)
+                        break
+                        ;;
+                    *)
+                        echo "Invalid choice"
+                        read -p "Press enter to continue"
+                        ;;
+                esac
+            done
+            ;;
+
+        4)
+            exit
+            ;;
+        *)
+            echo "Invalid choice"
+            read -p "Press enter to continue"
+            ;;
+    esac
+done
