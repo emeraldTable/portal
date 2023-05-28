@@ -28,3 +28,14 @@ Additional Steps:
 - Mushroom cloud formation: Distinctive mushroom-shaped cloud from rapid ascent and cooling of vaporized material.
 - Environmental impact: Long-lasting contamination and environmental consequences.
 - Humanitarian considerations: Raises ethical and humanitarian concerns.
+
+Equations Steps:
+- Fission reaction: E = mc^2
+- Compression and implosion: V = πr^2h
+- Compression mechanism: F = ma
+- Implosion initiation: P = F/A
+- Nuclear fusion: E = mc^2
+- Extreme compression: P = F/A"
+- Fusion reaction initiation: Q = mcΔT
+- Helium-4 production: n = N/λt
+- Release of energy: KE = 0.5mv^2
