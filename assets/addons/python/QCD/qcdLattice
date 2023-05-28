@@ -1,0 +1,96 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+# Define lattice size and parameters
+L = 8  # Size of the lattice
+beta = 2.0  # Inverse coupling constant
+n_iterations = 1000  # Number of Monte Carlo iterations
+
+# Generate initial random configuration
+lattice = np.random.choice([-1, 1], size=(L, L))
+
+# Function to calculate the action
+def calculate_action(lattice):
+    action = 0.0
+    for i in range(L):
+        for j in range(L):
+            # Calculate plaquette contribution
+            plaq = (
+                lattice[i, j]
+                * lattice[(i + 1) % L, j]
+                * lattice[i, (j + 1) % L]
+                * lattice[(i + 1) % L, (j + 1) % L]
+            )
+            action += beta * (1 - plaq)
+    return action
+
+# Function to update the lattice
+def update_lattice():
+    # Choose a random lattice site
+    i = np.random.randint(0, L)
+    j = np.random.randint(0, L)
+
+    # Calculate the action before the update
+    initial_action = calculate_action(lattice)
+
+    # Flip the spin at the chosen site
+    lattice[i, j] *= -1
+
+    # Calculate the action after the update
+    final_action = calculate_action(lattice)
+
+    # Metropolis acceptance criterion
+    delta_action = final_action - initial_action
+    if delta_action <= 0 or np.random.uniform(0, 1) < np.exp(-delta_action):
+        # Accept the update
+        initial_action = final_action
+    else:
+        # Reject the update and restore the original spin
+        lattice[i, j] *= -1
+
+# Function to apply a stimulus to the lattice
+def apply_stimulus(lattice):
+    # Apply a stimulus to select lattice sites
+    for i in range(L):
+        for j in range(L):
+            # Apply a stimulus to sites at specific coordinates
+            if i == 3 and j == 5:
+                lattice[i, j] = 1
+            elif i == 6 and j == 2:
+                lattice[i, j] = -1
+
+# Perform Monte Carlo updates
+for iteration in range(n_iterations):
+    apply_stimulus(lattice)
+    update_lattice()
+
+# Plot the final lattice configuration
+plt.imshow(lattice, cmap='binary')
+
+filename = "./database/lattice_config.txt"
+
+i = 0
+while os.path.exists(filename):
+    i += 1
+    filename = f"./database/lattice_config_{i}.txt"
+
+with open(filename, 'w') as f:
+    for row in lattice:
+        for element in row:
+            f.write(str(element) + ' ')
+        f.write('\n')
+        
+plt.title("Lattice Configuration with Stimulus")
+plt.axis('off')  # Turn off axis
+filename = "./database/final_lattice.png"
+dpi = 300
+bbox_inches = 'tight'
+
+i = 0
+while os.path.exists(filename):
+    i += 1
+    filename = f"./database/final_lattice_{i}.png"
+
+plt.savefig(filename, dpi=dpi, bbox_inches=bbox_inches)
+print(lattice)
