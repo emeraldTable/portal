@@ -39,3 +39,31 @@ Equations Steps:
 - Fusion reaction initiation: Q = mcΔT
 - Helium-4 production: n = N/λt
 - Release of energy: KE = 0.5mv^2
+
+This Example, 15111 Megatons / ~702 Tonnes of Hydrogen:
+- Fission reaction: E = mc^2
+  Energy produced in the fission reaction: 6.318e+22 joules
+
+- Compression and implosion: V = πr^2h
+  Volume of compression and implosion: 936000.0000000001 cubic meters
+
+- Compression mechanism: F = ma
+  Force applied by the compression mechanism: 8.207425046426961e+24 newtons
+
+- Implosion initiation: P = F/A
+  Pressure exerted during implosion initiation: 8.594581165934888e+20 pascals
+
+- Nuclear fusion: E = mc^2
+  Energy released in nuclear fusion: 6.318e+22 joules
+
+- Extreme compression: P = F/A
+  Pressure during extreme compression: 8.594581165934888e+20 pascals
+
+- Fusion reaction initiation: Q = mcΔT
+  Energy required for fusion reaction initiation: 1083.4847036328872 joules
+
+- Helium-4 production: n = N/λt
+  Number of helium-4 produced: 43486143486143.48 particles
+
+- Release of energy: KE = 0.5mv^2
+  Kinetic energy released: 63224424000000.0 joules
