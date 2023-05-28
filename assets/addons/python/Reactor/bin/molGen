@@ -1,0 +1,62 @@
+import random
+import subprocess
+
+# Comando shell a ser executado
+shell_script = "sh backup"
+
+# Executar o script shell
+subprocess.call(shell_script, shell=True)
+
+tabela_periodica = {
+    'H': {'energia': 4.5},
+    'C': {'energia': 7.5},
+    'N': {'energia': 10.0},
+    'O': {'energia': 12.0},
+    'F': {'energia': 15.0},
+    'P': {'energia': 18.0},
+    'S': {'energia': 20.0},
+    'Cl': {'energia': 22.0}
+}
+
+def calcular_energia_molecula(molecula):
+    energia_total = 0
+    for elemento, quantidade in molecula.items():
+        energia_atomo = tabela_periodica[elemento]['energia']
+        energia_total += energia_atomo * quantidade
+    return energia_total
+
+def gerar_molecula():
+    molecula = {}
+    simbolos_atomos = ['H', 'C', 'N', 'O', 'F', 'P', 'S', 'Cl']
+    comprimento_molecula = random.randint(5, 15)
+    
+    for _ in range(comprimento_molecula):
+        simbolo = random.choices(simbolos_atomos, weights=[0.2, 0.3, 0.1, 0.1, 0.05, 0.05, 0.05, 0.1])[0]
+        if simbolo in molecula:
+            molecula[simbolo] += 1
+        else:
+            molecula[simbolo] = 1
+    
+    return molecula
+
+# Obter a quantidade de vezes que o loop será executado
+quantidade_loop = int(input("Digite a quantidade de vezes que o loop será executado: "))
+
+# Realizar o loop
+for _ in range(quantidade_loop):
+    # Gerar a molécula
+    molecula_gerada = gerar_molecula()
+    
+    # Calcular a energia da molécula
+    energia_molecula = calcular_energia_molecula(molecula_gerada)
+    
+    # Salvar no arquivo mol.db
+    with open('../database/reactor/mol.db', 'a') as arquivo:
+        arquivo.write("Smile=")
+        for elemento, quantidade in molecula_gerada.items():
+            arquivo.write(elemento + str(quantidade))
+        arquivo.write("\n")
+        arquivo.write("Energy=" + str(energia_molecula) + " eV\n")
+        arquivo.write("\n")
+
+#    print(f"Molécula gerada: {molecula_gerada} - Energia: {energia_molecula} eV")
