@@ -32,6 +32,34 @@
  de última geração ainda é uma especulação e não existe evidência científica de que tais dispositivos
   sejam possíveis com a tecnologia atual.
 
+# Materiais supercondutores
+- Materiais supercondutores que são utilizados em pesquisas e aplicações práticas.
+
+	Alguns exemplos de materiais supercondutores de última geração incluem:
+	
+		- 6. Supercondutores de alta temperatura (HTS - High-Temperature Superconductors):
+			  Esses materiais supercondutores podem operar a temperaturas relativamente altas
+			   em comparação com os supercondutores convencionais,
+			    que exigem temperaturas próximas ao zero absoluto.
+			     Alguns exemplos de HTS são os compostos cerâmicos de cobre-óxido,
+			      como o YBCO (óxido de bário-cobre-ítrio) e o BSCCO (óxido de bismuto-estrôncio-cálcio-cobre).
+			      
+		- 7. Supercondutores de ferro-pnictídeo:
+			   Esses materiais supercondutores contêm elementos de ferro e pnictídeos (como arsênio ou fósforo) em sua composição.
+			    Eles foram descobertos relativamente recentemente
+			     e são conhecidos por exibir propriedades supercondutoras a temperaturas moderadamente baixas.
+			      Exemplos incluem os compostos de ferro-arseneto, como o FeSe (ferro-selênio) e o BaFe₂As₂ (bário-ferro-arseneto).
+			      
+		- 8. Supercondutores de magnésio-diboreto (MgB₂):
+				O magnésio-diboreto é um composto intermetálico que se torna supercondutor a temperaturas relativamente moderadas.
+				 É um exemplo de supercondutor de baixa temperatura que tem a vantagem
+				  de ser mais fácil e menos dispendioso de fabricar em comparação com alguns supercondutores de alta temperatura.
+				   O MgB₂ é amplamente estudado e possui aplicações em diferentes áreas.
+
+	Esses são apenas alguns exemplos de materiais supercondutores de última geração.
+	 A pesquisa nessa área continua em andamento, com o objetivo de descobrir novos materiais supercondutores
+	  com propriedades ainda mais aprimoradas e temperaturas de transição ainda mais altas.
+
 - 1. Materiais supercondutores: [About:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/GEG-GAG/AntigGavity-Techno/AntiGravity-Generator/superconductor-materials/readme.md)
   - 1. [Óxidos de cobre:](url)
   - 2. [Ferropnictetos:](url)
