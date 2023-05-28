@@ -1,0 +1,52 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Função para calcular a energia de interação entre dois spins
+def calculate_interaction_energy(lattice, i, j):
+    L = lattice.shape[0]
+    spin_ij = lattice[i, j]
+
+    energy = 0
+    for di in [-1, 1]:
+        for dj in [-1, 1]:
+            if di != 0 or dj != 0:
+                ni = (i + di) % L
+                nj = (j + dj) % L
+                spin_neighbor = lattice[ni, nj]
+                energy += spin_ij * spin_neighbor
+
+    return -energy
+
+# Função para realizar uma iteração da dinâmica temporal
+def perform_iteration(lattice, temperature):
+    L = lattice.shape[0]
+    for _ in range(L**2):
+        i = np.random.randint(L)
+        j = np.random.randint(L)
+        energy_diff = calculate_interaction_energy(lattice, i, j)
+
+        if energy_diff <= 0:
+            lattice[i, j] *= -1
+        else:
+            probability = np.exp(-energy_diff / temperature)
+            if np.random.rand() < probability:
+                lattice[i, j] *= -1
+
+# Parâmetros da simulação
+temperature = 2.0
+n_iterations = 1000
+
+# Carregar a lattice a partir do arquivo de texto
+filename = input("Digite o nome do arquivo (sem a extensão .txt): ")
+lattice = np.loadtxt("./database/" + filename + ".txt", dtype=int)
+
+# Simulação da dinâmica temporal
+for iteration in range(n_iterations):
+    perform_iteration(lattice, temperature)
+
+# Visualização da lattice após a dinâmica temporal
+plt.imshow(lattice, cmap='binary')
+plt.title("Lattice após a Dinâmica Temporal")
+plt.axis('off')
+plt.savefig('./montecarlo_results/lattice_plot.png', bbox_inches='tight')
+

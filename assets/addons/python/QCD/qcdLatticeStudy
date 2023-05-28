@@ -1,0 +1,85 @@
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+
+# Função para calcular a magnetização
+def calculate_magnetization(lattice):
+    return np.sum(lattice)
+
+# Função para calcular a correlação de pares
+def calculate_pair_correlation(lattice, i, j):
+    L = lattice.shape[0]
+    spin_ij = lattice[i, j]
+    sum_corr = 0
+    count = 0
+
+    for di in [-1, 1]:
+        for dj in [-1, 1]:
+            if 0 <= i+di < L and 0 <= j+dj < L:
+                spin_neighbor = lattice[i+di, j+dj]
+                sum_corr += spin_ij * spin_neighbor
+                count += 1
+
+    return sum_corr / count
+
+# Função para atualizar a lattice usando o algoritmo Monte Carlo
+def update_lattice(lattice, temperature):
+    L = lattice.shape[0]
+    for i in range(L):
+        for j in range(L):
+            spin = lattice[i, j]
+            energy_diff = 2 * spin * calculate_local_field(lattice, i, j)
+            if energy_diff <= 0 or random.random() < np.exp(-energy_diff / temperature):
+                lattice[i, j] = -spin
+
+# Função para calcular o campo local em um sítio da lattice
+def calculate_local_field(lattice, i, j):
+    L = lattice.shape[0]
+    local_field = 0
+    for di in [-1, 1]:
+        for dj in [-1, 1]:
+            if 0 <= i+di < L and 0 <= j+dj < L:
+                local_field += lattice[i+di, j+dj]
+    return local_field
+
+# Solicitar ao usuário o nome do arquivo a ser carregado
+filename = input("Digite o nome do arquivo (sem a extensão .txt): ")
+
+# Verificar se o arquivo existe
+file_path = os.path.join("database", filename + ".txt")
+if not os.path.isfile(file_path):
+    print("Arquivo não encontrado.")
+    exit()
+
+# Carregar a lattice a partir do arquivo de texto
+lattice = np.loadtxt(file_path, dtype=int)
+
+# 1. Análise da magnetização
+magnetization = calculate_magnetization(lattice)
+print("Magnetização total:", magnetization)
+
+# 2. Estudo da dinâmica temporal
+temperature = 2.5  # Temperatura inicial
+n_iterations = 1000
+for iteration in range(n_iterations):
+    # Atualizar a lattice usando o algoritmo Monte Carlo e as regras da física quântica
+    update_lattice(lattice, temperature)
+
+# 3. Cálculo de correlações
+i = 3
+j = 5
+pair_corr = calculate_pair_correlation(lattice, i, j)
+print("Correlação de pares em ({}, {}):".format(i, j), pair_corr)
+
+# 4. Estudo de transições de fase
+# ...
+# Seu código para variar os parâmetros e analisar as transições de fase aqui
+# ...
+
+# 5. Visualização da lattice
+plt.imshow(lattice, cmap='binary')
+plt.title("Lattice com Estímulo")
+plt.axis('off')
+plt.savefig('./study_results/lattice_plot.png', bbox_inches='tight')
+

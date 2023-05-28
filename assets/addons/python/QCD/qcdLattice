@@ -67,20 +67,14 @@ for iteration in range(n_iterations):
 
 # Plot the final lattice configuration
 plt.imshow(lattice, cmap='binary')
-
 filename = "./database/lattice_config.txt"
-
 i = 0
 while os.path.exists(filename):
     i += 1
     filename = f"./database/lattice_config_{i}.txt"
 
-with open(filename, 'w') as f:
-    for row in lattice:
-        for element in row:
-            f.write(str(element) + ' ')
-        f.write('\n')
-        
+np.savetxt(filename, lattice, fmt='%d')
+
 plt.title("Lattice Configuration with Stimulus")
 plt.axis('off')  # Turn off axis
 filename = "./database/final_lattice.png"
