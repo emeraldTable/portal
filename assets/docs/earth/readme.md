@@ -28,12 +28,13 @@ Citations:
 [2] https://www.daviddarling.info/encyclopedia/N/nutation.html
 [3] https://en.wikipedia.org/wiki/Astronomical_nutation
 
-# SCI-FI Terra Slip: `./sci-fi_terra_slipt/readme.md`
-## 1. Criar um "Gerador de Eixo Gravitacional" (GEG): `./sci-fi_terra_slipt/GEG-GAG/readme.md`
-     * Tecnologia Revolucionária de AntiGravidade avançada: `./sci-fi_terra_slipt/GEG-GAG/AntigGavity-Techno/readme.md`
-     * Singularidade artificial: `./sci-fi_terra_slipt/GEG-GAG/Artificial-Singularity/readme.md`
-     * Manipulação de buracos de minhoca: `./sci-fi_terra_slipt/GEG-GAG/Wormholes-Manipulation/readme.md`
-     * Quantum Reallity Machines: `./sci-fi_terra_slipt/GEG-GAG/Quantum-Reality-Machines/readme.md`
-     * Cosmic Energy Canalized: `./sci-fi_terra_slipt/GEG-GAG/Cosmic-Energy-Canalized/readme.md`
+# SCI-FI Terra Slip: [About](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi_terra_slipt/readme.md)
+- 1. Criar um "Gerador de Eixo Gravitacional" (GEG): [About](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi_terra_slipt/GEG-GAG/readme.md)
+
+  - 1. [Tecnologia Revolucionária de AntiGravidade avançada:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi_terra_slipt/GEG-GAG/AntigGavity-Techno/readme.md)
+  - 2. [Singularidade artificial:](url)
+  - 3. [Manipulação de buracos de minhoca:](url)
+  - 4. [Quantum Reallity Machines:](url)
+  - 5. [Cosmic Energy Canalized:](url)
 
 #####
