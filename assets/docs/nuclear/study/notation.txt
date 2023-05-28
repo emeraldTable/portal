@@ -1,0 +1,22 @@
+Enter the energy in megatons: 140000
+The required hydrogen mass is approximately 6508.444 kilograms.
+
+140.000 Megatons
+
+5.8576e+20 joules
+6517133.96 kg of Uranium
+6517.13 tonnes
+
+The total number of hydrogen atoms required is approximately 8.24e+30.
+
+Composicao of 75% Hydrogen + 25% Helium / URA Mass
+
+Mass of Hydrogen:  4887850.47 kg
+Mass of Helium:  1629283.49 kg
+Mass of Uranium:  6517133.96 kg
+
+
+Amount of Oralloy required:
+Oralloy-2 for the first uranium sample: 3100526.481 kg
+Oralloy-2 for the second uranium sample: 3100526.481 kg
+Total amount of Oralloy required: 6201052.963 kg
