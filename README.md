@@ -5,13 +5,17 @@ One collection of knowledge and utillity tools about
                   fission process  
                   Formation of Materia / Elements  
                   
-   
+# /assets/addons/python/QCD
+  Quantum chromodynamics (QCD)
+  indeed a fundamental theory that is part of the standard model of 
+  particle physics. It is the theory that describes the strong nuclear 
+  force, which is one of the fundamental forces of nature.
+
 # /dev/
-   |___>  Generator of Molecules: Generate molecules with random generation
-  
-          Molecules research: uses one cross-site of anonchatgpt to make research about the molecule  the button connect/disconnect then if you don't use this the site not make connection
-  
-          Molecules Viwer: to reproduce one visualization with the interpretation of formula of your molecule
+Generator of Molecules: Generate molecules with random generation
+  Molecules research: uses one cross-site of anonchatgpt to make research about the molecule  the button connect/disconnect 
+        then if you don't use this the site not make connection
+         Molecules Viwer: to reproduce one visualization with the interpretation of formula of your molecule
           IMG > Base64: To convert one image in string base64
           CSV Generator: This generate one .CSV that contain the proprierties of your molecule
           CSV to HTML: This generate with basis in the .CSV one html visualization of proprierties of molecule
