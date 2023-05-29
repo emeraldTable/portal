@@ -3,7 +3,7 @@
             var positions = {};
 
             // Define the IDs of the elements whose positions you want to save
-            var elementIds = ["divResize1", "divResize2", "divResize3", "divResize4", "divResize5", "divResize6", "divResize7", "divResize8", "divResize9", "divResize10", "divResize11", "divResize12", "divResize13", "divResize14", "divResize15", "divResize16", "divResize17", "divResize18", "divResize19", "divResize20", "divResize21",];
+            var elementIds = ["divResize1", "divResize2", "divResize3", "divResize4", "divResize5", "divResize6", "divResize7", "divResize8", "divResize9", "divResize10", "divResize11", "divResize12", "divResize13", "divResize14", "divResize15", "divResize16", "divResize17", "divResize18", "divResize19", "divResize20", "divResize21", "divResize22", "divResize23", "divResize24", "divResize25", "divResize26", "divResize27", "divResize27", "divResize29", "divResize30", "divResize31", "divResize32", "divResize33", "divResize34", "divResize35", "divResize36", "divResize37", "divResize38", "divResize39", "divResize40", "divResize41", "divResize42", "divResize43", "divResize44", "divResize45", "divResize46", "divResize47", "divResize48", "divResize49", "divResize50", "divResize51",];
 
             elementIds.forEach(function(id) {
                 var element = document.getElementById(id);
