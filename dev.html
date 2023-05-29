@@ -22,6 +22,9 @@
 <button onclick="onelement2()"></button>
 <a href="./url/"><button></button></a>
 <span>&nbsp;</span>
+<button onclick="savePositionsToJson()">Save Positions</button>
+<input type="file" id="jsonFileInput" onchange="handleFileUpload(event)">
+<span>&nbsp;</span>
 <a href="./index.html" rel="noopener noreferrer"><button>Home</button></a>
 <a href="https://github.com/c2V2ZW4K/portal/" target="_blank" rel="noopener noreferrer"><button>Github Repo</button></a>
 <button id="dark-mode-btn" onclick="toggleDarkMode()">Lights</button>
@@ -135,4 +138,5 @@
 <script type="text/javascript" src="./js/dev/dev/devmod.js"></script>
 <script type="text/javascript" src="./js/main/funcs/lights.js"></script>
 <script type="text/javascript" src="./js/main/funcs/mr.js"></script>
+<script type="text/javascript" src="./js/main/funcs/savepos.js"></script>
 </html>
