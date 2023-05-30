@@ -23,6 +23,8 @@
 <button onclick="onelement11()">Earth Weathers</button>
 <a href="./dev.html"><button>Dev</button></a>
 <span>&nbsp;</span>
+<button onclick="onelement24()">Emerald Table</button>
+<span>&nbsp;</span>
 <button onclick="savePositionsToJson()">Save Positions</button>
 <input type="file" id="jsonFileInput" onchange="handleFileUpload(event)">
 <span>&nbsp;</span>
@@ -37,7 +39,7 @@
 <header>
 <button onclick="onelement2()">Nuclear</button>
 <button onclick="onelement3()">Calc 1</button>
-<button onclick="onelement31()">Calc 2</button>
+<button onclick="onelement22()">Calc 2</button>
 <button onclick="onelement4()">NukeLinks</button>
 <button onclick="onelement5()">Nuke Elements</button>
 </header>
@@ -230,9 +232,22 @@ m = 703.466589076kg<br><br>
   <script type="text/javascript" src="./js/main/earth/weather/weather.js"></script>
 </div>
 
-  <div id="divResize31" style="position: absolute; left: 0.2%; top: 5%; height: 76%; width: 51%; display: none">
+<!-- Calculator -->
+  <div id="divResize22" style="position: absolute; left: 0.2%; top: 5%; height: 76%; width: 51%; display: none">
 	  <iframe id="calc-iframe" src="./calc.html" style="width: 100%; height: 100%;"></iframe>
 	   </div>
+
+<!-- Knowledges -->
+<div id="divResize24" style="position: absolute; left: 0.2%; top: 5%; height: 98%; width: 98%; display: none">
+  <button onclick="onelement25()">About</button>
+
+  <div id="divResize25" style="position: absolute; left: 0.2%; top: 5%; height: 76%; width: 51%;">
+    <iframe id="about1-iframe" src="./markdown.html" style="width: 100%; height: 100%;"></iframe>
+  </div>
+
+</div>
+
+
 </div>
 
 </body>

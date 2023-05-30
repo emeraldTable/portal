@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Página</title>
+  <script src="./js/main/funcs/showdown.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+
+<script>
+  // Caminho do arquivo README.md
+  var readmePath = './README.md';
+
+  // Função para ler o conteúdo do arquivo README.md
+  function lerArquivoMarkdown(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        callback(xhr.responseText);
+      }
+    };
+    xhr.open('GET', url, true);
+    xhr.send();
+  }
+
+  // Função para converter o Markdown em HTML
+  function converterMarkdownParaHTML(markdownText) {
+    var converter = new showdown.Converter();
+    var html = converter.makeHtml(markdownText);
+    document.getElementById('content').innerHTML = html;
+  }
+
+  // Ler o arquivo README.md e converter para HTML
+  lerArquivoMarkdown(readmePath, converterMarkdownParaHTML);
+</script>
+
+</body>
+</html>
