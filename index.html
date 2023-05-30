@@ -66,6 +66,7 @@ m = 703.466589076kg<br><br>
     Convert Megatons:
     <input type="number" id="megatonsInput" placeholder="Megatons">
     <button onclick="megatonsToJoules()">Convert to Joules</button>
+    <button onclick="megatonsToExplosionRadius()">Radius</button>
     <button onclick="copyToClipboard('joulesOutput')">Copy Joules</button>
   </p>
   <p id="joulesOutput"></p>
@@ -74,6 +75,7 @@ m = 703.466589076kg<br><br>
     Convert Joules:
     <input type="number" id="joulesInput" placeholder="Joules">
     <button onclick="joulesToMegatons()">Convert to Megatons</button>
+    <button onclick="joulesToExplosionRadius()">Radius</button>
     <button onclick="copyToClipboard('megatonsOutput')">Copy Megatons</button>
   </p>
   <p id="megatonsOutput"></p>
@@ -83,11 +85,12 @@ m = 703.466589076kg<br><br>
     <label for="returnMass">Return Mass value?</label>
     <p id="massOutputkg"></p>
     <p id="massOutputTonnes"></p>
+    <p id="explosionRadiusOutput"></p>
     <p id="priceOutput"></p>
-    <button onclick="copyToClipboard('massOutputkg')">Copy Mass Kg</button>
-    <button onclick="copyToClipboard('massOutputTonnes')">Copy Mass Tonnes</button>
     <button onclick="calculateTotalPrice()">Price</button>
     <button onclick="copyToClipboard('priceOutput')">Copy Price U$</button>
+    <button onclick="copyToClipboard('massOutputkg')">Copy Mass Kg</button>
+    <button onclick="copyToClipboard('massOutputTonnes')">Copy Mass Tonnes</button>
   </p>
   
   <p>Uranium Mass Conversion</p>
