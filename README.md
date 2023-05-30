@@ -5,7 +5,7 @@ One collection of knowledge
       - energy molecules  
       - fission process  
       - Formation of Materia / Elements  
-         
+ 
 # Knowledges about the universe  
   - [Earth](./assets/docs/earth/readme.md)  
   - [Volcanoes](/assets/docs/earth/earth/volcanoes/readme.md)  
@@ -43,3 +43,14 @@ One collection of knowledge
       - IMG > Base64: To convert one image in string base64  
       - CSV Generator: This generate one .CSV that contain the proprierties of your molecule  
       - CSV to HTML: This generate with basis in the .CSV one html visualization of proprierties of molecule  
+         
+  
+# Ways to run  
+  - Online mode:
+    - Acessing: [Portal](https://emeraldtable.github.io/portal/)  
+  - Offline mode Using:  
+
+        python3 -m http.server  
+
+     This is required because the portal contain CORS requests from files inside root dir  
+      then this command executed inside root dir of portal, fix the CORS requests.  
