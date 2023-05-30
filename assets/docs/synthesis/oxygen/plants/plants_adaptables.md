@@ -1,5 +1,5 @@
-Plants that growth fast 
-in arid zones without presence of water:
+Plants that growth fast   
+in arid zones without presence of water: 
                                         Zamioculcas zamiifolia (ZZ Plant)
                                         Sansevieria trifasciata (Snake Plant)
                                         Agave spp. (Agave)
