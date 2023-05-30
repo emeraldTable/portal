@@ -7,7 +7,7 @@ One collection of knowledge
       - Formation of Materia / Elements  
          
 # Knowledges about the universe  
-  - [Earth](/assets/docs/earth/readme.md)  
+  - [Earth](/portal/assets/docs/earth/readme.md)  
   - [Volcanoes](/assets/docs/earth/earth/volcanoes/readme.md)  
   - [Anti Matter](/assets/docs/antimatter/readme.md)  
   - [Nuclear](/assets/docs/nuclear/readme.md)  
