@@ -14,7 +14,7 @@ One collection of knowledge and utillity tools about
   
 
     
-# /assets/addons/python/QCD
+# [Quantum chromodynamics (QCD)](/assets/addons/python/QCD)  
   Quantum chromodynamics (QCD)
   indeed a fundamental theory that is part of the standard model of 
   particle physics. It is the theory that describes the strong nuclear 
