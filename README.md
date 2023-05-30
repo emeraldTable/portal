@@ -4,7 +4,16 @@ One collection of knowledge and utillity tools about
                   energy molecules  
                   fission process  
                   Formation of Materia / Elements  
-                  
+         
+# Knowledge about the earth  
+  - [Earth](/assets/docs/earth/readme.md)  
+  - [Volcanoes](/assets/docs/earth/earth/volcanoes/readme.md)  
+  - [Anti Matter](/assets/docs/antimatter/readme.md)  
+  - [Nuclear](/assets/docs/nuclear/readme.md)  
+  - [Synthesis](/assets/docs/synthesis/readme.md)  
+  
+
+    
 # /assets/addons/python/QCD
   Quantum chromodynamics (QCD)
   indeed a fundamental theory that is part of the standard model of 
