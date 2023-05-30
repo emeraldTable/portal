@@ -5,7 +5,7 @@ One collection of knowledge and utillity tools about
                   fission process  
                   Formation of Materia / Elements  
          
-# Knowledge about the earth  
+# Knowledges about the universe  
   - [Earth](/assets/docs/earth/readme.md)  
   - [Volcanoes](/assets/docs/earth/earth/volcanoes/readme.md)  
   - [Anti Matter](/assets/docs/antimatter/readme.md)  
