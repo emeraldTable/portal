@@ -9,10 +9,7 @@
   <div id="content"></div>
 
 <script>
-  // Caminho do arquivo README.md
-  var readmePath = './README.md';
-
-  // Função para ler o conteúdo do arquivo README.md
+  // Função para ler o conteúdo do arquivo Markdown
   function lerArquivoMarkdown(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -24,15 +21,27 @@
     xhr.send();
   }
 
-  // Função para converter o Markdown em HTML
-  function converterMarkdownParaHTML(markdownText) {
+  // Função para converter o Markdown em HTML e atualizar a página
+  function atualizarPagina(markdownText) {
     var converter = new showdown.Converter();
     var html = converter.makeHtml(markdownText);
     document.getElementById('content').innerHTML = html;
+
+    // Adicionar evento de clique aos links gerados
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function(e) {
+        e.preventDefault(); // Impedir o comportamento padrão do link
+        var readmePath = this.getAttribute('href');
+        lerArquivoMarkdown(readmePath, atualizarPagina);
+        history.pushState(null, null, readmePath); // Atualizar a URL
+      });
+    }
   }
 
-  // Ler o arquivo README.md e converter para HTML
-  lerArquivoMarkdown(readmePath, converterMarkdownParaHTML);
+  // Ler o arquivo README.md inicial e converter para HTML
+  var initialReadmePath = './README.md';
+  lerArquivoMarkdown(initialReadmePath, atualizarPagina);
 </script>
 
 </body>
