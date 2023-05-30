@@ -114,3 +114,30 @@ function joulesToExplosionRadius() {
         document.getElementById("joulesOutput").innerHTML = "";
       }
     }
+    
+// Função para calcular o raio da explosão com base em megatons
+function megatonsToExplosionRadius() {
+  var megatons = parseFloat(document.getElementById("megatonsInput").value);
+
+  if (!isNaN(megatons)) {
+    var joules = megatons * 4.184 * Math.pow(10, 9);
+    var radius = Math.pow((3 * joules / (4 * Math.PI * 1.225)), 1/3);
+    document.getElementById("explosionRadiusOutput").innerHTML = radius.toFixed(2) + " metros";
+  } else {
+    document.getElementById("explosionRadiusOutput").innerHTML = "";
+  }
+}
+
+// Função para calcular o raio da explosão com base em joules
+function joulesToExplosionRadius() {
+  var joules = parseFloat(document.getElementById("joulesInput").value);
+
+  if (!isNaN(joules)) {
+    var megatons = joules / (4.184 * Math.pow(10, 9));
+    var radius = Math.pow((3 * joules / (4 * Math.PI * 1.225)), 1/3);
+    
+    document.getElementById("explosionRadiusOutput").innerHTML = radius.toFixed(2) + " metros";
+  } else {
+    document.getElementById("explosionRadiusOutput").innerHTML = "";
+  }
+}
