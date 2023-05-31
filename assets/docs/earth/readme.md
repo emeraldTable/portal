@@ -1,4 +1,4 @@
-[Home](../../../README.md)  
+[Home](./README.md)  
 -------------------------------
 
 # Central Axis Gravity
@@ -24,5 +24,5 @@
   - External Citations: [1](https://astro.vaporia.com/start/nutation.html)  [2](https://www.daviddarling.info/encyclopedia/N/nutation.html) [3](https://en.wikipedia.org/wiki/Astronomical_nutation)  
 -------------------------------
 # Knowledges:
- - [SCI-FI](./sci-fi/readme.md)  
- - [Volcanoes](./earth/volcanoes/readme.md)  
+ - [SCI-FI](./assets/docs/earth/sci-fi/readme.md)  
+ - [Volcanoes](./assets/docs/earth/volcanoes/readme.md)  
