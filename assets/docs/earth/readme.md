@@ -1,3 +1,6 @@
+[Home](/README.md)  
+-------------------------------
+
 # Central Axis Gravity
 - A gravidade em torno do eixo da Terra é responsável por manter o planeta em sua órbita em torno do Sol
     e pela atração dos objetos em sua superfície. A Terra gira em torno de seu eixo,
@@ -17,10 +20,9 @@
       que é a mudança lenta e contínua da direção do eixo de rotação da Terra causada pela influência gravitacional da Lua e do Sol.
        A nutação é causada pelas forças gravitacionais de outros corpos celestes agindo sobre o objeto em rotação, como a Terra, e ocorre a cada 18,6 anos.
         A nutação é um fenômeno importante na astronomia, pois afeta a posição dos polos da Terra e pode influenciar a precisão das medições astronômicas
-#####
-Citations:
-[1] https://astro.vaporia.com/start/nutation.html
-[2] https://www.daviddarling.info/encyclopedia/N/nutation.html
-[3] https://en.wikipedia.org/wiki/Astronomical_nutation
-#####
-# [SCI-FI](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/readme.md)
+#####  
+  - External Citations: [1](https://astro.vaporia.com/start/nutation.html)  [2](https://www.daviddarling.info/encyclopedia/N/nutation.html) [3](https://en.wikipedia.org/wiki/Astronomical_nutation)  
+-------------------------------
+# Knowledges:
+ - [SCI-FI](./sci-fi/readme.md)  
+ - [Volcanoes](./earth/volcanoes/readme.md)  
