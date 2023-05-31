@@ -41,3 +41,7 @@
   
 It's important to note that our understanding of black holes is continually evolving,   
  and there may be other types or variations that are yet to be discovered or fully understood.  
+
+# Equations:  
+ - 1. Structure and stability of a spherically symmetric, non-rotating, and static object under the influence of gravity.  
+    - [Tolman-Oppenheimer-Volkoff](./Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)   
