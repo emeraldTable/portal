@@ -1,4 +1,6 @@
-# [SCI-FI Earth Split:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/readme.md)
+[Home](/README.md)  / [SCI-FI](./readme.md)  
+-------------------------------
+# SCI-FI Earth Split:
 - Criar um novo eixo para uma das metades divididas da Terra, usando termos de ficção científica,
    pode ser uma tarefa interessante e imaginativa. Vou elaborar uma ideia baseada nessa premissa:
     
@@ -29,9 +31,9 @@
 
 # Steps
 
-- 1. Criar um "Gerador de Eixo Gravitacional" (GEG): [About](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/GEG-GAG/readme.md)
-  - 1. [Tecnologia de AntiGravidade avançada:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/GEG-GAG/AntigGavity-Techno/readme.md)
-  - 2. [Singularidade artificial:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/GEG-GAG/Artificial-Singularity/readme.md)
-  - 3. [Manipulação de buracos de minhoca:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/GEG-GAG/Wormholes-Manipulation/readme.md)
-  - 4. [Máquinas de realidade quântica:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/GEG-GAG/Quantum-Reality-Machines/readme.md)
-  - 5. [Energia cósmica canalizada:](https://github.com/c2V2ZW4K/portal/blob/main/assets/docs/earth/sci-fi/sci-fi_terra_split/GEG-GAG/Cosmic-Energy-Canalized/readme.md)
+- 1. Criar um "Gerador de Eixo Gravitacional" (GEG): [About](./GEG-GAG/readme.md)
+  - 1. [Tecnologia de AntiGravidade avançada:](./GEG-GAG/AntigGavity-Techno/readme.md)
+  - 2. [Singularidade artificial:](./GEG-GAG/Artificial-Singularity/readme.md)
+  - 3. [Manipulação de buracos de minhoca:](./GEG-GAG/Wormholes-Manipulation/readme.md)
+  - 4. [Máquinas de realidade quântica:](./GEG-GAG/Quantum-Reality-Machines/readme.md)
+  - 5. [Energia cósmica canalizada:](./GEG-GAG/Cosmic-Energy-Canalized/readme.md)
