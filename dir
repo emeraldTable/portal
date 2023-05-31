@@ -1,0 +1,31 @@
+import os
+
+def listar_subdiretorios(diretorio_atual, nivel=0, arquivo_arvore=None, arquivo_lista=None):
+    for item in os.listdir(diretorio_atual):
+        caminho_item = os.path.join(diretorio_atual, item)
+        if os.path.isdir(caminho_item):
+            if arquivo_arvore:
+                arquivo_arvore.write("  " * nivel + item + "/\n")
+            listar_subdiretorios(caminho_item, nivel + 1, arquivo_arvore, arquivo_lista)
+        else:
+            if arquivo_arvore:
+                arquivo_arvore.write("  " * nivel + item + "\n")
+            if arquivo_lista:
+                arquivo_lista.write(caminho_item + "\n")
+
+diretorio_atual = os.getcwd()
+
+arquivo_arvore = open("arvore_dirs.txt", "w")
+arquivo_lista = open("lista_files.txt", "w")
+
+print("Estrutura de árvore de diretórios:")
+arquivo_arvore.write("Estrutura de árvore de diretórios:\n")
+listar_subdiretorios(diretorio_atual, arquivo_arvore=arquivo_arvore)
+
+print("Lista de arquivos:")
+arquivo_lista.write("Lista de arquivos:\n")
+listar_subdiretorios(diretorio_atual, arquivo_lista=arquivo_lista)
+
+arquivo_arvore.close()
+arquivo_lista.close()
+
