@@ -12,6 +12,9 @@ One collection of knowledge
   - [Anti Matter](./assets/docs/antimatter/readme.md)  
   - [Nuclear](./assets/docs/nuclear/readme.md)  
   - [Synthesis](./assets/docs/synthesis/readme.md)  
+  
+# Futuristic Comics:  
+- [SCI-FI](./assets/docs/earth/sci-fi/readme.md)    
     
 # [Quantum chromodynamics (QCD)](./assets/addons/python/QCD)  
   - Quantum chromodynamics (QCD)
