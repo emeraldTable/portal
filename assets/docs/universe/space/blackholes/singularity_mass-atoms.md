@@ -12,7 +12,7 @@
             (known as the Tolman-Oppenheimer-Volkoff limit),   
              it will continue collapsing under the force of gravity.  
 
-   - 2. Gravitational Collapse:   
+   - 2. [Gravitational Collapse](../knowledges/Gravitational_Collapse.md):   
          As the core collapses, the gravitational forces become stronger, compressing matter to an extreme density.   
           The mass of the collapsing core is concentrated into an incredibly small volume,   
            forming a singularity—a region of space where matter is infinitely dense.  
