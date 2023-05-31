@@ -44,4 +44,4 @@ It's important to note that our understanding of black holes is continually evol
 
 # Equations:  
  - 1. Structure and stability of a spherically symmetric, non-rotating, and static object under the influence of gravity.  
-    - [Tolman-Oppenheimer-Volkoff](../equations/Theoretical-Physics/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)   
+    - [Tolman-Oppenheimer-Volkoff](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)   
