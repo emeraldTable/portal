@@ -1,5 +1,6 @@
 Barium: Ba
 Plutonium: Pu
+Curium
 Carbon: C
 Vanadium: V
 Tantalum: Ta
