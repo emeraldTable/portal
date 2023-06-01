@@ -35,7 +35,8 @@ One collection of knowledge
 - Heat / Energy   
   - [Heat](./assets/docs/universe/equations/Heat-Energy/Heat/readme.md)   
   - [Nuclear](./assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)   
-  - [Theoretical Physics](./assets/docs/universe/equations/Theoretical-Physics/readme.md)  
+- [Theoretical Physics:](./assets/docs/universe/equations/Theoretical-Physics/readme.md)  
+  - [Tolman Oppenheimer Volkoff](./assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)  
   
 
 # Futuristic Comics:  
