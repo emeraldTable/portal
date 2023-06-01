@@ -48,7 +48,7 @@
            It dissociates into aluminum ions (Al3+) and hydroxide ions (OH-) when dissolved in water.   
 
    - 11. Bismuth (Bi):    
-          Bismuth hydroxide (Bi(OH)3) is a weak base that can produce an alkaline solution.    
+          [Bismuth hydroxide (Bi(OH)3)](./bismuth.md) is a weak base that can produce an alkaline solution.    
            It dissociates into bismuth ions (Bi3+) and hydroxide ions (OH-) when dissolved in water.   
 
    - 12. Copper (Cu):    
