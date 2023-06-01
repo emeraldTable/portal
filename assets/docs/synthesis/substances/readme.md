@@ -81,3 +81,8 @@
      produce the desired compound, ethyl acetate.     
       This is just one example,     
        and the synthesis of different substances may involve different reactants and reaction conditions based on the specific compound being synthesized.    
+
+---------------
+
+1. Types:  
+   - [Alkalis](./assets/docs/synthesis/substances/types/Alkalis/readme.md)  
