@@ -1,0 +1,376 @@
+Barium: Ba
+Plutonium: Pu
+Carbon: C
+Vanadium: V
+Tantalum: Ta
+Inconel
+Magnesium: Mg
+Chromium: Cr
+Osmium: Os
+Rhenium: Re
+Palladium: Pd
+Ruthenium: Ru
+
+Tantalum Hafnium Carbide: Ta4HfC5
+Cermet
+Boron Nitride: BN
+Yttrium: Y
+Europium: Eu
+Manganese: Mn
+
+Copper Oxide (YBCO): YBa2Cu3O7
+Beryllium Oxide: BeO
+Aluminum Oxide: Al2O3
+Yttrium Barium Copper Oxide: YBa2Cu3O7
+Tungsten-Lanthanum Oxide: W-La2O3
+Zinc Oxide: ZnO
+Yttrium Barium Copper Oxide: YBa2Cu3O7
+
+Magnesium Diboride: MgB2
+Zirconium Diboride: ZrB2
+Zirconium Carbide: ZrC
+Silicon Carbide: SiC
+Vanadium Carbide: VC
+Chromium Carbide: Cr3C2
+Tungsten Carbide: WC
+Tantalum Carbide: TaC
+
+Boron Nitride: BN
+Silicon Nitride: Si3N4
+Titanium Nitride: TiN
+Aluminum Nitride: AlN
+
+Samarium-Cobalt Magnet: SmCo
+Samarium Titanate: Sm2Ti2O7
+Nitinol: NiTi
+
+Silicon-Graphite Composites
+Carbon-Fiber-Reinforced
+
+Molybdenum: Mo
+Thorium: Th
+Americium: Am
+Samarium: Sm
+Boron: B
+Deuterium: D
+Tritium: T
+Berkelium: Bk
+Lithium-4/6/7: Li-4/6/7
+Helium-3/4: He-3/4
+Niobium: Nb
+
+Niobium-Titanium Superconductor: Nb-Ti
+Tantalum-Hafnium-Carbide Composite: Ta-Hf-C
+Titanium-Silicon Carbide Composite: Ti-SiC
+Lanthanum Hexaboride: LaB6
+Tungsten-Lanthanum Oxide Composite: W-La2O3
+Samarium-Cobalt Magnet: SmCo
+
+Beryllium: Be
+Tungsten: W
+Molybdenum: Mo
+Graphene
+Titanium: Ti
+Iron: Fe
+Ceramics
+Copper: Cu
+Stainless Steel
+Nickel: Ni
+Titanium Aluminides
+Alumina: Al2O3
+TZM
+
+Hastelloy alloys
+Copper-Chromium Alloy
+Tungsten-Titanium Alloy
+Tungsten-Copper Alloy
+Tungsten-Rhenium Alloy
+Tungsten-Zirconium Alloy
+Tantalum-Lithium Alloy
+Nickel-Based Superalloys
+Nickel-Titanium (Ni-Ti) Alloy
+Cobalt-Chromium (Co-Cr) Alloy
+Titanium-Aluminum (Ti-Al) Alloy
+Platinum-Rhodium (Pt-Rh) Alloy
+Tungsten-Rhenium-Iridium (W-Re-Ir) Alloy
+Nickel-Chromium (Ni-Cr) Alloy
+Lead-Lithium (Pb-Li) Eutectic Alloy
+Silicon-Aluminum (Si-Al) Alloy
+Titanium-Zirconium-Molybdenum (TZM) Alloy
+Copper-Chromium-Zirconium (Cu-Cr-Zr) Alloy
+Molybdenum-Tungsten (Mo-W) Alloy
+Lithium-Lithium Aluminum Alloy (Li-LiAl)
+Uranium Alloy-1/2/3
+Zirconium alloys
+Nitinol (Nickel-Titanium)
+Lead-Lithium Alloy
+
+aqui estão as categorias para os elementos e compostos mencionados:
+
+Metais alcalino-terrosos:
+- Barium (Ba)
+- Magnesium (Mg)
+
+Actinídeos:
+- Plutonium (Pu)
+- Thorium (Th)
+- Americium (Am)
+- Uranium Alloy-1/2/3
+
+Carbono e compostos relacionados:
+- Carbon (C)
+- Graphene
+
+Elementos de transição:
+- Vanadium (V)
+- Tantalum (Ta)
+- Chromium (Cr)
+- Osmium (Os)
+- Rhenium (Re)
+- Palladium (Pd)
+- Ruthenium (Ru)
+- Manganese (Mn)
+- Nickel (Ni)
+- Iron (Fe)
+
+Compostos cerâmicos:
+- Boron Nitride (BN)
+- Silicon Carbide (SiC)
+- Boron Nitride (BN)
+- Silicon Nitride (Si3N4)
+- Titanium Nitride (TiN)
+- Aluminum Nitride (AlN)
+- Alumina (Al2O3)
+
+Supercondutores e materiais relacionados:
+- Yttrium Barium Copper Oxide (YBCO)
+- Magnesium Diboride (MgB2)
+- Niobium-Titanium Superconductor (Nb-Ti)
+
+Ímãs:
+- Samarium-Cobalt Magnet (SmCo)
+
+Ligas metálicas:
+- Inconel
+- Hastelloy alloys
+- Copper-Chromium (Cu-Cr) Alloy
+- Tungsten-Titanium (W-Ti) Alloy
+- Tungsten-Copper Alloy
+- Tungsten-Rhenium Alloy
+- Tungsten-Zirconium (W-Zr) Alloy
+- Tantalum-Lithium (Ta-Li) Alloy
+- Nickel-Based Superalloys
+- Nickel-Titanium (Ni-Ti) Alloy
+- Cobalt-Chromium (Co-Cr) Alloy
+- Titanium-Aluminum (Ti-Al) Alloy
+- Platinum-Rhodium (Pt-Rh) Alloy
+- Tungsten-Rhenium-Iridium (W-Re-Ir) Alloy
+- Nickel-Chromium (Ni-Cr) Alloy
+- Lead-Lithium (Pb-Li) Eutectic Alloy
+- Silicon-Aluminum (Si-Al) Alloy
+- Titanium-Zirconium-Molybdenum (TZM) Alloy
+- Copper-Chromium-Zirconium (Cu-Cr-Zr) Alloy
+- Molybdenum-Tungsten (Mo-W) Alloy
+- Lithium-Lithium Aluminum Alloy (Li-LiAl)
+- Lead-Lithium Alloy
+- Zirconium alloys
+- Nitinol (Nickel-Titanium)
+
+Outros elementos:
+- Ceramics (Cerâmicas)
+- Copper (Cu)
+- Stainless Steel
+- Titanium Aluminides
+- Lithium-4/6/7 (Li-4/6/7)
+- Helium-3/4 (He-3/4)
+
+É importante observar que algumas substâncias mencionadas não possuem fórmulas químicas específicas ou   
+ são compostos mistos que não podem ser representados por uma única fórmula.  
+  Além disso, algumas categorias podem se sobrepor em certos casos, 
+   já que alguns elementos e compostos podem pertencer a múltiplas categorias.
+
+Effect over fission:
+
+1. Barium: O bário pode ser usado como um absorvedor de nêutrons para regular a taxa de fissão nuclear.
+
+2. Plutônio: O plutônio é um material físsil que pode ser usado como combustível em reatores nucleares ou como um componente de armas nucleares.
+
+3. Carbono: O carbono pode ser usado em forma de grafite para moderar os nêutrons e ajudar a controlar a reação de fissão.
+
+4. Vanádio: O vanádio pode ser usado em ligas metálicas para melhorar a resistência à corrosão em ambientes nucleares.
+
+5. Tântalo: O tântalo pode ser usado como um invólucro resistente à corrosão para componentes nucleares, como tubos de combustível.
+
+6. Inconel: Inconel é uma liga de níquel resistente ao calor e à corrosão, que pode ser usada em componentes de reatores nucleares, como tubos de combustível.
+
+7. Magnésio: O magnésio pode ser usado como um material de revestimento de combustível nuclear.
+
+8. Cromo: O cromo pode ser usado em ligas metálicas para melhorar a resistência à corrosão em ambientes nucleares.
+
+9. Ósmio: O ósmio tem uma alta densidade e pode ser usado como um absorvedor de nêutrons ou em blindagem de radiação.
+
+10. Rênio: O rênio pode ser usado em ligas metálicas para melhorar a resistência à corrosão e a capacidade de suportar altas temperaturas em aplicações nucleares.
+
+11. Paládio: O paládio pode ser utilizado como catalisador em reações de hidrogenação e também como material de revestimento em componentes de combustível nuclear.
+
+12. Rutênio: O rutênio pode ser usado como um material de revestimento em combustível nuclear e também em ligas metálicas resistentes à corrosão.
+
+13. Tântalo Háfnio Carbeto (Ta4HfC5): O carbeto de tântalo háfnio é um material cerâmico extremamente resistente ao calor e à corrosão, sendo usado em revestimentos de componentes de reatores nucleares.
+
+14. Cermet: Cermet é uma combinação de cerâmica e metal, sendo utilizado em revestimentos de combustível nuclear para melhorar a resistência mecânica e térmica.
+
+15. Nitreto de Boro (BN): O nitreto de boro é um material dielétrico com alta condutividade térmica, sendo utilizado em componentes eletrônicos de reatores nucleares.
+
+16. Óxido de Bário (BaO): O óxido de bário pode ser utilizado como um absorvedor de nêutrons em reatores nucleares.
+
+17. Europium (Eu): O europium é usado como um ativador em materiais cintilantes, sendo utilizado em detectores de radiação e monitores nucleares.
+
+18. Manganês (Mn): O manganês pode ser utilizado como um aditivo em ligas de aço para melhorar a resistência à radiação em ambientes nucleares.
+
+19. Óxido de Zinco (ZnO): O óxido de zinco é usado como um material semicondutor e como revestimento em componentes eletrônicos para aplicações nucleares.
+
+20. Óxido de Alumínio (Al2O3): O óxido de alumínio é um material cerâmico com alta resistência ao calor e à corrosão, sendo utilizado em revestimentos de combustível nuclear e componentes de reatores.
+
+21. Óxido de Berílio (BeO): O óxido de berílio é um material com alta condutividade térmica e resistência mecânica, sendo utilizado como um moderador de nêutrons em reatores nucleares.
+
+22. Carbeto de Silício (SiC): O carbeto de silício é um material cerâmico extremamente resistente ao calor e à corrosão, sendo usado em revestimentos de combustível nuclear e componentes de reatores.
+
+23. Carbeto de Vanádio (VC): O carbeto de vanádio é um material cerâmico que pode ser utilizado como revestimento em componentes de combustível nuclear devido à sua alta resistência à corrosão.
+
+24. Carbeto de Cromo (Cr3C2): O carbeto de cromo é um material cerâmico resistente à corrosão e ao desgaste, sendo utilizado em revestimentos de componentes de reatores nucleares.
+
+25. Carbeto de Tungstênio (WC): O carbeto de tungstênio é um material cerâmico com alta resistência ao calor e à corrosão, sendo utilizado em revestimentos de combustível nuclear e componentes de reatores.
+
+26. Carbeto de Tântalo (TaC): O carbeto de tântalo é um material cerâmico extremamente resistente ao calor e à corrosão, sendo usado em revestimentos de componentes de reatores nucleares.
+
+27. Nitreto de Boro (BN): O nitreto de boro é um material cerâmico com alta resistência mecânica e condutividade térmica, sendo utilizado em revestimentos de combustível nuclear.
+
+28. Nitreto de Silício (Si3N4): O nitreto de silício é um material cerâmico resistente ao calor e à corrosão, sendo utilizado em revestimentos de componentes de reatores nucleares.
+
+29. Nitreto de Titânio (TiN): O nitreto de titânio é um material cerâmico com alta dureza e resistência ao desgaste, sendo utilizado em revestimentos de combustível nuclear e componentes de reatores.
+
+30. Nitreto de Alumínio (AlN): O nitreto de alumínio é um material cerâmico com alta condutividade térmica e elétrica, sendo usado em componentes eletrônicos de reatores nucleares.
+
+31. Óxido de Zircônio (ZrO2): O óxido de zircônio é amplamente utilizado como revestimento de combustível nuclear devido à sua alta resistência térmica, condutividade térmica e baixa absorção de nêutrons.
+
+32. Carbeto de Molibdênio (Mo2C): O carbeto de molibdênio é um material cerâmico com alta resistência à corrosão e ao desgaste, sendo utilizado em revestimentos de componentes de reatores nucleares.
+
+33. Óxido de Tório (ThO2): O óxido de tório é um material físsil que pode ser usado como combustível nuclear em reatores de fissão. Ele tem boas propriedades termomecânicas e uma alta seção de choque efetiva para a captura de nêutrons térmicos.
+
+34. Óxido de Urânio (UO2): O óxido de urânio é o principal combustível nuclear utilizado em reatores de fissão. Ele possui alta densidade, estabilidade química e boa condutividade térmica.
+
+35. Óxido de Plutônio (PuO2): O óxido de plutônio é outro combustível nuclear utilizado em reatores de fissão. Ele possui alta densidade, boa estabilidade térmica e capacidade de retenção de produtos de fissão.
+
+36. Óxido de Amerício (AmO2): O óxido de amerício é um combustível nuclear que pode ser utilizado em reatores de fissão. Ele tem propriedades fiscais e termomecânicas adequadas para o uso em reatores nucleares.
+
+37. Óxido de Samário (Sm2O3): O óxido de samário é utilizado em revestimentos de combustível nuclear devido às suas boas propriedades termomecânicas e à capacidade de absorção de nêutrons térmicos.
+
+38. Hexaboreto de Lantânio (LaB6): O hexaboreto de lantânio é um material cerâmico que possui alta emissividade termiônica, sendo utilizado como revestimento em componentes de reatores nucleares.
+
+39. Liga Tântalo-Háfnio-Carbeto (Ta-Hf-C): A liga Ta-Hf-C é um material compósito que combina as propriedades do tântalo, do háfnio e do carbeto de tântalo, oferecendo alta resistência à corrosão e ao desgaste em ambientes nucleares.
+
+40. Ligas de Hastelloy: As ligas de Hastelloy são ligas de níquel-molibdênio que apresentam excelente resistência à corrosão em ambientes ácidos e alcalinos, sendo utilizadas em vasos de reatores nucleares e tubulações.
+
+41. Óxido de Berílio (BeO): O óxido de berílio é um material cerâmico com excelente condutividade térmica e propriedades elétricas, sendo usado como moderador de nêutrons em reatores nucleares.
+
+42. Carboneto de Tungstênio (WC): O carboneto de tungstênio é um composto cerâmico extremamente duro e resistente à corrosão, sendo utilizado em revestimentos de combustível nuclear e componentes de reatores.
+
+43. Carboneto de Tântalo (TaC): O carboneto de tântalo é um material cerâmico com alta resistência ao desgaste e alta temperatura, sendo empregado em revestimentos de componentes de reatores nucleares.
+
+44. Nitreto de Silício (Si3N4): O nitreto de silício é um material cerâmico com alta resistência mecânica e térmica, sendo utilizado como revestimento de componentes de reatores nucleares e como isolante elétrico.
+
+45. Ligas de Níquel-Titânio (Ni-Ti): As ligas de níquel-titânio, conhecidas como Nitinol, possuem propriedades de memória de forma e superelasticidade, sendo usadas em dispositivos de controle e regulação em reatores nucleares.
+
+46. Óxido de Alumínio (Al2O3): O óxido de alumínio, também conhecido como alumina, é um material cerâmico com alta resistência à temperatura e corrosão, sendo usado em revestimentos de combustível nuclear e isolamento térmico.
+
+47. Óxido de Zinco (ZnO): O óxido de zinco é um material semicondutor com boa estabilidade térmica, sendo usado em revestimentos de combustível nuclear e como material de controle de absorção de nêutrons.
+
+48. Ligas de Cobalto-Cromo (Co-Cr): As ligas de cobalto-cromo são conhecidas por sua alta resistência à corrosão e alta temperatura, sendo usadas em componentes estruturais e revestimentos de reatores nucleares.
+
+49. Ligas de Tungstênio-Cobre (W-Cu): As ligas de tungstênio-cobre possuem alta condutividade térmica e boa resistência mecânica, sendo utilizadas em dissipadores de calor e componentes de reatores nucleares.
+
+50. Ligas de Tungstênio-Renio (W-Re): As ligas de tungstênio-rênio apresentam alta resistência à temperatura e ao desgaste, sendo utilizadas em componentes de reatores nucleares, como bicos de combustível e filamentos.
+
+51. Ligas de Molibdênio (Mo): As ligas de molibdênio são conhecidas por sua alta resistência ao calor e à corrosão, sendo usadas em revestimentos de combustível nuclear, tubos de refrigeração e componentes estruturais.
+
+52. Óxido de Lítio (Li2O): O óxido de lítio é um material cerâmico usado como material de fusão em reatores nucleares de fusão, contribuindo para a geração de trítio.
+
+53. Carbeto de Silício (SiC): O carbeto de silício é um material cerâmico extremamente resistente e com alta condutividade térmica, sendo utilizado como revestimento de combustível nuclear e em componentes de reatores de alta temperatura.
+
+54. Ligas de Níquel-Cromo (Ni-Cr): As ligas de níquel-cromo são conhecidas por sua resistência à corrosão e ao calor, sendo utilizadas em componentes estruturais e revestimentos de reatores nucleares.
+
+55. Ligas de Cobre-Cromo-Zircônio (Cu-Cr-Zr): As ligas de cobre-cromo-zircônio possuem alta resistência à radiação e à corrosão, sendo usadas em componentes de reatores nucleares, como trocadores de calor e tubos de combustível.
+
+56. Óxido de Urânio (UO2): O óxido de urânio é o principal combustível utilizado em reatores nucleares de fissão, sendo um material cerâmico capaz de sustentar a reação em cadeia.
+
+57. Ligas de Níquel-Óxido de Alumínio (Ni-Al2O3): As ligas de níquel-óxido de alumínio possuem alta resistência à corrosão e à oxidação, sendo usadas em revestimentos de combustível nuclear e em componentes estruturais.
+
+58. Ligas de Tungstênio-Lantânio (W-La): As ligas de tungstênio-lantânio possuem alta densidade e alta resistência ao calor, sendo usadas em escudos de radiação e componentes de reatores nucleares.
+
+59. Ligas de Níquel-Molibdênio (Ni-Mo): As ligas de níquel-molibdênio apresentam alta resistência à corrosão e são usadas em componentes de reatores nucleares, como vasos de pressão e trocadores de calor.
+
+60. Óxido de Zircônio (ZrO2): O óxido de zircônio é um material cerâmico amplamente utilizado como revestimento de combustível nuclear, proporcionando isolamento térmico e alta resistência à corrosão.
+
+61. Ligas de Tório (Th): O tório é um elemento utilizado como combustível em reatores nucleares de fissão, sendo uma alternativa ao urânio. Possui propriedades favoráveis, como menor geração de resíduos radioativos.
+
+62. Carboneto de Tungstênio (WC): O carboneto de tungstênio é um composto cerâmico usado em revestimentos de combustível nuclear devido à sua alta resistência à temperatura e corrosão.
+
+63. Hélio-3 (He-3): O hélio-3 é um isótopo do hélio que tem sido estudado como um possível combustível para reatores nucleares de fusão, devido à sua capacidade de reação nuclear em baixas temperaturas.
+
+64. Óxido de Césio (Cs2O): O óxido de césio é um material usado para revestir o combustível nuclear, proporcionando isolamento e proteção contra a liberação de produtos radioativos.
+
+65. Ligas de Titânio-Alumínio (Ti-Al): As ligas de titânio-alumínio são conhecidas por sua alta resistência à temperatura e à corrosão, sendo utilizadas em componentes estruturais e revestimentos de reatores nucleares.
+
+66. Ligas de Cobalto-Cromo (Co-Cr): As ligas de cobalto-cromo são amplamente usadas em implantes médicos, mas também podem ser usadas em componentes de reatores nucleares devido à sua resistência à corrosão e biocompatibilidade.
+
+67. Carbeto de Titânio (TiC): O carbeto de titânio é um composto cerâmico com alta dureza e resistência à corrosão, sendo usado em revestimentos de combustível nuclear e componentes de reatores.
+
+68. Ligas de Níquel-Cobalto (Ni-Co): As ligas de níquel-cobalto possuem alta resistência à corrosão e são usadas em componentes de reatores nucleares, como vasos de pressão e tubos de combustível.
+
+69. Ligas de Alumínio-Zinco (Al-Zn): As ligas de alumínio-zinco são conhecidas por sua resistência à corrosão e baixa densidade, sendo utilizadas em componentes estruturais de reatores nucleares.
+
+70. Ligas de Ferro-Nióbio (Fe-Nb): As ligas de ferro-nióbio são usadas em componentes de reatores nucleares devido à sua resistência mecânica e capacidade de absorver nêutrons, ajudando a regular a reação em cadeia.
+
+71. Óxido de Urânio (UO2): O óxido de urânio é o principal combustível utilizado em reatores nucleares de fissão. É um material cerâmico que contém urânio enriquecido, capaz de sustentar a reação em cadeia.
+
+72. Ligas de Níquel-Ferro (Ni-Fe): As ligas de níquel-ferro são utilizadas em reatores nucleares devido à sua alta resistência à corrosão e capacidade de suportar altas temperaturas.
+
+73. Carbetos Reforçados com Silício (SiC): Os carbetos reforçados com silício são materiais cerâmicos de alta resistência utilizados como revestimento de combustível nuclear, devido à sua capacidade de suportar altas temperaturas e altos fluxos de nêutrons.
+
+74. Ligas de Tungstênio-Rênio (W-Re): As ligas de tungstênio-rênio são utilizadas em componentes de reatores nucleares devido à sua alta resistência à temperatura, baixa taxa de fluência e boa resistência à corrosão.
+
+75. Óxido de Berílio (BeO): O óxido de berílio é um material cerâmico usado em reatores nucleares como um moderador de nêutrons, ajudando a controlar a reação em cadeia.
+
+76. Ligas de Cobre-Berílio (Cu-Be): As ligas de cobre-berílio são utilizadas em reatores nucleares devido à sua alta condutividade térmica, baixa taxa de absorção de nêutrons e resistência à corrosão.
+
+77. Ligas de Titânio-Zircônio (Ti-Zr): As ligas de titânio-zircônio são usadas em componentes estruturais de reatores nucleares devido à sua alta resistência à corrosão e baixa taxa de absorção de nêutrons.
+
+78. Ligas de Níquel-Tungstênio (Ni-W): As ligas de níquel-tungstênio são utilizadas em reatores nucleares como revestimento de combustível, devido à sua resistência à corrosão e capacidade de suportar altas temperaturas.
+
+79. Óxido de Zircônio (ZrO2): O óxido de zircônio é um material cerâmico usado como revestimento de combustível nuclear devido à sua alta resistência térmica e baixa taxa de absorção de nêutrons.
+
+80. Ligas de Titânio-Molibdênio (Ti-Mo): As ligas de titânio-molibdênio são usadas em reatores nucleares devido à sua resistência à corrosão e baixa taxa de absorção de nêutrons.
+
+81. Carboneto de Silício (SiC): O carboneto de silício é um composto cerâmico utilizado como material refratário em reatores nucleares de alta temperatura. Possui alta resistência mecânica e estabilidade química.
+
+82. Ligas de Níquel-Cromo (Ni-Cr): As ligas de níquel-cromo são utilizadas em reatores nucleares devido à sua resistência à oxidação e capacidade de suportar altas temperaturas.
+
+83. Óxido de Magnésio (MgO): O óxido de magnésio é um material cerâmico usado como revestimento de combustível nuclear, devido à sua resistência à corrosão e baixa taxa de absorção de nêutrons.
+
+84. Ligas de Tungstênio-Cobre (W-Cu): As ligas de tungstênio-cobre são usadas em reatores nucleares como materiais de alta condutividade térmica e elétrica, além de possuírem boa resistência à radiação.
+
+85. Nitreto de Alumínio (AlN): O nitreto de alumínio é um composto cerâmico utilizado em reatores nucleares como revestimento de combustível, devido à sua alta condutividade térmica e resistência à corrosão.
+
+86. Ligas de Níquel-Molibdênio (Ni-Mo): As ligas de níquel-molibdênio são utilizadas em reatores nucleares devido à sua alta resistência à corrosão e capacidade de suportar ambientes de alta temperatura.
+
+87. Ligas de Tungstênio-Ródio (W-Rh): As ligas de tungstênio-ródio são usadas em reatores nucleares como revestimento de combustível, devido à sua alta resistência à corrosão e estabilidade em altas temperaturas.
+
+88. Óxido de Zinco (ZnO): O óxido de zinco é um material cerâmico usado em reatores nucleares como material absorvedor de nêutrons, ajudando a controlar a reação em cadeia.
+
+89. Ligas de Tungstênio-Molibdênio (W-Mo): As ligas de tungstênio-molibdênio são utilizadas em reatores nucleares devido à sua alta resistência mecânica, estabilidade térmica e resistência à corrosão.
+
+90. Ligas de Titânio-Alumínio (Ti-Al): As ligas de titânio-alumínio são usadas em reatores nucleares como materiais estruturais, devido à sua resistência mecânica, baixa absorção de nêutrons e alta resistência à corrosão.
+
+91. Óxido de Alumínio Dopado com Ítrio (Yttria-Stabilized Zirconia - YSZ):
+     O óxido de alumínio dopado com ítrio é um material cerâmico usado em reatores nucleares como revestimento de combustível,
+      devido à sua alta resistência à corrosão e estabilidade em altas temperaturas.

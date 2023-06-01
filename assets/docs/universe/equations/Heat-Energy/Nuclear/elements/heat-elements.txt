@@ -1,0 +1,108 @@
+Barium
+Plutonium
+Polonium
+Carbon
+Vanadium
+Tantalum
+Inconel
+Magnesium
+Chromium
+Osmium
+Rhenium
+Palladium
+Ruthenium,
+Tantalum Hafnium Carbide:(Ta4HfC5)
+Cermet
+Boron Nitride (BN)
+Yttrium
+Barium
+Europium
+Manganese
+
+Copper Oxide (YBCO)
+Beryllium Oxide (BeO)
+Aluminum Oxide (Al2O3)
+Yttrium Barium Copper Oxide (YBCO)
+Tungsten-Lanthanum Oxide (W-La2O3)
+Zinc Oxide (ZnO)
+Yttrium Barium Copper Oxide (YBCO)
+
+Magnesium Diboride (MgB2
+Zirconium Diboride (ZrB2)
+Zirconium Carbide (ZrC)
+Silicon Carbide (SiC)
+Vanadium Carbide (VC)
+Chromium Carbide (Cr3C2)
+Tungsten Carbide (WC):
+Tantalum Carbide (TaC)
+
+Boron Nitride (BN)
+Silicon Nitride (Si3N4)
+Titanium Nitride (TiN)
+Aluminum Nitride (AlN)
+
+Samarium-Cobalt (SmCo) Magnet
+Samarium Titanate (Sm2Ti2O7)
+Nitinol (Nickel-Titanium)
+
+Silicon-Graphite Composites
+carbon-fiber-reinforced 
+
+Molybdenum
+Thorium
+Americium
+Samarium
+Boro
+Deuterium
+Tritium
+Berkelium
+americium
+Lithio-4/6/7
+Helium-3/4
+Niobium
+
+Niobium-Titanium (Nb-Ti) Superconductor
+Tantalum-Hafnium-Carbide (Ta-Hf-C) Composite
+Titanium-Silicon Carbide (Ti-SiC) Composite:
+Lanthanum Hexaboride (LaB6)
+Tungsten-Lanthanum Oxide (W-La2O3) Composite
+Samarium-Cobalt (SmCo) Magnet
+
+Beryllium
+Tungsten
+Molybdenum
+Graphene
+Titanium
+Iron
+Ceramics
+Copper
+Stainless Steel
+Nickel
+Titanium Aluminides
+alumina (Al2O3)
+TZM (titanium-zirconium-molybdenum)
+
+Hastelloy alloys
+Copper-Chromium (CuCr) Alloy
+Tungsten-Titanium (W-Ti) Alloy
+Tungsten-Copper Alloy
+Tungsten-Rhenium Alloy
+Tungsten-Zirconium (W-Zr) Alloy
+Tantalum-Lithium (Ta-Li) Alloy:
+Nickel-Based Superalloys
+Nickel-Titanium (Ni-Ti) Alloy
+Cobalt-Chromium (Co-Cr) Alloy
+Titanium-Aluminum (Ti-Al) Alloy
+Platinum-Rhodium (Pt-Rh) Alloy
+Tungsten-Rhenium-Iridium (W-Re-Ir) Alloy
+Nickel-Chromium (Ni-Cr) Alloy
+Lead-Lithium (Pb-Li) Eutectic Alloy
+Silicon-Aluminum (Si-Al) Alloy
+Titanium-Zirconium-Molybdenum (TZM) Alloy
+Copper-Chromium-Zirconium (Cu-Cr-Zr) Alloy
+Molybdenum-Tungsten (Mo-W) Alloy
+Lithium-Lithium Aluminum Alloy (Li-LiAl): Li-LiAl alloy
+Uranium Alloy-1/2/3
+Zirconium alloys
+Nitinol (Nickel-Titanium)
+Lead-Lithium Alloy: Lead-lithium (Pb-Li)
