@@ -3,3 +3,7 @@
      and static object under the influence of gravity.   
       It provides the theoretical framework for understanding   
        the maximum mass a compact object like a neutron star can have before it collapses into a black hole.  
+
+---------------
+# Scripts
+- [Tolman-Oppenheimer-Volkoff.py](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.py)   
