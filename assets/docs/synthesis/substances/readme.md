@@ -85,4 +85,4 @@
 ---------------
 
 1. Types:  
-   - [Alkalis](./assets/docs/synthesis/substances/types/Alkalis/readme.md)  
+   - [Alkalis](/assets/docs/synthesis/substances/types/Alkalis/readme.md)  
