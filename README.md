@@ -1,4 +1,7 @@
-# Portal of Knowledge  
+# Portal of Knowledge   
+ ![Portal](./portal.png)  
+  
+Guide to Wisdom.  
 One collection of knowledge   
  - utillity tools about:  
       - nuclear elements  
@@ -7,12 +10,34 @@ One collection of knowledge
       - Formation of Materia / Elements  
  
 # Knowledges about the universe  
-  - [Earth](./assets/docs/earth/readme.md)  
-  - [Volcanoes](./assets/docs/earth/earth/volcanoes/readme.md)  
-  - [Anti Matter](./assets/docs/antimatter/readme.md)  
-  - [Nuclear](./assets/docs/nuclear/readme.md)  
-  - [Synthesis](./assets/docs/synthesis/readme.md)  
+- [Earth](./assets/docs/earth/readme.md)  
+ - [Core/Nucleous](./assets/docs/earth/core/readme.md)   
+ - [Volcanoes](./assets/docs/earth/earth/volcanoes/readme.md)  
+- Elements:
+  - [Elements Formation](./assets/docs/earth/elements/formation/readme.md)  
+
+- [Anti Matter](./assets/docs/antimatter/readme.md)  
+- [Nuclear](./assets/docs/nuclear/readme.md)  
+- [Synthesis](./assets/docs/synthesis/readme.md)  
+- [NucleoSynthesis](./assets/docs/nucleosynthesis/readme.md)  
+- [Chemy](./assets/docs/universe/chemy/README.md)   
+   
+- Space:
+  - [BlackHoles](./assets/docs/universe/space/blackholes/readme.md)  
+  - [Singularity of Mass Atoms](./assets/docs/universe/space/blackholes/singularity_mass-atoms.md)  
+  - [Gravitational Collapse](./assets/docs/universe/space/knowledges/Gravitational_Collapse.md)  
+  - [Electron Capture](./assets/docs/universe/space/knowledges/electron_capture.md)    
+  - [Neutron Stars](./assets/docs/universe/space/neutron-stars/readme.md)  
+   
+- [Spatial Researchs:](./assets/docs/universe/spatial/readme.md)
+
+# [Universe Equations](./assets/docs/universe/equations/README.md)   
+- Heat / Energy   
+  - [Heat](./assets/docs/universe/equations/Heat-Energy/Heat/readme.md)   
+  - [Nuclear](./assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)   
+  - [Theoretical Physics](./assets/docs/universe/equations/Theoretical-Physics/readme.md)  
   
+
 # Futuristic Comics:  
 - [SCI-FI](./assets/docs/earth/sci-fi/readme.md)    
     
