@@ -9,3 +9,7 @@
         - [Cosmic-Energy-Canalized](./sci-fi_terra_split/GEG-GAG/Cosmic-Energy-Canalized/readme.md)  
         - [Quantum-Reality-Machines](./sci-fi_terra_split/GEG-GAG/Quantum-Reality-Machines/readme.md)  
         - [Wormholes-Manipulation](./sci-fi_terra_split/GEG-GAG/Wormholes-Manipulation/readme.md)  
+
+# [SCI-IMAGES](/assets/imgs/sci-fi/readme.md)  
+- Multiples Worlds  
+   ![MW](/assets/imgs/sci-fi/Multiple_Worlds.jpg)  
