@@ -78,3 +78,5 @@ It's important to note that creating a neutron star or any other object describe
     Essas são as interpretações básicas de cada variável na equação de TOV.  
      Cada variável desempenha um papel crucial na descrição da estrutura e estabilidade de objetos compactos,  
       como estrelas de nêutrons, e na compreensão dos efeitos da gravidade em escalas extremas.  
+
+![Output Of Formula](./Tolman-Oppenheimer-Volkoff.png)
