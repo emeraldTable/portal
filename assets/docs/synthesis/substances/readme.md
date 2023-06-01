@@ -1,4 +1,4 @@
-[HOME](./README.md)
+[HOME](/README.md)
 # Synthesis of a substance   
   - The synthesis of substances refers to the process of creating new compounds or substances by chemically combining different reactants.    
      It involves a series of chemical reactions that transform the starting materials into the desired product.    
