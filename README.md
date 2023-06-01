@@ -18,10 +18,13 @@ One collection of knowledge
 
 - [Anti Matter](./assets/docs/antimatter/readme.md)  
 - [Nuclear](./assets/docs/nuclear/readme.md)  
+--------------
 - [Synthesis](./assets/docs/synthesis/readme.md)  
+  - [Substances](./assets/docs/synthesis/substances/readme.md)  
+--------------
 - [NucleoSynthesis](./assets/docs/nucleosynthesis/readme.md)  
 - [Chemy](./assets/docs/universe/chemy/README.md)   
-   
+--------------
 - Space:
   - [BlackHoles](./assets/docs/universe/space/blackholes/readme.md)  
   - [Singularity of Mass Atoms](./assets/docs/universe/space/blackholes/singularity_mass-atoms.md)  
@@ -30,27 +33,26 @@ One collection of knowledge
   - [Neutron Stars](./assets/docs/universe/space/neutron-stars/readme.md)  
    
 - [Spatial Researchs:](./assets/docs/universe/spatial/readme.md)
-
+--------------
 # [Universe Equations](./assets/docs/universe/equations/README.md)   
 - Heat / Energy   
   - [Heat](./assets/docs/universe/equations/Heat-Energy/Heat/readme.md)   
   - [Nuclear](./assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)   
 - [Theoretical Physics:](./assets/docs/universe/equations/Theoretical-Physics/readme.md)  
   - [Tolman Oppenheimer Volkoff](./assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)  
-  
-
+--------------
 # Futuristic Comics:  
 - [SCI-FI](./assets/docs/earth/sci-fi/readme.md)    
-    
+--------------
 # [Quantum chromodynamics (QCD)](./assets/addons/python/QCD)  
   - Quantum chromodynamics (QCD)
      indeed a fundamental theory that is part of the standard model of 
       particle physics. It is the theory that describes the strong nuclear 
       force, which is one of the fundamental forces of nature.
-  
+--------------
 # [Molecules Tools](./assets/addons/python/molecules)  
   - [Simple Molecule Generator](./assets/addons/python/molGenerator)  
-
+--------------
 # [Nuclear Docs](./assets/docs/nuclear/)  
 
 # [Nuclear Python](./assets/addons/python/Nuclear/)  
@@ -63,6 +65,7 @@ One collection of knowledge
       The molecules generator included is result of one process in the deep of reactor,  
        that generate elements after your operation  
         faciliting the studies and uses of reactors and other nuclear developments.  
+--------------
 # /dev/  
   - Generator of Molecules: Generate molecules with random generation   
      - Molecules research: uses one cross-site of anonchatgpt to make research,   
@@ -70,7 +73,7 @@ One collection of knowledge
       - IMG > Base64: To convert one image in string base64  
       - CSV Generator: This generate one .CSV that contain the proprierties of your molecule  
       - CSV to HTML: This generate with basis in the .CSV one html visualization of proprierties of molecule  
-  
+--------------
 # Ways to run  
   - Online mode:
     - Acessing: [Portal](https://emeraldtable.github.io/portal/)  
