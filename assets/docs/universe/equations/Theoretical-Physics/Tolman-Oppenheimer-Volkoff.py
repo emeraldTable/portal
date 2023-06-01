@@ -1,10 +1,25 @@
 import math
 
-# Atomic masses of elements
+# Atomic masses of elements used in nuclear fission
 atomic_masses = {
     "plutonium": 244,
     "uranium": 238,
-    "curium": 247
+    "curium": 247,
+    "neptunium": 237,
+    "americium": 243,
+    "berkelium": 247,
+    "californium": 251,
+    "thorium": 232,
+    "protactinium": 231,
+    "actinium": 227,
+    "thallium": 208,
+    "rhenium": 186,
+    "promethium": 145,
+    "terbium": 158,
+    "europium": 152,
+    "holmium": 164,
+    "ytterbium": 173,
+    "lutetium": 175
 }
 
 def calculate_properties(r, m, element):
