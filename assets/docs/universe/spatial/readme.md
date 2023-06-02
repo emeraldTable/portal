@@ -18,5 +18,5 @@ https://data.sdss.org/sas/
 https://aladin.cds.unistra.fr/aladin.gml  
 
 // Web softwares  
-https://stellarium-web.org/
-https://eyes.nasa.gov/apps/orrery/#/home  
+https://stellarium-web.org/  
+https://eyes.nasa.gov/apps/orrery/#/home    
