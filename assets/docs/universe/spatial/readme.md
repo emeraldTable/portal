@@ -16,3 +16,6 @@ https://www.eso.org/sci/data-access.html
 https://www.sdss.org/  
 https://data.sdss.org/sas/  
 https://aladin.cds.unistra.fr/aladin.gml  
+
+// Web softwares  
+https://stellarium-web.org/
