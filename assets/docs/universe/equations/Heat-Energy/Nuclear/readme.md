@@ -1,5 +1,5 @@
-[HOME](/README.md) / [Fission](./fission.md)  
-  
+[HOME](/README.md) / [Fission](/assets/docs/universe/equations/Heat-Energy/Nuclear/fission/readme.md)  / [Fusion](/assets/docs/universe/equations/Heat-Energy/Nuclear/fusion/readme.md) / [Elements](/assets/docs/universe/equations/Heat-Energy/Nuclear/elements/readme.md)  
+   
 Nuclear Equations merge one sequence of principiles and complex equations of nuclear physic
 Here have one of the enumerous equations and human fundamental concepts
 Relationed about Nuclear Equations:
