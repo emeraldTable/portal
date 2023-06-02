@@ -1,3 +1,7 @@
+[HOME](/README.md)  
+
+---------------------
+
 # Alkalis 
   - are substances that produce alkaline or basic solutions when dissolved in water.  
      They are typically hydroxides or oxides of metals.    
