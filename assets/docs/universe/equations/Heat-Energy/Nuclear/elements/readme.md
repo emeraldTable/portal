@@ -68,7 +68,7 @@ Ligas metálicas:
 - Lead-Lithium Alloy   
 - Zirconium alloys    
 - Nitinol (Nickel-Titanium)   
-- Uranium Amalgam (Uranium + Mercury) 
+- [Uranium Amalgam (Uranium + Mercury)](/assets/docs/universe/chemy/Elements/alloy/about/uranium-amalgam.md)  
   
 Outros elementos:   
 - Ceramics (Cerâmicas)    
