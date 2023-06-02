@@ -1,3 +1,4 @@
+[HOME](/README.md)  / [Alloy List](./alloylist.md)   
 # Alloys   
   - Are metallic substances composed of a mixture of two or more elements, where at least one of the elements is a metal.    
      Alloys are typically created to enhance the properties of the base metal or to introduce new properties that    
