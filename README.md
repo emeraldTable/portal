@@ -21,6 +21,8 @@ One collection of knowledge
 --------------
 - [Synthesis](./assets/docs/synthesis/readme.md)  
   - [Substances](./assets/docs/synthesis/substances/readme.md)  
+  - Substances Types / Elements Formation:
+   - [Alkalis](./assets/docs/synthesis/substances/readme.md)  
 --------------
 - [NucleoSynthesis](./assets/docs/nucleosynthesis/readme.md)  
 - [Chemy](./assets/docs/universe/chemy/README.md)   
