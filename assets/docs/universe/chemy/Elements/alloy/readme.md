@@ -1,4 +1,7 @@
 [HOME](/README.md)  / [Alloy List](./alloylist.md)   
+
+----------------
+
 # Alloys   
   - Are metallic substances composed of a mixture of two or more elements, where at least one of the elements is a metal.    
      Alloys are typically created to enhance the properties of the base metal or to introduce new properties that    
@@ -34,3 +37,26 @@
      These are just a few examples, and there are countless other alloys with specific compositions and properties designed for specific purposes.    
       Alloys play a crucial role in modern technology and manufacturing,    
        enabling the production of materials with improved performance characteristics compared to pure metals.   
+
+----------------
+
+- 1. Types:  
+    
+     - Amalgams alloys.  
+        An amalgam is a type of alloy that is formed by combining mercury with one or more other metals.  
+         The resulting material has properties different from those of the individual metals involved.   
+
+        Amalgams have been used for various purposes throughout history, including in dental fillings,  
+         where they have been commonly used to repair cavities.   
+          In dental amalgams, mercury is mixed with other metals such as silver, tin, copper, and sometimes zinc.   
+           This combination creates a durable and malleable material that can be easily shaped to fill cavities and hardens over time.   
+
+
+        The use of dental amalgams has become somewhat controversial due to concerns about the potential health effects of mercury exposure.   
+         However, it's worth noting that dental amalgams have been used for over a century,    
+          and numerous studies have been conducted to assess their safety.    
+           The general consensus among scientific and regulatory bodies,    
+            such as the U.S. Food and Drug Administration (FDA) and the World Health Organization (WHO),    
+             is that dental amalgams are safe for use in most patients, with only a small risk of adverse effects.    
+             
+----------------
