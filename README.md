@@ -26,6 +26,7 @@ One collection of knowledge
 --------------
 - [NucleoSynthesis](./assets/docs/nucleosynthesis/readme.md)  
 - [Chemy](./assets/docs/universe/chemy/README.md)   
+   - [Elements](./assets/docs/universe/chemy/Elements/readme.md)  
 --------------
 - Space:
   - [BlackHoles](./assets/docs/universe/space/blackholes/readme.md)  
