@@ -33,4 +33,4 @@ Understanding the energy equations of the universe involves delving into fundame
      the universe at various scales and in different contexts, such as general relativity, thermodynamics, and cosmology.   
 
 # Equations List:  
- - [1.md](/assets/docs/universe/equations/Heat-Energy/Heat/1.md) =  ΔG° = A + BT |  The Standard Gibbs Free Energy Change  
+ - [1.md](/assets/docs/universe/equations/Heat-Energy/Energy/1.md) =  ΔG° = A + BT |  The Standard Gibbs Free Energy Change  
