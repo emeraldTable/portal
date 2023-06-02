@@ -20,3 +20,5 @@
 
 ---------------------  
 
+#  Equations of Use:  
+ - [The Standard Gibbs Free Energy Change](/assets/docs/universe/equations/Heat-Energy/Energy/1.md)   
