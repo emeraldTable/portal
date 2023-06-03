@@ -1,3 +1,7 @@
+[HOME](/README.md) / [Synthesis](./synthesis/readme.md) / [Equations](./equations/readme.md)  
+   
+-------------------
+
 # Light   
   is a form of electromagnetic radiation that is visible to the human eye.    
    It is a type of energy that travels in the form of waves or particles known as photons.    
@@ -42,3 +46,26 @@ Here are some key aspects of light:
    Understanding light has been crucial for scientific advancements and technological innovations,    
     enabling us to explore the cosmos, communicate over vast distances,     
      and improve our quality of life in numerous ways.    
+
+-------------------
+
+# Photons   
+   are fundamental particles of light.    
+    They are the smallest possible units or "packets" of electromagnetic radiation, which includes all forms of light.   
+     Photons are massless and travel at the speed of light in a vacuum.    
+     Photons have several properties that distinguish them from other particles.      
+      Firstly, they have zero rest mass, meaning they are always moving at the speed of light.    
+       This is due to their unique relationship with electromagnetic radiation.    
+        Photons can exhibit both wave-like and particle-like behavior, known as wave-particle duality.    
+ 
+   The energy of a photon is directly proportional to its frequency and inversely proportional to its wavelength,   
+    according to the equation E = hf, where E is the energy, h is Planck's constant, and f is the frequency.    
+     This relationship implies that photons with higher frequencies (shorter wavelengths) carry more energy.     
+  
+   Photons interact with matter through various processes such as absorption, emission, and scattering.    
+    When a photon is absorbed by an atom or molecule, it can transfer its energy to an electron, promoting it to a higher energy level.    
+     Conversely, an excited electron can release energy in the form of a photon when it returns to a lower energy state.     
+      This emission process is the basis of light emission in various contexts, including lasers and everyday lighting.     
+
+   summary, photons are the elementary particles that make up light and other forms of electromagnetic radiation.      
+    They exhibit both wave and particle properties and carry energy proportional to their frequency.   
