@@ -20,5 +20,5 @@ ax.axis('off')
 for i, radius in enumerate(layer_radii):
     ax.text(0, -radius - 100, f"{layer_names[i]}\n{radius} km", ha='center', fontsize=10)
 
-# Save the image as a PNG file
+# Save the image as a PNG file  
 plt.savefig('earth_layers.png', dpi=300)
