@@ -72,7 +72,11 @@ One collection of knowledge
 --------------
 # [Nuclear Docs](./assets/docs/nuclear/)  
 
-# [Nuclear Python](./assets/addons/python/Nuclear/)  
+---------------
+
+# Python Section:
+
+- [Nuclear Python](./assets/addons/python/Nuclear/)  
 - [Nuclear Weapons](./assets/addons/python/Nuclear/Weapons/)  
   - [Ivy Mike](./assets/addons/python/Nuclear/weapons/ivyMike)   
   
@@ -82,7 +86,14 @@ One collection of knowledge
       The molecules generator included is result of one process in the deep of reactor,  
        that generate elements after your operation  
         faciliting the studies and uses of reactors and other nuclear developments.  
---------------
+- [Earth Dev Section](/assets/addons/python/dev/earth/readme.md)   
+   -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/1.py)  
+
+
+--------------  
+
+ # WEB pages Sections below:   
+ 
 # /dev/  
   - Generator of Molecules: Generate molecules with random generation   
      - Molecules research: uses one cross-site of anonchatgpt to make research,   
