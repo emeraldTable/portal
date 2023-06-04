@@ -72,4 +72,4 @@ ax.set_zlabel("Z")
 ax.set_title("Earth Layers")
 
 # Save the figure as a PNG image
-plt.savefig("earth_layers.png")
+plt.savefig("earth_layers-deep.png")
