@@ -24,10 +24,15 @@ One collection of knowledge
 - [Anti Matter](./assets/docs/antimatter/readme.md)  
 - [Nuclear](./assets/docs/nuclear/readme.md)  
 --------------
+- [Light](./assets/docs/universe/light/readme.md)  
+   - [Synthesis](./assets/docs/universe/light/synthesis/readme.md)  
+   - [Equations](./assets/docs/universe/light/equations/readme.md)  
+--------------
 - [Synthesis](./assets/docs/synthesis/readme.md)  
   - [Substances](./assets/docs/synthesis/substances/readme.md)  
   - Substances Types / Elements Formation:
    - [Alkalis](./assets/docs/synthesis/substances/types/Alkalis/readme.md)  
+   - [Light](./assets/docs/universe/light/synthesis/readme.md)   
 --------------
 - [NucleoSynthesis](./assets/docs/nucleosynthesis/readme.md)  
 - [Chemy](./assets/docs/universe/chemy/README.md)   
@@ -49,6 +54,7 @@ One collection of knowledge
   - [Nuclear](./assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)   
 - [Theoretical Physics:](./assets/docs/universe/equations/Theoretical-Physics/readme.md)  
   - [Tolman Oppenheimer Volkoff](./assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)  
+- [Light:](./assets/docs/universe/light/equations/readme.md)   
 --------------
 # Futuristic Comics:  
 - [SCI-FI](./assets/docs/earth/sci-fi/readme.md)    
