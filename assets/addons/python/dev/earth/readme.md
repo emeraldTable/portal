@@ -9,6 +9,10 @@
 ![img](/assets/addons/python/dev/earth/imgs/distribuicao_massa_pressao.png)   
 
 
-# [Properties of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers.py)    
+# [Properties of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-proprerties.py)    
 
 ![img](/assets/addons/python/dev/earth/imgs/earth_layers_properties.png)   
+
+# [Radius of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-radius.py)    
+
+![img](/assets/addons/python/dev/earth/imgs/earth_layers.png)   
