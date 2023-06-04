@@ -100,4 +100,5 @@ Density: 0.28 kg/m^3
 Pressure: 183842.66 N/m^2     
 dP/dr: -35.06 N/(m^2/m)    
      
-![Cluster](./cluster_properties_lines.png)
+![Cluster](./cluster_properties_lines.png)   
+![Cluster](./cluster_properties_circles.png)   
