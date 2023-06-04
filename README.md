@@ -86,9 +86,12 @@ One collection of knowledge
       The molecules generator included is result of one process in the deep of reactor,  
        that generate elements after your operation  
         faciliting the studies and uses of reactors and other nuclear developments.  
-- [Earth Dev Section](/assets/addons/python/dev/earth/readme.md)   
-   -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/equations/1.py)  
-
+1. [Earth Dev Section](/assets/addons/python/dev/earth/readme.md)   
+ - 1. Equations:   
+                -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/equations/1.py)   
+   
+ - 2. Plot:  
+          - [Chart Properties Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers.py)  
 
 --------------  
 
