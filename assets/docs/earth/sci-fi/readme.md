@@ -10,6 +10,9 @@
         - [Quantum-Reality-Machines](./sci-fi_terra_split/GEG-GAG/Quantum-Reality-Machines/readme.md)  
         - [Wormholes-Manipulation](./sci-fi_terra_split/GEG-GAG/Wormholes-Manipulation/readme.md)  
 
+- 2. [SCI-FI Star Formation:](/assets/docs/earth/sci-fi/sci-fi-StarFormation/readme.md)   
+      - [Core Creation](/assets/docs/earth/sci-fi/sci-fi-StarFormation/readme.md) 
+
 # [SCI-IMAGES](/assets/imgs/sci-fi/readme.md)  
 - Multiples Worlds  
    ![MW](/assets/imgs/sci-fi/Multiple_Worlds.jpg)  
