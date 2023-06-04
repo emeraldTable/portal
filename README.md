@@ -53,7 +53,9 @@ One collection of knowledge
   - [Energy](./assets/docs/universe/equations/Heat-Energy/Energy/readme.md)   
   - [Nuclear](./assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)   
 - [Theoretical Physics:](./assets/docs/universe/equations/Theoretical-Physics/readme.md)  
-  - [Tolman Oppenheimer Volkoff](./assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)  
+  - [Tolman Oppenheimer Volkoff](./assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.md)   
+  - [Ruge-Kutta](./assets/docs/universe/equations/Theoretical-Physics/Runge-Kutta.md)   
+       
 - [Light:](./assets/docs/universe/light/equations/readme.md)   
 --------------
 # Futuristic Comics:  
