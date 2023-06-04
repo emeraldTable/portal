@@ -87,7 +87,7 @@ One collection of knowledge
        that generate elements after your operation  
         faciliting the studies and uses of reactors and other nuclear developments.  
 - [Earth Dev Section](/assets/addons/python/dev/earth/readme.md)   
-   -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/1.py)  
+   -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/equations/1.py)  
 
 
 --------------  
