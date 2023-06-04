@@ -1,4 +1,15 @@
-Enter the number of layers in the cluster: 7
+[HOME](/README.md)  / 
+
+- Script Equations:   
+                   - [Tolman Oppenheimer Volkoff](/assets/docs/earth/sci-fi/sci-fi-StarFormation/python/equations/tov.py)     
+
+----------------------
+
+# Results of research   
+
+----------------
+
+Enter the number of layers in the cluster: 7  
 
 Layer 1:    
 Choose the unit of measurement for the radius (1 for m, 2 for cm, 3 for mm): 2   
