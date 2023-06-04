@@ -16,3 +16,6 @@
 # [Radius of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-radius.py)    
 
 ![img](/assets/addons/python/dev/earth/imgs/earth_layers.png)   
+
+# [Deep of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-deep.py)    
+![img](/assets/addons/python/dev/earth/imgs/earth_layers-deep.png)   
