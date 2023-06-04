@@ -91,7 +91,8 @@ One collection of knowledge
                 -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/equations/1.py)   
    
  - 2. Plot:  
-          - [Chart Properties Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers.py)  
+          - [Chart Properties Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-properties.py)  
+          - [Chart Radius Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-radius.py)   
 
 --------------  
 
