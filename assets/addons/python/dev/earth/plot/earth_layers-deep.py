@@ -71,5 +71,23 @@ ax.set_ylabel("Y")
 ax.set_zlabel("Z")
 ax.set_title("Earth Layers")
 
+# Set up the table with layer names and radii
+table_data = [["Layer", "Radius (km)"]]
+for i in range(len(layer_names)):
+    table_data.append([layer_names[i], layer_radii[i]])
+
+# Create a table at the top right corner of the plot
+table = ax.table(cellText=table_data, loc='upper right', colWidths=[0.2, 0.2], cellLoc='center')
+
+# Add the corresponding color to each layer in the table
+for i in range(1, len(layer_names) + 1):
+    table[i, 0].set_facecolor(layer_colors[i - 1])
+    table[i, 0].set_edgecolor('black')
+
+# Adjust the style of the table
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1, 1.5)
+
 # Save the figure as a PNG image
 plt.savefig("earth_layers-deep.png")
