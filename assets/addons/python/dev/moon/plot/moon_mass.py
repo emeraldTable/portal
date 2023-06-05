@@ -10,19 +10,19 @@ def plotar_massa_lua(massa_terra, massa_lua, distancia_media, periodo_orbital):
     escala_terra = (massa_terra / massa_terra) ** (1/3)  # Escala da Terra (1)
     escala_lua = (massa_lua / massa_terra) ** (1/3)  # Escala da Lua em relação à Terra
 
+
     # Plotar a esfera da Terra
-    ax.scatter(0, 0, 0, color='blue', s=escala_terra**2 * 1000, label='Terra')
+    ax.scatter(distancia_media, 0, 0, color='blue', s=escala_terra**2 * 1000, label='Terra')
 
     # Plotar a esfera da Lua
-    ax.scatter(distancia_media, 0, 0, color='gray', s=escala_lua**2 * 1000, label='Lua')
-
+    ax.scatter(0, 0, 0, color='gray', s=escala_lua**2 * 1000, label='Lua')
     # Configurações adicionais
     ax.set_xlabel('X (km)')
     ax.set_ylabel('Y (km)')
     ax.set_zlabel('Z (km)')
 
     # Adicionar a escala de distância e o período orbital na caixa de texto
-    texto = f'Distância Média: {distancia_media} km\nPeríodo Orbital: {periodo_orbital} dias\nEarth Mass: {massa_terra}\nMoon Mass {massa_lua}'
+    texto = f'Distância Média: {distancia_media} km\nPeríodo Orbital: {periodo_orbital} dias\nEarth Mass: {massa_terra} kg\nMoon Mass {massa_lua} kg'
     ax.text2D(0.02, 0.98, texto, transform=ax.transAxes, ha='left', va='top', bbox={'facecolor': 'white', 'alpha': 0.8})
 
     # Exibir a legenda
