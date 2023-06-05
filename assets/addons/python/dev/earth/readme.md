@@ -19,3 +19,6 @@
 
 # [Deep of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-deep.py)    
 ![img](/assets/addons/python/dev/earth/imgs/earth_layers-deep.png)   
+
+# [Gravitational Acceleration Zone around the Earth](/assets/addons/python/dev/earth/plot/earth_GravitationalAcceleration.py)   
+![img](/assets/addons/python/dev/earth/imgs/gravitational_accelerationzone.png)    
