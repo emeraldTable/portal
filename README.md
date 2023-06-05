@@ -31,10 +31,13 @@ One collection of knowledge
    - [Equations](./assets/docs/universe/light/equations/readme.md)  
 --------------
 - [Synthesis](./assets/docs/synthesis/readme.md)  
-  - [Substances](./assets/docs/synthesis/substances/readme.md)  
-  - Substances Types / Elements Formation:
-   - [Alkalis](./assets/docs/synthesis/substances/types/Alkalis/readme.md)  
-   - [Light](./assets/docs/universe/light/synthesis/readme.md)   
+- [Substances](./assets/docs/synthesis/substances/readme.md)  
+   - Substances Types / Elements Formation:  
+    - [Alkalis](./assets/docs/synthesis/substances/types/Alkalis/readme.md)   
+
+- [Formulas](./assets/docs/synthesis/substances/readme.md)  
+   - [C13 H21 NO2](./assets/docs/synthesis/substances/formulas/syn/1/readme.md)  
+
 --------------
 - [NucleoSynthesis](./assets/docs/nucleosynthesis/readme.md)  
 - [Chemy](./assets/docs/universe/chemy/README.md)   
@@ -61,23 +64,26 @@ One collection of knowledge
   - [Ruge-Kutta](./assets/docs/universe/equations/Theoretical-Physics/Runge-Kutta.md)   
        
 - [Light:](./assets/docs/universe/light/equations/readme.md)   
---------------
-# [Quantum chromodynamics (QCD)](./assets/addons/python/QCD)  
-  - Quantum chromodynamics (QCD)
-     indeed a fundamental theory that is part of the standard model of 
-      particle physics. It is the theory that describes the strong nuclear 
-      force, which is one of the fundamental forces of nature.
---------------
-# [Molecules Tools](./assets/addons/python/molecules)  
-  - [Simple Molecule Generator](./assets/addons/python/molGenerator)  
---------------
+
+-------------
 
 # Python Section:
 - [Nuclear Docs](./assets/docs/nuclear/)   
 - [Nuclear Python](./assets/addons/python/Nuclear/)  
 - [Nuclear Weapons](./assets/addons/python/Nuclear/Weapons/)  
   - [Ivy Mike](./assets/addons/python/Nuclear/weapons/ivyMike)   
-  
+
+- [Quantum chromodynamics (QCD)](./assets/addons/python/QCD)  
+  - Quantum chromodynamics (QCD)
+     indeed a fundamental theory that is part of the standard model of 
+      particle physics. It is the theory that describes the strong nuclear 
+      force, which is one of the fundamental forces of nature.
+
+- [Molecules Tools](./assets/addons/python/molecules)  
+  - [Simple Molecule Generator](./assets/addons/python/molGenerator)  
+
+
+
 - [Reactor](./assets/addons/python/Reactor)  
   - This is one project of Digital Reactor that generate multiples equations math,  
      idealy to use to operate reactors with energy calcs,mass and elements study.  
