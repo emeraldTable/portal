@@ -33,3 +33,13 @@ The InChI (International Chemical Identifier) is a unique textual representation
   The InChIKey is a condensed version of the InChI that provides a shorter unique identifier for the compound.      
     
 If you have any specific questions or if there's anything else I can assist you with, please let me know!     
+
+-------------
+
+- Structural Formula:   
+     
+![img](/assets/docs/synthesis/substances/formulas/syn/1/imgs/MolView%20(structural%20formula).png)         
+   
+- Molecule Viwew:   
+    
+![img](/assets/docs/synthesis/substances/formulas/syn/1/imgs/MolView%20(model).png)     
