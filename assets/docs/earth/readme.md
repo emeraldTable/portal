@@ -22,7 +22,29 @@
         A nutação é um fenômeno importante na astronomia, pois afeta a posição dos polos da Terra e pode influenciar a precisão das medições astronômicas
 #####  
   - External Citations: [1](https://astro.vaporia.com/start/nutation.html)  [2](https://www.daviddarling.info/encyclopedia/N/nutation.html) [3](https://en.wikipedia.org/wiki/Astronomical_nutation)  
--------------------------------
+-------------------------------   
+
+# [Equation of Distribution of Mass/ Pression over The Earth](/assets/addons/python/dev/earth/equations/1.py)    
+     
+![img](/assets/addons/python/dev/earth/imgs/distribuicao_massa_pressao.png)   
+
+
+# [Properties of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-proprerties.py)    
+
+![img](/assets/addons/python/dev/earth/imgs/earth_layers_properties.png)   
+
+# [Radius of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-radius.py)    
+
+![img](/assets/addons/python/dev/earth/imgs/earth_layers.png)   
+
+# [Deep of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-deep.py)    
+![img](/assets/addons/python/dev/earth/imgs/earth_layers-deep.png)   
+
+# [Gravitational Acceleration Zone around the Earth](/assets/addons/python/dev/earth/plot/earth_GravitationalAcceleration.py)    
+- Each Scale point represent: 12742 Meters   
+  
+![img](/assets/addons/python/dev/earth/imgs/gravitational_accelerationzone.png)    
+
 # Knowledges:
  - [SCI-FI](./assets/docs/earth/sci-fi/readme.md)  
  - [Volcanoes](./assets/docs/earth/volcanoes/readme.md)  
