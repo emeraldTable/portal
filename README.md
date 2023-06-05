@@ -37,6 +37,7 @@ One collection of knowledge
 
 - [Formulas](./assets/docs/synthesis/substances/readme.md)  
    - [C13 H21 NO2](./assets/docs/synthesis/substances/formulas/syn/1/readme.md)  
+   - [C20 H25 NO4](./assets/docs/synthesis/substances/formulas/syn/2/readme.md)  
 
 --------------
 - [NucleoSynthesis](./assets/docs/nucleosynthesis/readme.md)  
