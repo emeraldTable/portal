@@ -40,3 +40,8 @@ The structure can be divided into different components:
           This notation suggests the presence of a hydrogen atom,      
            possibly attached to one of the atoms in the structure.   
 
+- Formula viwew:  
+![img](/assets/docs/synthesis/substances/formulas/syn/2/imgs/MolView%20(structural%20formula).png)   
+
+- Molecule Viwew:  
+![img](/assets/docs/synthesis/substances/formulas/syn/2/imgs/MolView%20(model).png)    
