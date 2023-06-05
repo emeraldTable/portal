@@ -5,8 +5,9 @@
 # Earth Dev Section
 
 # [Equation of Distribution of Mass/ Pression over The Earth](/assets/addons/python/dev/earth/equations/1.py)    
-     
+- [Script 1) Distribution of mass / pression based in radius and density:](/assets/addons/python/dev/earth/plot/earth_MassDistribution.py)    
 ![img](/assets/addons/python/dev/earth/imgs/distribuicao_massa_pressao.png)    
+- [Script 2) Distribution of mass / pression based in radius and density:](/assets/addons/python/dev/earth/plot/earth_MassPression.py)    
 ![img](/assets/addons/python/dev/earth/imgs/mass_pressure_graph.png)    
 
 # [Properties of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-proprerties.py)    
