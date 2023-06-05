@@ -43,3 +43,72 @@ If you have any specific questions or if there's anything else I can assist you 
 - Molecule Viwew:   
     
 ![img](/assets/docs/synthesis/substances/formulas/syn/1/imgs/MolView%20(model).png)     
+
+- 3,4-Dimethyl-2,5-dimethoxyamphetamine (commonly known as 3,4-Dimethyl-2,5-DMA or Methyl-MA)   
+   is a chemical compound with the molecular formula C12H19NO2.    
+    It belongs to the class of substituted amphetamines and is a derivative of the phenethylamine family.    
+     Here is some additional information about this compound:     
+  
+     Systematic name: 1-(3,4-Dimethylphenyl)-2-aminopropane-1,4-diol     
+   
+     Chemical structure:     
+
+```  
+   H   H
+   |   |
+H3C-C-C-CH2-NH2
+   |   |
+   H   OCH3
+      |
+      CH3
+```
+
+Properties:   
+- Molecular weight: 209.29 g/mol    
+- Physical appearance:   
+   The physical appearance of the compound may vary depending on its form (e.g., solid, liquid, or powder).    
+   
+- Solubility:   
+   The compound's solubility can vary depending on the specific form and the solvent used.     
+
+- Effects and Pharmacology:    
+   As a substituted amphetamine, 3,4-Dimethyl-2,5-dimethoxyamphetamine is  
+    known to have stimulant and hallucinogenic properties.    
+     Its effects on the human body and mind can vary, and it is considered a psychoactive substance.    
+      The compound interacts with various receptors in the brain,    
+       including dopamine and serotonin receptors, leading to its psychoactive effects.    
+       
+- Legal Status:    
+   The legal status of 3,4-Dimethyl-2,5-dimethoxyamphetamine can vary from country to country.   
+    In many jurisdictions,     
+     it is classified as a controlled substance due to its psychoactive effects and potential for abuse.    
+
+1. Ariadne:   
+    Ariadne is a compound associated with the molecular formula C13H21NO2.   
+     It is described in the book "PiHKAL:   
+      A Chemical Love Story" by Dr. Alexander Shulgin and Ann Shulgin.   
+       However, specific information about its properties or effects is not readily available.    
+
+2. Beatrice:    
+    Beatrice, also known as 2,5-Dimethoxy-4,N-dimethylamphetamine and N-Methyl-DOM, is a psychedelic compound.      
+     It is included in the book "PiHKAL" and is known for its hallucinogenic effects.    
+      Its molecular formula is C13H21NO2.     
+
+3. Ganesha:   
+    Ganesha is another compound associated with the molecular formula C13H21NO2.   
+     It is also known as 3,4-Dimethyl-2,5-dimethoxyamphetamine.   
+      Ganesha is a hallucinogenic compound and is classified as a phenethylamine derivative.    
+       Its effects on the human body and mind are similar to other psychedelic substances.     
+
+4. 2,5-Dimethoxy-4-ethylamphetamine:    
+    This compound is also referred to as DOET or Hecate.    
+     It falls under the class of amphetamine derivatives and is characterized by its hallucinogenic effects.    
+      Its molecular formula is C13H21NO2.    
+
+It's important to note that compounds with psychedelic properties can   
+ have significant effects on the mind and body.   
+  These substances may be subject to legal restrictions and should be used with caution.    
+   This information is provided for educational purposes only and   
+    should not be interpreted as an endorsement or encouragement of any illegal or harmful activities.     
+   
+If you have any further questions or need more information, feel free to ask.
