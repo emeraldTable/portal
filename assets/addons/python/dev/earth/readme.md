@@ -6,8 +6,8 @@
 
 # [Equation of Distribution of Mass/ Pression over The Earth](/assets/addons/python/dev/earth/equations/1.py)    
      
-![img](/assets/addons/python/dev/earth/imgs/distribuicao_massa_pressao.png)   
-
+![img](/assets/addons/python/dev/earth/imgs/distribuicao_massa_pressao.png)    
+![img](/assets/addons/python/dev/earth/imgs/mass_pressure_graph.png)    
 
 # [Properties of Each Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-proprerties.py)    
 
