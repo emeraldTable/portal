@@ -65,3 +65,25 @@ Space missions such as NASA's Apollo missions and the Chinese Chang'e mission ha
            providing evidence that water ice may exist in permanently shadowed areas.      
      
 These are just some of the information obtained through space missions until my knowledge was updated in September 2021. It is important to note that lunar research is constantly evolving, and new discoveries and missions may bring more knowledge about the Moon in the future.
+
+# Gravity   
+  The Moon has gravity due to its mass.      
+   Gravity is a force that pulls objects towards the center of mass of a body.      
+    The greater the mass of an object, the greater its gravity.    
+    
+   Although the Moon is much smaller than Earth, it still has significant mass.     
+    The Moon's gravitational pull is about 1/6 of Earth's gravity.      
+     This means that an object on the Moon's surface weighs about 1/6 of what it would on Earth's surface.     
+
+   The Moon's gravity is essentially produced by its mass concentrated in its core and distributed throughout its structure.       
+    Any object with mass exerts a gravitational pull on other objects around it.     
+     The force of gravity depends on the mass of the objects involved and the distance between them.     
+  
+   It is important to note that gravity is not unique to the Moon.     
+    All objects with mass in the universe have some form of gravity.      
+     Earth, other planets, stars and even galaxies all have their own gravity.     
+      In the solar system, the Sun's gravity is dominant and influences the motions of the planets, including the Moon's orbit around the Earth.      
+
+   The presence of gravity on the Moon is essential for maintaining its orbit around Earth,     
+    as well as for influencing the movement of objects on its surface, including crater formation, rock movement, and influencing Earth's tides.     
+     Gravity also has significant implications for future space missions and lunar exploration.      
