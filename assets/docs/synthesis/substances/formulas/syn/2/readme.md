@@ -45,3 +45,19 @@ The structure can be divided into different components:
 
 - Molecule Viwew:  
 ![img](/assets/docs/synthesis/substances/formulas/syn/2/imgs/MolView%20(model).png)    
+
+Codamine and laudanine are two different compounds, not alternative names for the same compound.   
+ Let's clarify their identities:   
+
+   - 1. Codamine:   
+          Codamine is a norlaudanosoline alkaloid.   
+           It belongs to a class of naturally occurring compounds found in certain plants.      
+            Unfortunately, I don't have specific information on codamine beyond its classification as a norlaudanosoline alkaloid.   
+
+   - 2. Laudanine:   
+          Laudanine is also a norlaudanosoline alkaloid.    
+           It is a functionally related compound to codamine.    
+            Norlaudanosoline alkaloids share a similar chemical structure, characterized by a norlaudanosoline core skeleton.      
+
+While I don't have extensive details about the specific properties or effects of codamine or laudanine,    
+ I can provide general information about norlaudanosoline alkaloids if you're interested.   
