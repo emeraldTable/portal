@@ -87,3 +87,8 @@ These are just some of the information obtained through space missions until my 
    The presence of gravity on the Moon is essential for maintaining its orbit around Earth,     
     as well as for influencing the movement of objects on its surface, including crater formation, rock movement, and influencing Earth's tides.     
      Gravity also has significant implications for future space missions and lunar exploration.      
+
+# Mass Representation  
+  - [Moon Mass / plot script](/assets/addons/python/dev/moon/plot/moon_mass.py)    
+
+     ![img](/assets/addons/python/dev/moon/plot/imgs/massa_lua.png)   
