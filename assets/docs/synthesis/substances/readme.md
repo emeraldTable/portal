@@ -86,3 +86,8 @@
 
 1. Types:  
    - [Alkalis](/assets/docs/synthesis/substances/types/Alkalis/readme.md)  
+
+
+2. Synthetic Formulas:  
+   - [C13H21NO2 / 2,5-Dimethoxy-4,N-dimethylamphetamine and N-Methyl-DOM](/assets/docs/synthesis/substances/formulas/syn/1/readme.md)   
+   - [C20H25NO4 / Laudenine,Codamine](/assets/docs/synthesis/substances/formulas/syn/2/readme.md)     
