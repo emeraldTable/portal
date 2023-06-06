@@ -33,24 +33,48 @@
          The coolant transfers its heat to a secondary system without coming into direct contact with it.   
           The secondary system then produces steam to drive the turbine.    
 
-   3. Types of Reactors:    
-       There are several types of nuclear reactors, including:   
-        - Pressurized Water Reactor (PWR):   
-           Water acts as both the coolant and moderator.   
-            It operates at high pressure to prevent the water from boiling.   
+--------------------
+
+ # 3. Types of Reactors:    
+   There are several types of nuclear reactors, including:   
+        
+# Pressurized Water Reactor (PWR):   
+   Water acts as both the coolant and moderator.   
+    It operates at high pressure to prevent the water from boiling.   
+                
+   ![img](/assets/docs/nuclear/reactors/imgs/400px-PressurizedWaterReactor.gif)           
+
+--------------------
+
+ # Boiling Water Reactor (BWR):   
+   Water serves as both the coolant and moderator.   
+    It boils in the reactor core, and the resulting steam directly powers the turbine.  
+
+   ![img](/assets/docs/nuclear/reactors/imgs/BoilingWaterReactor.gif)                
+   [Source image](https://upload.wikimedia.org/wikipedia/commons/4/4a/BoilingWaterReactor.gif)  
+
+--------------------
+
+ # Heavy Water Reactor (HWR):   
+  Uses heavy water (deuterium oxide) as both the coolant and moderator.  
            
-        - Boiling Water Reactor (BWR):   
-           Water serves as both the coolant and moderator.   
-            It boils in the reactor core, and the resulting steam directly powers the turbine.  
-            
-        - Heavy Water Reactor (HWR):   
-           Uses heavy water (deuterium oxide) as both the coolant and moderator.  
+   ![img](/assets/docs/nuclear/reactors/imgs/PressurizedHeavyWaterReactor.jpg)                
+
+--------------------
+
+ # Gas-Cooled Reactor (GCR):  
+   Utilizes carbon dioxide or helium gas as the coolant.  
            
-        - Gas-Cooled Reactor (GCR):  
-           Utilizes carbon dioxide or helium gas as the coolant.  
-           
-       - Liquid Metal Fast Breeder Reactor (LMFBR):   
-          Uses liquid sodium or a sodium-potassium alloy as the coolant.   
+   ![img](/assets/docs/nuclear/reactors/imgs/NuclearReactorAdvancedGas-cooledReactor.jpg)                
+
+--------------------
+
+# Liquid Metal Fast Breeder Reactor (LMFBR):   
+  Uses liquid sodium or a sodium-potassium alloy as the coolant.   
+
+   ![img](/assets/docs/nuclear/reactors/imgs/FastBreederReactors.jpg)                
+
+--------------------
 
    4. Safety:   
        Nuclear reactors incorporate various safety features and protocols to prevent accidents and mitigate potential risks.    
