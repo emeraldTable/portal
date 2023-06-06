@@ -29,7 +29,6 @@ Please consult a healthcare professional or a trusted medical source for more in
 - Molecule View:   
 ![img](/assets/docs/synthesis/substances/formulas/syn/3/imgs/MolView%20(model).png)   
 
--------
 
 One substance with the molecular formula C21H24NO2 is known as "LSD" or lysergic acid diethylamide.   
  LSD is a powerful hallucinogenic drug that belongs to the class of compounds called ergolines.   
@@ -41,3 +40,25 @@ LSD is typically consumed orally and can induce profound alterations in percepti
 
 It's important to note that the use of LSD is illegal in many countries and can carry serious legal and health consequences.     
  This information is provided for educational purposes only and does not promote or endorse the use of illegal substances.   
+
+-------
+
+# Custom Formula Producing C25H33NO2:  
+- Formula Structural:   
+![img](/assets/docs/synthesis/substances/formulas/syn/3/imgs/MolView%20(structural%20formula)2.png)  
+
+- Molecule View:   
+![img](/assets/docs/synthesis/substances/formulas/syn/3/imgs/MolView%20(model)2.png) 
+
+substânces that have the chemy formula C25H33NO2.
+
+1. N-Acetilfenciclidina (N-Acetylphenylcyclohexylamine, ou "PCE")
+2. Difenilciclopropilamina (Diphenylcyclopropylamine)
+3. 2-(4-bromofenil)-N-metilanfetamina (2-(4-Bromophenyl)-N-methylamphetamine)
+4. 1-(1,3-benzodioxol-5-il)-2-(terc-butilamino)pentan-1-ona (1-(1,3-Benzodioxol-5-yl)-2-(tert-butylamino)pentan-1-one, ou "Butylone")
+5. N-Phenyl-N-[1-(2-phenylethyl)piperidin-4-yl]propanamide
+6. 2,5-Dimethoxy-4-(n)-propylthiophenethylamine (2C-T-7)
+7. 4-Methoxy-N-(2-methylphenyl)benzenesulfonamide
+8. 2-(4-bromofenil)-N-metilanfetamina (2-(4-Bromophenyl)-N-methylamphetamine)
+
+-------
