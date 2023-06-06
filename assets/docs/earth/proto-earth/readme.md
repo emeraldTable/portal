@@ -63,13 +63,7 @@
         This collision caused a significant portion of the proto-Earth's mantle and material from Theia to be ejected into space.      
          Over time, this debris coalesced to form the Moon.     
 
-  11. Proto-Earth Formation:   
-       Over millions of years, planetesimals continued to collide and merge, forming a growing body known as the proto-Earth.       
-        This process is called accretion.       
-         The proto-Earth's gravity further attracted other objects in its vicinity,     
-          including other planetesimals and smaller bodies, contributing to its growth.      
-
-  12. Final Stages:    
+  11. Final Stages:    
        As the proto-Earth continued to accumulate material, its gravity became stronger,      
         attracting more gas and dust from the protoplanetary disk.    
          Eventually,    
