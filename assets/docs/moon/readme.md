@@ -135,3 +135,22 @@ These are just some of the information obtained through space missions until my 
   - [Moon Mass / plot script](/assets/addons/python/dev/moon/plot/moon_mass.py)    
      
      ![img](/assets/addons/python/dev/moon/plot/imgs/moon_mass.png)   
+
+The Moon's formation is not directly related to stellar nucleosynthesis.    
+ The Moon is believed to have formed as a result of a giant impact between a Mars-sized body called Theia and the early Earth,   
+  approximately 4.5 billion years ago.    
+
+The prevailing theory, known as the Giant Impact Hypothesis, suggests that during the early stages of the Solar System's formation,     
+ a Mars-sized object collided with the proto-Earth.     
+  This impact was incredibly violent and resulted in the ejection of a large amount of debris from both bodies into space.     
+   Over time, this debris coalesced to form the Moon.      
+
+The Moon's composition is primarily composed of silicate rocks, similar to the Earth's mantle.     
+ It consists of materials such as oxygen, silicon, magnesium, iron, and aluminum,    
+  which are common elements found in terrestrial rocks.     
+
+The nucleosynthesis of the elements found in the Moon, including oxygen, silicon, and iron,   
+ can be traced back to the processes that occurred in the cores of massive stars through [stellar nucleosynthesis](/assets/docs/nucleosynthesis/stellar-nucleosynthesis/readme.md).     
+  These elements were created in the interiors of stars during their lifetimes through fusion reactions.     
+   However,   
+    it is important to note that the Moon's formation itself is not a product of stellar nucleosynthesis but rather a result of the giant impact event.    
