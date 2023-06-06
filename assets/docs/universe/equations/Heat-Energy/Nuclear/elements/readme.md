@@ -1,3 +1,7 @@
+[HOME](/README.md) / [Nuclear Equations](/assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md) / [Nuclear](/assets/docs/nuclear/readme.md)   
+
+-------------------
+
 Elements separated by categories:  
 
 Metais alcalino-terrosos:  
