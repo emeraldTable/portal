@@ -31,9 +31,18 @@
 It is important to note that the information provided here is for educational purposes only and should not replace professional medical advice.    
  If you or someone you know is struggling with substance abuse or addiction,     
   it is crucial to seek help from healthcare professionals or addiction specialists.   
-
+# Original to produce C10H15N:
 - Structural view:  
 ![img](/assets/docs/synthesis/substances/formulas/syn/4/imgs/MolView%20(structural%20formula).png)  
 
 - Molecule view:  
 ![img](/assets/docs/synthesis/substances/formulas/syn/4/imgs/MolView%20(model).png)  
+
+
+----------------------
+# Modified to produce C13H20N2:
+- Formula Structural:   
+![img](/assets/docs/synthesis/substances/formulas/syn/4/imgs/MolView%20(structural%20formula)2.png)  
+
+- Molecule View:   
+![img](/assets/docs/synthesis/substances/formulas/syn/4/imgs/MolView%20(model)2.png) 
