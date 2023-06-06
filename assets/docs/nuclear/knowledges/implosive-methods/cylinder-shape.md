@@ -1,4 +1,8 @@
-First implosive method to Nuclear fission:
+[HOME](/README.md) / [Nuclear](/assets/docs/nuclear/readme.md)   
+
+----------------------------------
+
+# First implosive method to Nuclear fission:
 
 To mount the cylinder to the implosive method of nuclear fission using the two-point linear implosion design,
 the nuclear fuel is cast into a solid shape and placed within the center of a cylinder of high explosive.
