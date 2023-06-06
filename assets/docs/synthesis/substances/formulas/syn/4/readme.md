@@ -46,3 +46,15 @@ It is important to note that the information provided here is for educational pu
 
 - Molecule View:   
 ![img](/assets/docs/synthesis/substances/formulas/syn/4/imgs/MolView%20(model)2.png) 
+
+Substances that have the Original formula C13H20N2:   
+   - Phenmetrazine is a substance that has the chemical formula C13H20N2.     
+      It is a central nervous system stimulant that acts as an appetite suppressant.     
+       Phenmetrazine was used in the past as a medication to aid weight loss,     
+        but is currently banned in many countries due to its potential for abuse and adverse side effects.     
+         Phenmetrazine stimulates the release of neurotransmitters such as dopamine, norepinephrine and serotonin,    
+          resulting in stimulant and appetite suppressant effects.   
+           However, due to the risks associated with its use,  
+            phenmetrazine is no longer widely available for medical use and is considered a controlled substance in many countries.   
+           
+--------------
