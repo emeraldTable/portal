@@ -1,4 +1,4 @@
-# Methamphetamine, 
+# Methamphetamine = C10H15N, 
    commonly known as meth, is a powerful central nervous system (CNS) stimulant.    
     It belongs to a class of drugs called amphetamines and is chemically similar to amphetamine.   
      Methamphetamine is a highly addictive substance that produces euphoria, increased energy, and heightened focus.    
@@ -32,3 +32,8 @@ It is important to note that the information provided here is for educational pu
  If you or someone you know is struggling with substance abuse or addiction,     
   it is crucial to seek help from healthcare professionals or addiction specialists.   
 
+- Structural view:  
+![img](/assets/docs/synthesis/substances/formulas/syn/4/imgs/MolView%20(structural%20formula).png)  
+
+- Molecule view:  
+![img](/assets/docs/synthesis/substances/formulas/syn/4/imgs/MolView%20(model).png)  
