@@ -33,3 +33,13 @@ It's important to note that while I strive to provide accurate and up-to-date in
   Therefore,    
    it's always recommended to consult reliable sources and healthcare professionals for specific information about medications and their uses.    
 
+----------------------
+# Modified to produce C17H36N2:
+- Formula Structural:   
+![img](/assets/docs/synthesis/substances/formulas/syn/5/imgs/MolView%20(structural%20formula)2.png)  
+
+- Molecule View:   
+![img](/assets/docs/synthesis/substances/formulas/syn/5/imgs/MolView%20(model)2.png) 
+
+- Formula Structural 2:   
+![img](/assets/docs/synthesis/substances/formulas/syn/5/imgs/MolView%20(structural%20formula)3.png)  
