@@ -53,7 +53,8 @@ One collection of knowledge
   - [Neutron Stars](./assets/docs/universe/space/neutron-stars/readme.md)  
   - [Red Dwarfs](./assets/docs/universe/space/red-dwarf/readme.md)  
       
-- [Spatial Researchs:](./assets/docs/universe/spatial/readme.md)
+- [Spatial Researchs:](./assets/docs/universe/spatial/readme.md)  
+  - [Open Exoplanet Catalog](https://github.com/emeraldTable/exoplanets)  
 --------------
 # [Universe Equations](./assets/docs/universe/equations/README.md)   
 - Heat / Energy   
