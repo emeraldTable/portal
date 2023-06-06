@@ -1,5 +1,9 @@
 [HOME](/README.md) / [Nuclear](/assets/docs/nuclear/readme.md)   
 
+----------------------
+
+[Synthesis Part 2](/assets/docs/nuclear/synthesis/uranium/readme.md)  
+
 -----------------------
 
 To pick the synthesis of uranium, there are several methods available.    
