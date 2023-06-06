@@ -34,6 +34,8 @@
           The gravitational interaction between the Moon, Earth, and the Sun causes the rise and fall of the ocean tides,    
            as well as some minor deformations of Earth's crust.    
   
+  -----------------   
+  
 The Moon has fascinated humans for centuries and continues to be a subject of scientific research and exploration.    
  Human missions, like the Apollo program, have allowed astronauts to visit the Moon's surface and gather valuable data and samples,     
   expanding our understanding of this celestial body.     
@@ -66,6 +68,8 @@ Space missions such as NASA's Apollo missions and the Chinese Chang'e mission ha
      
 These are just some of the information obtained through space missions until my knowledge was updated in September 2021. It is important to note that lunar research is constantly evolving, and new discoveries and missions may bring more knowledge about the Moon in the future.
 
+  -----------------   
+
 # Gravity   
   The Moon has gravity due to its mass.      
    Gravity is a force that pulls objects towards the center of mass of a body.      
@@ -88,6 +92,8 @@ These are just some of the information obtained through space missions until my 
     as well as for influencing the movement of objects on its surface, including crater formation, rock movement, and influencing Earth's tides.     
      Gravity also has significant implications for future space missions and lunar exploration.      
 
+  -----------------   
+  
 # Here are some key facts about the Moon:   
 
    - 1. Appearance:   
@@ -131,14 +137,19 @@ These are just some of the information obtained through space missions until my 
           NASA's Artemis program aims to land astronauts on the lunar surface by 2024,     
            with the goal of establishing a sustainable lunar outpost and eventually using it as a stepping stone for future human missions to Mars.   
 
+  -----------------   
+
 # Mass Representation  
   - [Moon Mass / plot script](/assets/addons/python/dev/moon/plot/moon_mass.py)    
      
      ![img](/assets/addons/python/dev/moon/plot/imgs/moon_mass.png)   
 
-The Moon's formation is not directly related to stellar nucleosynthesis.    
- The Moon is believed to have formed as a result of a giant impact between a Mars-sized body called Theia and the early Earth,   
-  approximately 4.5 billion years ago.    
+  -----------------   
+  
+# The Moon's formation
+ is not directly related to stellar nucleosynthesis.    
+  The Moon is believed to have formed as a result of a giant impact between a Mars-sized body called Theia and the early Earth,   
+   approximately 4.5 billion years ago.    
 
 The prevailing theory, known as the Giant Impact Hypothesis, suggests that during the early stages of the Solar System's formation,     
  a Mars-sized object collided with the proto-Earth.     
@@ -154,3 +165,22 @@ The nucleosynthesis of the elements found in the Moon, including oxygen, silicon
   These elements were created in the interiors of stars during their lifetimes through fusion reactions.     
    However,   
     it is important to note that the Moon's formation itself is not a product of stellar nucleosynthesis but rather a result of the giant impact event.    
+    
+# The Giant Impact Hypothesis  
+   is the leading theory regarding the formation of the Moon.   
+    According to this hypothesis, a Mars-sized object, often referred to as Theia, collided with the early Earth around 4.5 billion years ago.    
+     The impact was so powerful and energetic that it led to the ejection of a significant amount of debris from both Theia and the proto-Earth into space.      
+  
+   The debris from the collision eventually formed a disk of material surrounding the Earth,   
+    known as the circumterrestrial disk or the protolunar disk.     
+    Over time, the material in this disk began to accumulate and coalesce through accretion and gravitational attraction.       
+     Eventually, this process resulted in the formation of the Moon.    
+
+   The Giant Impact Hypothesis explains various characteristics of the Moon and the Earth-Moon system,   
+    such as the Moon's relatively small iron core compared to its size, its similar oxygen isotope composition to Earth,   
+     and the Moon's relatively low overall density.    
+      It also helps explain why the Moon lacks significant volatile elements like water compared to the Earth.    
+
+   While the precise details of the Moon's formation are still the subject of ongoing research and investigation,   
+    the Giant Impact Hypothesis is currently the most widely accepted explanation supported by geological and isotopic evidence,   
+      computer simulations, and lunar samples brought back by the Apollo missions.    
