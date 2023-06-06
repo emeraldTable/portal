@@ -24,6 +24,13 @@
 It's important to note that implosion is a concept with different meanings depending on the context in which it is used.  
  The specific interpretation can vary in fields such as physics, engineering, and metaphorical usage.  
 
+# Implosion effect inside one Nuclear weapon:  
+
+![img](/assets/docs/universe/equations/Heat-Energy/Nuclear/implosion/imgs/implosion.png)  
+[Source img](https://pt.m.wikipedia.org/wiki/Ficheiro:Implosion_Nuclear_weapon.svg)     
+
+----------------------
+
 # About Equations
 
 - Nuclear implosion refers to the technique used to initiate a  
