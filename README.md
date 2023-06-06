@@ -80,7 +80,7 @@ One collection of knowledge
 
 - [Galaxies:](/assets/docs/universe/space/galaxies/readme.md)  
   - [Andromeda](/assets/docs/universe/space/galaxies/andromeda/readme.md)     
-
+  - [NGC4993](/assets/docs/universe/space/galaxies/NGC4993/readme.md)     
    
 - [Spatial Researchs:](/assets/docs/universe/spatial/readme.md)  
   - [Open Exoplanet Catalog](https://github.com/emeraldTable/exoplanets)  
