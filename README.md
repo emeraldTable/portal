@@ -96,14 +96,25 @@ One collection of knowledge
       The molecules generator included is result of one process in the deep of reactor,  
        that generate elements after your operation  
         faciliting the studies and uses of reactors and other nuclear developments.  
+        
+-------------------
+        
 1. [Earth Dev Section](/assets/addons/python/dev/earth/readme.md)   
  - 1. Equations:   
                 -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/equations/1.py)   
    
  - 2. Plot:  
-          - [Chart Properties Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-properties.py)  
-          - [Chart Radius Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-radius.py)   
+         - [Chart Properties Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-proprerties.py)  
+         - [Chart Radius Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-radius.py)   
+         - [Chart Deep](/assets/addons/python/dev/earth/plot/earth_layers-deep.py)    
+         - [Chart of Distribution of Mass/Pression 1](/assets/addons/python/dev/earth/plot/earth_MassPression.py)   
+         - [Chart of Distribution of Mass/Pression 2](/assets/addons/python/dev/earth/plot/earth_MassDistribution.py)   
+         - [Chart Of Gravitational Acceleration](/assets/addons/python/dev/earth/plot/earth_GravitationalAcceleration.py)   
 
+2. [Moon Dev Section](/assets/addons/python/dev/moon/readme.md)   
+ - 1. Plot:  
+         - [Chart about Moon Mass](/assets/addons/python/dev/moon/plot/moon_mass.py)  
+ 
 --------------  
 # Futuristic Comics:  
 - [SCI-FI](./assets/docs/earth/sci-fi/readme.md)    
