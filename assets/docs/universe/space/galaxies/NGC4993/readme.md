@@ -60,5 +60,5 @@
 - Representation of Event GW170817:  
    
    ![img](/assets/docs/universe/space/neutron-stars/imgs/neutronstars.gif)   
-
+[Source image:](https://www.buzzfeed.com/kellyoakes/scientists-have-seen-gravitational-waves-formed-from)   
 -------------------
