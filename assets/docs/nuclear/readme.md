@@ -1,7 +1,7 @@
 [HOME](/README.md)   
 
 --------------------
-
+- [Reactors](/assets/docs/nuclear/reactors/readme.md)   
 - [Equations](/assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)   
 - [Nuclear Oxygen](/assets/docs/nuclear/knowledges/nuclear-oxygen.md)  / [Nuclear Oxygen Tritium](/assets/docs/nuclear/knowledges/nuclear-oxygen-tritium.md)   
 - Implosive Methods:  
@@ -11,6 +11,8 @@
 
 - Synthesis of Nuclear Elements:  
    - [U-92 Synthesis](/assets/docs/nuclear/synthesis/U92-synthesis.md)    
+   
+- [Nuclear Elements:](/assets/docs/universe/equations/Heat-Energy/Nuclear/elements/readme.md)   
    
 ---------------------
 
