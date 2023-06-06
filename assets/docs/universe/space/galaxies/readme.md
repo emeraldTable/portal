@@ -4,6 +4,7 @@
 
 - Galaxies:
   - [Andromeda](/assets/docs/universe/space/galaxies/andromeda/readme.md)   
+  - [NGC4993](/assets/docs/universe/space/galaxies/NGC4993/readme.md)   
 
 ------------------------  
 
