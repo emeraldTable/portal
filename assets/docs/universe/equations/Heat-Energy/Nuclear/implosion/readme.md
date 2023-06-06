@@ -1,3 +1,7 @@
+[HOME](/README.md) / [Implosion based in fission](/assets/docs/universe/equations/Heat-Energy/Nuclear/implosion/implosion-based_fission_process.md)     
+
+-------------------
+
 # Implosion
 - refers to the process of collapsing inward or shrinking under extreme pressure or force.  
    It is the opposite of explosion, where matter or energy rapidly expands outward.  
