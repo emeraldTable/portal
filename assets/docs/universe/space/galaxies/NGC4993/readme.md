@@ -23,6 +23,9 @@
      It had a profound impact on the field of astrophysics and helped further our understanding of compact object mergers,    
       gravitational waves, and the origin of heavy elements in the universe.   
 
+   ![img](/assets/docs/universe/space/galaxies/NGC4993/imgs/NGC_4993_and_GRB170817A_after_glow.gif)   
+[Source image:](https://en.wikipedia.org/wiki/NGC_4993)   
+
 -------------------
 <a id="1"></a> 
 # GW170817
