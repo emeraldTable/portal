@@ -52,6 +52,7 @@ One collection of knowledge
   - [Electron Capture](./assets/docs/universe/space/knowledges/electron_capture.md)    
   - [Neutron Stars](./assets/docs/universe/space/neutron-stars/readme.md)  
   - [Red Dwarfs](./assets/docs/universe/space/red-dwarf/readme.md)  
+  - [Kepler-62](./assets/docs/universe/space/Kepler-62/readme.md)  
       
 - [Spatial Researchs:](./assets/docs/universe/spatial/readme.md)  
   - [Open Exoplanet Catalog](https://github.com/emeraldTable/exoplanets)  
