@@ -69,6 +69,7 @@ One collection of knowledge
 --------------
 - Space:  
   - [Anti Matter](/assets/docs/antimatter/readme.md)     
+  - [Dark Matter](/assets/docs/universe/space/dark-matter/readme.md)  
   - [BlackHoles](/assets/docs/universe/space/blackholes/readme.md)  
   - [Singularity of Mass Atoms](/assets/docs/universe/space/blackholes/singularity_mass-atoms.md)  
   - [Gravitational Collapse](/assets/docs/universe/space/knowledges/Gravitational_Collapse.md)  
@@ -76,7 +77,11 @@ One collection of knowledge
   - [Neutron Stars](/assets/docs/universe/space/neutron-stars/readme.md)  
   - [Red Dwarfs](/assets/docs/universe/space/red-dwarf/readme.md)  
   - [Kepler-62](/assets/docs/universe/space/Kepler-62/readme.md)  
-      
+
+- Galaxies:  
+  - [Andromeda](/assets/docs/universe/space/galaxies/andromeda/readme.md)     
+
+   
 - [Spatial Researchs:](/assets/docs/universe/spatial/readme.md)  
   - [Open Exoplanet Catalog](https://github.com/emeraldTable/exoplanets)  
 --------------
