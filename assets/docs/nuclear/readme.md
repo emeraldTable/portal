@@ -2,9 +2,11 @@
 
 --------------------
 
-- [Equations](/assets/docs/nuclear/equations/E-EFF-EPF-MM)   
+- [Equations](/assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)   
 - [Nuclear Oxygen](/assets/docs/nuclear/knowledges/nuclear-oxygen.md)  / [Nuclear Oxygen Tritium](/assets/docs/nuclear/knowledges/nuclear-oxygen-tritium.md)   
 - Implosive Methods:  
+   - [Implosion](/assets/docs/universe/equations/Heat-Energy/Nuclear/implosion/readme.md)   
+   - [Implosion per Fission](/assets/docs/universe/equations/Heat-Energy/Nuclear/implosion/implosion-based_fission_process.md)    
    - [Cylinder Shape](/assets/docs/nuclear/knowledges/implosive-methods/cylinder-shape.md)   
 
 - Synthesis of Nuclear Elements:  
