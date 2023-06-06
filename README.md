@@ -78,7 +78,7 @@ One collection of knowledge
   - [Red Dwarfs](/assets/docs/universe/space/red-dwarf/readme.md)  
   - [Kepler-62](/assets/docs/universe/space/Kepler-62/readme.md)  
 
-- Galaxies:  
+- [Galaxies:](/assets/docs/universe/space/galaxies/readme.md)  
   - [Andromeda](/assets/docs/universe/space/galaxies/andromeda/readme.md)     
 
    
