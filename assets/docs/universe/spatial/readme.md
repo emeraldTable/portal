@@ -20,3 +20,4 @@ https://aladin.cds.unistra.fr/aladin.gml
 // Web softwares  
 https://stellarium-web.org/  
 https://eyes.nasa.gov/apps/orrery/#/home    
+https://www.openexoplanetcatalogue.com/systems/
