@@ -1,16 +1,35 @@
+[HOME](/README.md)   
+
+--------------   
+
 # Nucleosynthesis   
  - Refers to the process by which new atomic nuclei are formed through nuclear reactions.    
     It occurs in various astrophysical environments, including the early universe, stellar interiors,   
      and explosive events such as supernovae.   
-  
+
+There are two primary types of nucleosynthesis:   
+
+   1. [Primordial Nucleosynthesis:](/assets/docs/nucleosynthesis/primordial-nucleosynthesis/readme.md)     
+      This refers to the formation of light elements in the early universe, shortly after the Big Bang.     
+       During this period, the universe was extremely hot and dense.    
+        Protons and neutrons combined to form atomic nuclei, primarily of hydrogen (H), helium (He), and traces of lithium (Li).       
+         Primordial nucleosynthesis is responsible for the initial abundance of these light elements in the universe.    
+
+   2. [Stellar Nucleosynthesis:](/assets/docs/nucleosynthesis/stellar-nucleosynthesis/readme.md)     
+       This occurs within stars and is responsible for the synthesis of heavier elements.    
+        Stars generate energy through nuclear fusion, which involves the fusion of lighter atomic nuclei to form heavier ones.     
+         In the core of stars like our Sun,   
+          hydrogen nuclei (protons) combine to form helium through a series of fusion reactions known as the proton-proton chain.     
+           This process releases a tremendous amount of energy.    
+
   There are several types of nucleosynthesis:  
-   - 1. Big Bang Nucleosynthesis:     
+   - 1. [Big Bang Nucleosynthesis:](/assets/docs/nucleosynthesis/primordial-nucleosynthesis/readme.md)      
           This process occurred shortly after the Big Bang, when the universe was hot and dense.   
            During this phase, light elements such as hydrogen and helium,   
             as well as small amounts of lithium and beryllium, were synthesized through nuclear fusion reactions.    
              The primordial abundances of these light elements provide important constraints on cosmological models.   
 
-   - 2. Stellar Nucleosynthesis:    
+   - 2. [Stellar Nucleosynthesis:](/assets/docs/nucleosynthesis/stellar-nucleosynthesis/readme.md)     
          Stellar nucleosynthesis is responsible for the synthesis of elements within stars.   
           The main process in stellar nucleosynthesis is hydrogen fusion, which occurs in the cores of stars like our Sun.     
            Through a series of fusion reactions, hydrogen is converted into helium,    
@@ -32,12 +51,29 @@
           can interact with interstellar matter and produce new elements through nuclear reactions.    
            This process contributes to the nucleosynthesis of light isotopes such as lithium, beryllium, and boron.  
 
+   As stars evolve, they can undergo more complex fusion reactions, leading to the synthesis of heavier elements.   
+    In more massive stars, helium can fuse into carbon, nitrogen, and oxygen, and subsequently,     
+     these elements can further fuse to produce elements like neon, magnesium, and silicon.    
+      This process continues until iron is produced.   
+
+
+   Elements heavier than iron are generally not synthesized within stars but are formed through other processes.  
+    For example, elements like gold and uranium are believed to be primarily formed during supernova explosions,     
+     where extreme temperatures and pressures enable the fusion of atomic nuclei into heavier elements.        
+
+
+   It's important to note that our understanding of nucleosynthesis has been    
+    refined over time through theoretical models and observational evidence.      
+      
+   Advances in astrophysics, nuclear physics,  
+    and observational astronomy have contributed to our current understanding of how elements are synthesized in the universe.     
+
    Nucleosynthesis plays a crucial role in shaping the elemental abundances observed in the universe.    
     By studying the abundance patterns of different elements,    
      scientists can gain insights into the physical processes and conditions that govern the evolution of stars, galaxies,    
       and the cosmos as a whole.   
 
---------------
+--------------   
   
 # [PT-BR] Nucleossíntese    
   - é o processo pelo qual os elementos químicos mais pesados do que o hélio são formados no universo.    
