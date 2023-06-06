@@ -1,3 +1,12 @@
+[HOME](/README.md) / [Oxygen](/assets/docs/synthesis/oxygen/readme.md)    
+ 
+---------------
+
+[Adaptable Plants](/assets/docs/synthesis/oxygen/plants/plants_adaptables.md)   
+[Oxygen Producers](/assets/docs/synthesis/oxygen/plants/plants_oxygenproducers.md)    
+
+---------------
+
 # plants, oxygen synthesis  
   - primarily occurs through the process of photosynthesis.  
      Photosynthesis is a complex biochemical reaction that takes place in the chloroplasts of plant cells,  
@@ -27,6 +36,3 @@
       and sunlight are converted into glucose and oxygen.   
        This process is fundamental not only for the plant's survival but also for maintaining oxygen levels in the atmosphere,   
         supporting aerobic organisms' respiration.  
-
- - [Adaptable Plants](/assets/docs/synthesis/oxygen/plants/plants_adaptables.md)  
- - [Oxygen Producers](/assets/docs/synthesis/oxygen/plants/plants_oxygenproducers.md)  
