@@ -3,12 +3,12 @@
 --------------------
 
 - [Equations](/assets/docs/nuclear/equations/E-EFF-EPF-MM)   
-- [Nuclear Oxygen](/assets/docs/nuclear/knowledges/nuclear-oxygen)  / [Nuclear Oxygen Tritium](/assets/docs/nuclear/knowledges/nuclear-oxygen-tritium)   
+- [Nuclear Oxygen](/assets/docs/nuclear/knowledges/nuclear-oxygen.md)  / [Nuclear Oxygen Tritium](/assets/docs/nuclear/knowledges/nuclear-oxygen-tritium.md)   
 - Implosive Methods:  
-   - [Cylinder Shape](/assets/docs/nuclear/knowledges/implosive-methods/cylinder-shape)   
+   - [Cylinder Shape](/assets/docs/nuclear/knowledges/implosive-methods/cylinder-shape.md)   
 
 - Synthesis of Nuclear Elements:  
-   - [U-92 Synthesis](/assets/docs/nuclear/synthesis/U92-synthesis)    
+   - [U-92 Synthesis](/assets/docs/nuclear/synthesis/U92-synthesis.md)    
    
 ---------------------
 
