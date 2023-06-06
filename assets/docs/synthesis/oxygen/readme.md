@@ -1,3 +1,11 @@
+[HOME](/README.md) / [Synthesis](/assets/docs/synthesis/readme.md)    
+
+----------------   
+
+[Plants](/assets/docs/synthesis/oxygen/plants/readme.md)   
+
+----------------   
+
 # Oxygen synthesis  
   - refers to the process by which oxygen is produced or generated.  
      Oxygen is a chemical element with the symbol "O" and atomic number 8.   
@@ -25,6 +33,4 @@
         oxidation of substances, or using specific catalysts.  
         In summary, oxygen synthesis primarily occurs through photosynthesis in plants and other photosynthetic organisms.   
          It is also produced through other means such as electrolysis and chemical reactions.   
-          The availability of oxygen is vital for sustaining life and supporting various biological and chemical processes on Earth.  
-
- - [Plants](/assets/docs/synthesis/oxygen/plants/readme.md)   
+          The availability of oxygen is vital for sustaining life and supporting various biological and chemical processes on Earth. 
