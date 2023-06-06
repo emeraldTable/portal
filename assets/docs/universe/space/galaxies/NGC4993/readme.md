@@ -1,3 +1,7 @@
+[HOME](/README.md) / [Galaxies](/assets/docs/universe/space/galaxies/readme.md)  
+
+-----------------------
+
 # NGC 4993
   is a galaxy located in the constellation Hydra.   
    It gained significant attention in 2017 due to an astronomical event associated with it.   
@@ -52,5 +56,9 @@
    GW170817 played a crucial role in advancing our understanding of gravitational waves, neutron stars, nucleosynthesis,     
     and the nature of compact object mergers.     
      It showcased the power of combining multiple observing techniques to unravel the mysteries of the universe.   
+
+- Representation of Event GW170817:  
+   
+   ![img](/assets/docs/universe/space/neutron-stars/imgs/neutronstars.gif)   
 
 -------------------
