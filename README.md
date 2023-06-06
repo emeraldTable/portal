@@ -14,8 +14,9 @@ One collection of knowledge
 
 -------------
 
-# Knowledges about the universe  
+# Knowledges about the universe    
 - Earth:
+  - [Proto Earth](/assets/docs/earth/proto-earth/readme.md)    
   - [Earth](./assets/docs/earth/readme.md)  
   - [Core/Nucleous](./assets/docs/earth/core/readme.md)   
   - [Volcanoes](./assets/docs/earth/earth/volcanoes/readme.md)  
