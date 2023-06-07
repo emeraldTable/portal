@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../web/css/bootstrap-3.4.1.min.css"/> 
+    <link rel="stylesheet" href="../web/css/bootstrap-theme-3.4.1.min.css"/>
+    <link rel="stylesheet" href="../web/css/master.css"/>
+    <link rel="stylesheet" href="../web/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="../web/css/jquery-ui.min.css"/>  
+    <title>Rich in Histidina, Glutamina, Lisina, Metionina e Arginina | Structure Assessment</title>
+    <style>
+.multiselect-container{position:absolute;list-style-type:none;margin:0;padding:0}.multiselect-container .input-group{margin:5px}.multiselect-container>li{padding:0}.multiselect-container>li>a.multiselect-all label{font-weight:700}.multiselect-container>li.multiselect-group label{margin:0;padding:3px 20px 3px 20px;height:100%;font-weight:700}.multiselect-container>li.multiselect-group-clickable label{cursor:pointer}.multiselect-container>li>a{padding:0}.multiselect-container>li>a>label{margin:0;height:100%;cursor:pointer;font-weight:400;padding:3px 20px 3px 40px}.multiselect-container>li>a>label.radio,.multiselect-container>li>a>label.checkbox{margin:0}.multiselect-container>li>a>label>input[type=checkbox]{margin-bottom:5px}.btn-group>.btn-group:nth-child(2)>.multiselect.btn{border-top-left-radius:4px;border-bottom-left-radius:4px}.form-inline .multiselect-container label.checkbox,.form-inline .multiselect-container label.radio{padding:3px 20px 3px 40px}.form-inline .multiselect-container li a label.checkbox input[type=checkbox],.form-inline .multiselect-container li a label.radio input[type=radio]{margin-left:-20px;margin-right:0}
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.loader-sm {
+    border: 4px solid #EEE; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+.loader {
+    border: 8px solid #EEE; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+label {
+  font-weight: normal;
+}
+
+.status{
+  animation: glow 2s  infinite;
+}
+@keyframes glow {
+  0% { text-shadow: .5px .5px .5px #777; }
+  50%{ text-shadow: 2px 2px 8px #777; }
+  100% { text-shadow: .5px .5px .5px #777; }
+}
+
+@media (min-width: 768px) {
+  #flex-panel-container > #left-panel {
+    width: 450px;
+    min-width: 280px;
+    padding-bottom: 16px;
+  }
+}
+
+dl { margin-bottom:0px; }
+.dl-horizontal dt{ width:220px; }
+.outlier:hover { text-decoration: underline; cursor: pointer  }
+.resContainer{ max-height:100px; overflow-y: auto; font-size:.9em;  }
+
+#ramaPanel .btn{ padding: 4px 6px }
+#qmean_results > div{ padding:8px 2px; }
+#qmean_results td { font-size: .8em; }
+
+.panel { border-radius: unset; }
+
+#mappingUL, #molprobity_progress, #reference_progress {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+#alnPanel {
+  padding: 15px 0px 15px 4px;
+}
+#alignDivs {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+#alignDivs > table:not(:first-child) {
+  margin-top: 32px;
+}
+ 
+.alignTbl tr[seqno="1"] {
+  display: none
+}
+.alignNameTbl tr[seqno="1"] {
+  display: none;
+}
+tr[seqno="2"] td {
+  padding-top:10px
+} 
+.hasChart tr[seqno="2"] td {
+  padding-top:80px;
+}
+.secstrucChart tr[seqno="2"] td {
+  padding-top:24px;
+}
+.table > tbody > tr:first-child > td {
+  border-top: unset;
+}
+#referencePanel h1 {
+  font-size: 1.2em;
+  margin: 0px 0px 4px 0px;
+}
+#referencePanel h1:not(:first-child) {
+  margin-top: 24px;
+}
+.interfaceLo {
+  border-bottom: 3px solid rgba(198, 39, 44, 0.742);
+}
+.interfaceAcc {
+  border-bottom: 3px solid rgba(213, 199, 40, 0.804);
+}
+.interfaceMed {
+  border-bottom: 3px solid #7070fe;
+}
+.interfaceHi {
+  border-bottom: 3px solid rgba(52, 191, 52, 0.857);
+}
+.interfaceLo, .interfaceAcc, .interfaceMed, .interfaceHi {
+  width: fit-content;
+  text-align: center;
+}
+
+.mdlRefSelected {
+  font-weight: bold;
+}
+
+</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="margin-left:0px;padding:8px 4px 0px 0px;"
+                title="SIB Swiss Institute of Bioinformatics" 
+                href="https://www.sib.swiss" target="_blank"><img src="../web/images/sib_logo_small.png" alt="SIB logo" style="max-height:50px"></a>
+            <a class="hidden-xs hidden-sm navbar-brand" style="margin-left:0px; padding:8px 0px 0px 4px;"
+            title="Biozentrum | University of Basel | The Center for Molecular Life Sciences" 
+            href="http://www.biozentrum.unibas.ch/" target="_blank"><img src="../web/images/biozentrum_en.png" alt="Biozentrum logo" style="max-height:36px"></a>
+            <a class="navbar-brand" href="https://swissmodel.expasy.org" style="margin-left:0px;padding-left:0px;padding-right:0px;font-size:28px;">SWISS-MODEL</a>
+        </div>
+      </div>
+    </nav>
+      
+    <div class="container-fluid" id="main-content">
+    
+    
+<div id="alignmentOptions" style="display:none;">
+  <form class="alignmentOptions form form-inline" autocomplete="off">
+    <div id="exportOptions" style="padding-bottom:8px">
+      <b>Export Alignment</b>
+      <br>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('#alignTbl'+$('#currentAlignmentIndex').val()).alignment('exportAlignment', {'format':'FASTA'});">FASTA format</button>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('#alignTbl'+$('#currentAlignmentIndex').val()).alignment('exportAlignment', {'format':'ClustalW'});">Clustal Format</button>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('.alTbl').first().alignment('html2image')">PNG Image</button>
+    </div>
+    <div>
+
+      <div id="colourOptions" style="padding-top:8px">
+        <b>Colour Scheme </b>
+        <a class="smng-help" href="/docs/help#colour_schemes"></a>
+        <div id="fadeMismatches">
+        <label class="inline checkbox" style="margin-right:12px;"><input type="checkbox" id="fadeMismatch_cb" onclick="$('.alignTbl').alignment('targetMismatch',{match:this.checked?'fade':null})" checked="checked" />Fade Mismatches</label>
+        <label class="inline checkbox"><input type="checkbox" id="enhanceMismatch_cb" onclick="$('.alignTbl').alignment('targetMismatch',{match:this.checked?'enhance':null})"  />Enhance Mismatches</label></div>
+        
+        
+
+         
+
+        
+        <label class="confLabel"><input title="Per residue confidence colours" type="radio" name="csRadioGroup" id="qmean_localButton" value="qmean_local" checked="checked" />Confidence<sup>gradient</sup></label>
+        <label class="confLabel"><input title="Confidence classes" type="radio" name="csRadioGroup" id="confClassButton" value="confClass" checked="checked" />Confidence<sup>class</sup></label>
+        <label><input type="radio" name="csRadioGroup" id="indelsButton" value="indels"  />Indels</label>
+
+        <label><input type="radio" name="csRadioGroup" id="chainButton" value="chain" >Chain</label>
+        <label><input type="radio" name="csRadioGroup" id="uniqueChainButton" value="uniqueChain" >Unique Chain</label>
+        <label><input type="radio" name="csRadioGroup" id="rainbowButton" value="rainbow" checked="checked">Rainbow</label>
+        <label><input type="radio" name="csRadioGroup" id="secstrucButton" value="secstruc" checked="checked">2&deg; Structure</label>
+
+        
+        <label><input type="radio" name="csRadioGroup" id="bfactorButton" value="bfactor" >Bfactor</label>
+        <label><input type="radio" name="csRadioGroup" id="bfactorRangeButton" value="bfactor_range" >Bfactor Range</label>
+
+        
+
+
+        
+        <label><input type="radio" name="csRadioGroup" id="clustalButton" value="clustal"  />Clustal</label>
+        <label><input type="radio" name="csRadioGroup" id="hydrophobicButton" value="hydrophobic"  />Hydrophobic</label>
+        <label><input type="radio" name="csRadioGroup" id="sizeButton" value="size"  />Size</label>
+        <label><input type="radio" name="csRadioGroup" id="chargedButton" value="charged"  />Charged</label>
+        <label><input type="radio" name="csRadioGroup" id="polarButton" value="polar"  />Polar</label>
+        <label><input type="radio" name="csRadioGroup" id="prolineButton" value="proline"  />Proline</label>
+        <label><input type="radio" name="csRadioGroup" id="serThrButton" value="serThr"  />Ser/Thr</label>
+        <label><input type="radio" name="csRadioGroup" id="cysButton" value="cysteine"  />Cysteine</label>      
+        <label><input type="radio" name="csRadioGroup" id="aliphaticButton" value="aliphatic"  />Aliphatic</label>
+        <label><input type="radio" name="csRadioGroup" id="aromaticButton" value="aromatic"  />Aromatic</label>
+        
+        <label><input type="radio" name="csRadioGroup" id="noColourButton" value="none"  />No Colour</label> 
+      </div>
+      
+      
+      <label class="checkbox" style="display: none" id="qmeanbraneLbl">
+        <input type="checkbox" id="qmeanbraneCB" onclick="toggleQMEANBrane($(this).prop('checked'))">Use QMEANBrane values
+      </label>
+
+      <table>
+        <tr>
+          <td><div style="margin-right:16px">Background</div></td>
+          <td><div style="height:16px; width:16px; border:1px solid #777;cursor:pointer;background-color:black" onclick="$('#bgColSlider').slider('value',0);"> </div></td>
+          <td style="width:220px"><div id="bgColSlider" style="margin:8px"></div></td>
+          <td><div style="height:16px; width:16px; border:1px solid #777;cursor:pointer;background-color:white" onclick="$('#bgColSlider').slider('value',255);"> </div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="viewerSelect" style="padding-top:8px">
+      <b>3D Viewer</b><br>
+      <label><input type="radio" name="3dRG" value="NGL" checked="checked" />NGL</label>
+      <label><input type="radio" name="3dRG" value="PV"  />PV</label>
+    </div>
+  </form>
+  <div id="formattedAlignment" style="width:610px;height:470px;" class="fancy_box_swap">
+    <label class="checkbox-inline" >
+      <select style="height:28px;width:150px;" class="form-control" name="alignmentFormatSelect" id="alignmentFormatSelect" onchange="$('.alignTbl').first().alignment('changeExportFormat')">
+        <option value="FASTA" selected="selected">FASTA</option>
+        <option value="Multi FASTA">Multi FASTA</option>
+        <option value="ClustalW">ClustalW</option>
+      </select>
+    </label>
+    <button type="button" class="btn btn-sm btn-default" onclick="$('.alignTbl').first().alignment('html2image')">PNG</button>
+    <div align="center">
+      <textarea name="formattedAlignmentTextarea" id="formattedAlignmentTextarea" style="margin-top:8px;font-family:'Courier New', Courier, monospace; font-size:12px;width:100%;height:400px"></textarea>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="currentAlignmentIndex" value="">
+
+
+
+<div id="flex-panel-container">
+  <div id="left-panel">
+    <div>
+      <h3 style="margin-top:0px; word-break: break-all;"><span id="projectTitle">Rich in Histidina, Glutamina, Lisina, Metionina e Arginina; </span> 
+      <small>Model 01; </small>
+      </h3>
+    </div>
+
+    <div style="display:inline-flex;">
+      <div class="pull-left btn-group">
+        <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">Project Data <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          
+          
+          
+          
+          
+          <li><a href="models/01/input.pdb.gz" download title="Model Coordinates"><i class="glyphicon glyphicon-file"></i> Coordinates <i>(PDB format)</i></a></li>
+
+          
+
+          <li class="divider"></li>
+          <li>
+            <a href="models/01/model.json" download title="View Results in JSON"><i class="glyphicon glyphicon-file"></i> JSON</a>
+          </li>
+               
+        </ul>
+      </div>
+
+      
+    </div>
+      
+    <div>
+      <h4 style="margin:4px 0px 18px 0px;"><small title="Created: 7th Jun 2023, 23:04; Expires: 21st Jun 2023">Created: Wed 7th Jun, 23:04; 
+    
+      </small></h4>
+    </div>
+
+    
+    
+
+    
+    
+    
+
+    
+    <div class="panel panel-default">
+      <div class="panel-heading togglePanel">Ramachandran Plots
+        <i class="pull-right glyphicon glyphicon-chevron-up"></i>
+      </div>
+      <div class="panel-body" id="ramaPanel">
+        
+        <div id="rama_chart" style="max-width:500px; margin:auto;"></div>
+        <div class="text-center">
+          <button type="button" class="ramaBtn btn btn-sm btn-default active" onclick="showRamachandran('general');">General</button>
+          <button type="button" class="ramaBtn btn btn-sm btn-default" onclick="showRamachandran('glycine');">Glycine</button>
+          <button type="button" class="ramaBtn btn btn-sm btn-default" onclick="showRamachandran('proline');">Proline</button>
+          <button type="button" class="ramaBtn btn btn-sm btn-default" onclick="showRamachandran('preproline');">Pre-Proline</button>
+          &nbsp;
+          <select id="chainSelector" multiple="multiple" autocomplete="off"><option value="B" selected>Chain B</option>
+          </select>
+          &nbsp;
+          <button class="btn btn-sm btn-default" title="Save as PNG" onclick="svgToPNG('rama_chart',getFileName());return false;"><i class="glyphicon glyphicon-camera"></i></button>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="panel panel-default">
+    <div class="panel-heading togglePanel">MolProbity Results
+      <i class="pull-right glyphicon glyphicon-chevron-up"></i>
+    </div>
+    <div class="panel-body">
+      
+      <table class="table table-condensed" style="margin-bottom:0px">
+        <tr><td><label class="outlierLabel checkbox-inline">MolProbity Score</label></td><td>1.19</td><td></td></tr>
+        
+        <tr><td><label class="outlierLabel checkbox-inline"><input id="clashesCB" class="checkbox" type="checkbox" >Clash Score</label></td><td>4.09</td><td><div class="resContainer">(<span class="outlier" title="SD-CD1; Clash score: -0.407">B136 MET-B158 LEU</span>)</div></td></tr>
+        
+        <tr><td><label class="outlierLabel checkbox-inline">Ramachandran Favoured</label></td><td>100.00%</td><td></td></tr>
+        
+        <tr><td><label class="outlierLabel checkbox-inline">Ramachandran Outliers</label></td><td>0.00%</td><td><div class="resContainer"></div></td></tr>
+        
+        <tr><td><label class="outlierLabel checkbox-inline">Rotamer Outliers</label></td><td>0.00%</td><td><div class="resContainer"></div></td></tr>
+        
+        <tr><td><label class="outlierLabel checkbox-inline">C-Beta Deviations</label></td><td>0</td><td><div class="resContainer"></div></td></tr>
+        
+        <tr><td><label class="outlierLabel checkbox-inline"><input id="bond_lengthsCB" class="checkbox" type="checkbox">Bad Bonds</label></td><td nowrap="nowrap">1 / 257</td><td><div class="resContainer">
+          <span class="outlier" title="N-CA; Deviation: 4.0 &sigma;">B132 GLY</span></div></td></tr>
+       
+
+        <tr><td><label class="outlierLabel checkbox-inline"><input id="bond_anglesCB" class="checkbox" type="checkbox">Bad Angles</label></td><td nowrap="nowrap">5 / 347</td><td>
+          <div class="resContainer"><span class="outlier" title="CG-SD-CE; Deviation: 6.4 &sigma;
+N-CA-CB; Deviation: 4.1 &sigma;">B136 MET</span>, <span class="outlier" title="ND1-CG-CD2; Deviation: 4.5 &sigma;">B133 HIS</span>, <span class="outlier" title="ND1-CE1-NE2; Deviation: 4.1 &sigma;
+ND1-CG-CD2; Deviation: 4.0 &sigma;">B163 HIS</span></div></td></tr>
+
+
+        
+        
+        
+        
+
+        
+
+        
+
+
+      </table><small class="pull-right" style="font-style: italic">Results obtained using <a href="https://swissmodel.expasy.org/docs/references#molprobity">MolProbity</a> version 4.4 </small>
+
+      
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading togglePanel">QMEANDisCo
+      <i class="pull-right glyphicon glyphicon-chevron-up"></i>
+    </div>
+    
+       
+
+      
+        <div id="qmean_results" class="panel-body" >
+          <div class="col-xs-12" style="padding:0px 2px">
+            <span id="qmDiscoInfo">
+              <small>QMEANDisCo Global:</small> <span id="avgLocalScore"></span> 
+              <span id="avgLocalScoreError"></span> 
+              <a tabindex="0" style="margin-left:4px;" role="button" data-toggle="popover" title="QMEANDisCo Global" data-content="A single model method combining statistical potentials and agreement terms 
+    with a distance constraints (DisCo) score. DisCo evaluates consistencies of 
+    pairwise CA-CA distances from a model with constraints extracted from 
+    homologous structures. All scores are combined using a neural network 
+    trained to predict per-residue lDDT scores."><i class="glyphicon glyphicon-question-sign"></i></a>
+            </span>
+          </div>
+          
+          <div class="col-sm-12" style="padding-right: 8px">
+            <a href="#lq-chart-01" rel="lq-01"  class="fancybox"> 
+             <div id="lq-chart-01-thumb"></div>
+            </a>
+          </div>
+          <div class="col-sm-6" style="padding-left:16px; border-left: 1px dotted #777">
+            <small>QMEAN Z-Scores</small>
+            <table id="qmeanGlobalTbl01"></table>
+          </div>
+          <div class="col-sm-6">&nbsp;
+            <a href="#qn-chart-01" class="fancybox">
+              <div id="qn-chart-01-thumb"></div>
+            </a>
+            <div id="qn-chart-01" style="display:none"></div>
+          </div>
+        </div>
+      
+    
+  </div>
+
+    
+    <div class="panel panel-default">
+      <div class="panel-heading togglePanel">Alignments
+        <i class="pull-right glyphicon glyphicon-chevron-up"></i>
+      </div>
+      <div class="panel-body" id="alnPanel">
+        
+        <div style="margin-bottom:16px; padding:0px 15px;">
+          <div style="display:flex; align-content: space-around;">
+            <div style="flex:0 1 auto">
+                <i style="margin-right:6px">Show charts</i>
+            </div>
+            <div style="flex:1 1 auto; text-align:center">
+                <label><input id="showDSSP" type="checkbox" checked="checked" onclick="loadAlignment(model_id);"> DSSP</label>
+            </div>
+            
+            <div style="flex:1 1 auto; text-align:center">
+                <label><input id="showQMEAN" type="checkbox" checked="checked" onclick="loadAlignment(model_id);"> QMEANDisCo</label>
+            </div>
+            
+            
+          </div>
+          
+        </div>
+        
+
+        <div id="alignDivs"></div>
+
+        <div id="blankAlignment" style="display:none;">
+            <table cellpadding="0" cellspacing="0" class="alignTblContainer">
+    <tr>
+        <td valign="top">
+            <div class="hidden-print">
+                <a id="options_TEMPLATE" class="poponthis glyphicon glyphicon-cog" style="color:#333;opacity:.7;margin-right:2px"></a> 
+            </div>
+        </td>
+        <td valign="top">
+            <table class="alignNameTbl" id="alignNameTblTEMPLATE" border="0" cellspacing="0" cellpadding="0"></table>
+        </td>
+        <td valign="top">
+            <table class="alignTbl" id="alignTblTEMPLATE" cols_cookie="up3d_cols" border="0" cellspacing="0" cellpadding="0" ></table>
+            <div id="alignTblTEMPLATE_features" style="z-index:-1; position: absolute;"></div>
+        </td>
+    </tr>
+</table><div id="offscreen_selection" style="position:absolute; top:-5000px; word-break: break-all;"></div>
+
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="right-panel">
+    <div id="viewerWrapper" style="border: 1px solid #DDD; border-radius: 10px; padding:7px; margin-bottom:4px; height:300px; width:100%; position:relative">
+    <div style="position:absolute; right:10px; top:10px; z-index:100;">
+      <div id="pv_status"  class="notNGL viewerStatus"></div>
+      <div id="ngl_status" class="notPV viewerStatus"></div>
+    </div>
+
+    <div id="annotateDiv">
+      <textarea id="annotate" rows=5 class="form-control" placeholder='MOTIF=YAN TARGET=1 COLOR=rgb(0,100,100)
+MOTIF=P COLOR=gold LABEL="prolines labelled gold"
+CHAIN=A START=34 END=38 COLOR=#440088 LABEL=default' spellcheck="false" style="white-space: pre;"></textarea> 
+      <span style="float: left; margin-left: 8px;">
+       <a class="smng-help" href="/docs/help#model-annotation"></a>
+      </span>
+      <button id="applyBtn" class="btn btn-sm" onclick="processAnnotations();" style="margin-right:8px;" disable="disabled">
+        Apply
+      </button>
+
+      <button class="btn btn-sm" onclick="$('#annotateDiv').hide();">
+        Close
+      </button>         
+    </div>
+
+    <div style="position:absolute; bottom:10px; right:10px; z-index: 10;">
+      <div class="dropup pull-left">
+        <button title="Annotate Models" id="annotateBtn" class="btn btn-sm btn-default" onclick="$('#annotateDiv').toggle(); if($('#annotateDiv:visible').length==1)processAnnotations();"><i class="glyphicon glyphicon-pencil"></i></button>
+        <a id="options_" class="poponthis btn btn-sm btn-default">
+          <i class="glyphicon glyphicon-cog"></i>
+        </a>
+        <button class="btn btn-sm btn-default" data-toggle="dropdown"><span style="margin-right:4px" id="repBtnLbl">Cartoon</span><b class="caret"></b></button>
+        <ul role="menu" class="dropdown-menu" style="min-width:10px">
+          <li><a href="#" onclick="changeRep('cartoon');return false;">Cartoon</a></li>
+          <li><a href="#" onclick="changeRep('tube');return false;">Tube</a></li>
+          <li><a href="#" onclick="changeRep('trace');return false;">Trace</a></li>
+          <li><a href="#" onclick="changeRep('lines');return false;">Lines</a></li>
+
+          <li class="notPV"><a href="#" onclick="changeRep('ballAndStick');return false;">Ball+Stick</a></li>
+          <li class="notPV"><a href="#" onclick="changeRep('licorice');return false;">Licorice</a></li>
+          <li class="notPV"><a href="#" onclick="changeRep('hyperball');return false;">Hyperball</a></li>
+          <li class="notPV"><a href="#" onclick="changeRep('rope');return false;">Rope</a></li>
+          <li class="notPV"><a href="#" onclick="changeRep('surface');return false;">Surface</a></li>
+          <li class="notPV"><a href="#" onclick="changeRep('spacefill');return false;">Spacefill</a></li>
+          <li role="separator" class="notNGL divider"></li>
+          <li class="notNGL"><a href="#" onclick="changeRep('outline');return false;">Outline</a></li>
+          <li class="notNGL"><a href="#" onclick="changeRep('fog');return false;">Fog</a></li>
+        </ul>
+      </div>
+      <div class="dropup pull-left notPV">
+  <button class="btn btn-sm btn-default" title="Take Snapshot of 3D Molecule" data-toggle="dropdown"><span class="glyphicon glyphicon-camera" style="margin-right:4px"></span><b class="caret"></b></button>
+    <ul role="menu" class="dropdown-menu" style="min-width:10px">
+      <h6 class="dropdown-header">Background</h6>
+      <li><label style="padding-left: 20px; padding-right: 20px; white-space: nowrap; font-weight: normal;" onclick="event.stopPropagation();"
+                 title="Export snapshot with a transparent background"><input type="checkbox"
+                 id="snapshot_bg_transparent_checkbox" checked="checked">&nbsp;Transparent</label></li>
+      <h6 class="dropdown-header">Resolution</h6>
+      <li><a href="#" onclick="takeSnapshot('.png', 1);return false;">Low</a></li>
+      <li><a href="#" onclick="takeSnapshot('.png', 2);return false;">Medium</a></li>
+      <li><a href="#" onclick="takeSnapshot('.png', 4);return false;">High</a></li>
+      <li><a href="#" onclick="takeSnapshot('.png', 10);return false;">Extreme</a></li>
+    </ul>
+</div>
+<button class="btn btn-sm btn-default notNGL" title="Take Snapshot of 3D Molecule" onclick="takeSnapshot('.png');return false;"><i class="glyphicon glyphicon-camera"></i></button>
+
+      <button class="btn btn-sm btn-default spinButton" title="Start rotation" onclick="spin(true);$('.spinButton').toggle();"><i class="glyphicon glyphicon-play"></i></button>
+      <button class="btn btn-sm btn-default spinButton" style="display:none" title="Stop rotation" onclick="spin(false);$('.spinButton').toggle();"><i class="glyphicon glyphicon-pause"></i></button>
+      <button class="btn btn-sm btn-default" title="Reset" onclick="resetStructure();"><i class="glyphicon glyphicon-refresh"></i></button>
+    </div>
+
+    <div id="pv"  style="display:none;width:100%;height:100%;position:relative;"></div>
+    <div id="ngl" style="display:none;width:100%;height:100%;position:relative;"></div>
+  </div><!-- end viewerWrapper -->
+  </div>
+
+</div>
+
+
+<!-- Modal -->
+<div id="delProjectDiv" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Delete "Rich in Histidina, Glutamina, Lisina, Metionina e Arginina"</h3>
+      </div>
+      <div class="modal-body">
+       <p>Are you sure you want to delete this project?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-danger" id="confirmDeleteButton" >Delete Project</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+    </div>
+  </body>
+</html> 
+
+<script src="../web/js/jquery-3.7.0.min.js"></script>
+<script src="../web/js/jquery-ui.min.js"></script>
+<script src="../web/js/bootstrap-3.4.1.min.js"></script>
+<script src="../web/js/bootstrap-multiselect.min.js"></script>
+<script src="../web/js/bio-pv.min.js"></script>
+<script src="../web/js/ngl.js"></script>
+<script src="../web/js/raphael-min.js"></script>
+<script src="../web/js/smng.min.js"></script>
+<script src="../web/js/ramachandran.min.js"></script>
+<script src="../web/js/assess.min.js"></script>
+<script src="../web/js/jquery.fancybox.pack.js"></script> 
+<script>
+let localQMEANNormImage='../web/images/qmean_norm.png';
+$('a.smng-help').append('<icon class="glyphicon glyphicon-question-sign"></i>');
+    $(document).on('click','a.smng-help', function()
+    { 
+        window.open('https://swissmodel.expasy.org/'+$(this).attr('href'),
+            'Help',
+            'width=920,height=600,left=20,top=100,directories=no,menubar=yes,toolbar=yes,'
+                +'status=no,scrollbars=yes,resizable=no');
+        return false;
+    });
+</script>
+<script src="models/01/coords.js"></script>
+
+<script src="/static/js/bio-pv.min.js?v=1685522680"></script>
+<script src="/static/js/ngl.js?v=1658166481"></script>
+<script src="/static/js/raphael-min.js"></script>
+<script src="/static/js/smng.min.js?v=1685522680"></script>
+<script src="/static/js/ramachandran.min.js?v=1685714758"></script>
+<script src="/static/js/bootstrap-multiselect.min.js?v=1524669021"></script>
+<script src="/static/js/assess.min.js"></script>
+<script>
+
+const urls = '/assess/6T8pwb/00.pdb%20/assess/6T8pwb/00/reference.pdb%20/comparison/superpose/%20/comparison/00.pdb'
+const project_id = '6T8pwb';
+const model_id = '01';
+const [coordsURL,refCoordsURL,superposeURL,comparisonURL] = urls.split('%20');
+const modelData = {'01':{"meta":{"created":"2023-06-07 23:04:27.529911","user_upload":false,"title":"Rich in Histidina, Glutamina, Lisina, Metionina e Arginina","upload_format":"PDB","upload_gzip":false,"original_name":"Model 01","tasks":{"molprobity":true,"qmean":true}},"targets":[{"templates":[{"qname":"7ne9.1.B","offset":23,"chain":"B","trg_seq":"HISGLNLYSLYSGLCLYSMETLYSHISGLNMETARGARGGLCLYSGLNARGGLNHISLYSLYSMETGLNGLNGLNLYSLYSGLCHISMETMETLYSLYSLYSHISARGLYSLYSLYSGLNLYSARGGLNARGHISMETLYSLYSARGHISLYSLYSGLNGLNHISHISLYSARGGLNGLCLYSHISMETMETLYSHISGLCLYSMETARGGLNARGLYSHISMETMETGLCGLCHISGLCGLNHISGLCLYSGLCGLNHISLYSLYSGLNARGARGGLNLYSMETLYSGLNLYSGLNGLNMETMETGLNLYSHISARGGLNHISGLCMETMETHISHISLYSLYSGLCMETLYSLYSGLNHISLYSHISGLNGLNHISLYSMETGLCLYSHISLYSGLNGLNARGARGGLCLYSGLNARGGLNHISLYSLYSMETGLNGLNGLNLYSLYSGLCHISMETMETLYSLYSLYSHISARGLYSLYSLYSGLNLYSARGGLNARGHISMETLYSLYSARGHISLYSLYSGLNGLNHISHISLYSARGGLNGLCLYSHISMETMETLYSHISGLCLYSMETARGGLNARGLYSHISMETMETGLCGLCHISGLCGLNHISGLCLYSGLCGLNHISLYSLYSGLNARGARGGLNLYSMETLYSGLNLYSGLNGLNMETMETGLNLYSHISARGGLNHISGLCMETMETHISHISLYSLYS","tpl_seq":"-----------------------------------------------------------------------------------------------------------------------------------DEMSGQQLHRSLDDEASMGLATVYRNLRQLQQ-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------","annotation":{"dssp":"XXXXXCCCCHHHHHHHHHHHHSSSCEEHHHHHHHCCGGGCCCHHHHHHHHHHHHHTTSEEEEECTTSCEEEEETTCCCCEEEETTTCCEEECSSCTTTTCCCCCXXXCCCEEEEEEEEEEEECTTTCCXXXXXX","psipred":"CCCCCCCCCHHHHHHHHHHHHCCCCCCHHHHHHHHHHCCCCCHHHHHHHHHHHHHCCCEEEEECCCCCEEEEECCCCCEEEEECCCCCEEEECCCCCCCCCCHHHHCCCCEEEEEEEEEEEECCCCCCCCCCCC","sspro":"CCCCCCCCCHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHCCCEEEHHHHHHHCHCCCEEEEECCCCCCCCCCCCEEEEEEECCCCCCCCCCCCCCCCCCCCCCCCCHHHHHHHHHHHHHHHHHCCCCHHCCCC"}}],"keyseq_annotation":{"B":{"dssp":"-----------------------------------------------------------------------------------------------------------------------------------CCCCHHHHHHHCCGGGCCCHHHHHHHHHHHHC","qmean":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0.19,0.2,0.31,0.38,0.34,0.38,0.37,0.34,0.29,0.33,0.28,0.25,0.27,0.31,0.18,0.31,0.26,0.25,0.27,0.26,0.23,0.28,0.28,0.25,0.26,0.3,0.26,0.28,0.27,0.24,0.17,0.14,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"psipred":"CCCCCCHHHHHHHHHHHHHHHHHHHHCCCCCCCCCCCCCCEEEECCCCCCCCCCCEEEEEEEHHHCCCCCCCCCCHHHHHHHCCCCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCEEECCCCCCCCCCCCHHHHHHHHHCCCCEEEEEHHCCCCCCCCCCCEEEEECCCCCCCEECCCCCCHHHHHHHHHHHHHHHEEEECCCCCCCCCCCCCCCCCHHHCCCCCCCHHHHCCCCCCCCCCHHHHHHCCCCCCCCHHHHHHCCCCCCCCCCCCCEEEHHHHHCCCCCCCCCCCCCCHHHHHCCCHHHHHHCCCCCCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCCEEHHHHHCCCCCCCCEEEEECCCCCHHHHHHHHHHCCCCCCCCCCCCCEEEECCCCCCCCCCCEEEEEEEHHHCCCCCCCCCCHHHHHHHCCCCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCEEECCCCCCCCCCCCHHHHHHHHHCCCCEEEEEHHCCCCCCCCCCCEEEEECCCCCCCEECCCCCCHHHHHHHHHHHHHHHEEEECCCCCCCCCCCCCCCCCHHHCCCCCCCHHHHCCCCCCCCCCHHHHHHCCCCCCCCHHHHHHCCCCCCCCCCCCCEEEHHHHHCCCCCCCCCCCCCCHHHHHCCCHHHHHHCCCCCCCHHHHHHHHHHHHCCCEEEEEECC"}},"keyseq_chain_name":"B","target_id":"0"}],"qmean_global":{"qmean4_norm_score":0.6093013132028692,"qmean4_z_score":-1.2877477940447826,"qmean6_norm_score":0.4632717997099276,"qmean6_z_score":-2.133113592538387,"interaction_norm_score":-0.031225274785356305,"interaction_z_score":-0.26126222967050433,"cbeta_norm_score":-0.008495501430344677,"cbeta_z_score":-1.0874802462242668,"packing_norm_score":-0.22483769222162664,"packing_z_score":-0.6287427447444792,"torsion_norm_score":0.05108466551506093,"torsion_z_score":-1.0573387382854573,"ss_agreement_norm_score":-0.250805901363492,"ss_agreement_z_score":-1.9788044514853835,"acc_agreement_norm_score":0.3125,"acc_agreement_z_score":-3.2941531971680953,"avg_local_score":0.2733608854922319,"avg_local_score_error":0.115},"residues":[["B",132,"G","GLY",null,174.8972389819315,null],["B",133,"H","HIS",-66.52482674225193,153.65629322929732,167.17433042701975],["B",134,"I","ILE",-129.80411151545388,128.78096283816433,-175.3571565998835],["B",135,"S","SER",-69.30891430078668,158.6649802306944,166.19124763940147],["B",136,"M","MET",-59.88379966130268,-40.62857431549879,177.34461870495213],["B",137,"E","GLU",-61.75167881438275,-40.0656847656197,174.69622651465804],["B",138,"T","THR",-62.41312116379596,-45.3238854075865,171.03376979867048],["B",139,"L","LEU",-64.05177233814122,-39.54454474704231,179.16476849611215],["B",140,"Y","TYR",-58.385140044185995,-45.17576934034019,169.98715259139274],["B",141,"S","SER",-68.83819132356774,-26.04367010715682,179.08589347157684],["B",142,"L","LEU",-76.48984734505792,-17.682640883752867,178.67153321538885],["B",143,"Y","TYR",-71.94465015054875,127.68132970254894,178.30665084954842],["B",144,"S","SER",-79.71491923716538,174.34139818727587,174.31204203422317],["B",145,"A","ALA",-55.18741622951528,-37.35800994842447,-177.1869642785299],["B",146,"R","ARG",-60.446805324397666,-37.3693446473521,174.34732679147544],["B",147,"G","GLY",-104.12085853796759,4.154267048495264,-178.98484765299568],["B",148,"H","HIS",-61.57172382032043,134.6138760874635,-171.02601070377335],["B",149,"I","ILE",-144.06271880412413,158.18481793204248,176.1858907726378],["B",150,"S","SER",-60.683635303678685,156.91780418062677,174.03785092018217],["B",151,"L","LEU",-60.96861128641913,-41.27220694665118,178.76462869377613],["B",152,"Y","TYR",-61.51336668405184,-40.929044582371404,173.08006715324962],["B",153,"S","SER",-60.67951669960917,-37.727311446657886,174.994200347389],["B",154,"L","LEU",-61.35507021984762,-48.5747754147566,172.39998521759145],["B",155,"Y","TYR",-60.71957575909129,-42.78688677246614,176.36456852132534],["B",156,"S","SER",-60.94443241675729,-42.86077575890734,175.19134692759226],["B",157,"G","GLY",-69.81083758213424,-35.58182608495182,177.800916322644],["B",158,"L","LEU",-68.08052526912739,-36.99570256390114,171.4418326204437],["B",159,"N","ASN",-58.35702698556222,-38.774403352082935,169.70072177835908],["B",160,"G","GLY",-68.49543877063816,-35.26025053354387,174.08140020633016],["B",161,"L","LEU",-67.60773274458994,-34.044603219781244,170.12685728067618],["B",162,"N","ASN",-66.9344536773451,-35.739364398158166,171.73189709411582],["B",163,"H","HIS",-74.45069436835063,null,176.23000013429777]],"molprobity_results":{"outliers":{"bond_lengths":{"total_count":1,"residues":[{"name":"B132 GLY","title":"N-CA; Deviation: 4.0 &sigma;","res_count":1}]},"bond_angles":{"total_count":5,"residues":[{"name":"B136 MET","title":"CG-SD-CE; Deviation: 6.4 &sigma;\nN-CA-CB; Deviation: 4.1 &sigma;","res_count":1},{"name":"B133 HIS","title":"ND1-CG-CD2; Deviation: 4.5 &sigma;","res_count":1},{"name":"B163 HIS","title":"ND1-CE1-NE2; Deviation: 4.1 &sigma;\nND1-CG-CD2; Deviation: 4.0 &sigma;","res_count":1}]},"ramachandran":[],"rotamers":[],"cbeta":[],"clashes":{"total_count":1,"residues":[{"name":"B136 MET-B158 LEU","title":"SD-CD1; Clash score: -0.407","res_count":2}]},"omega_cis_pro":[],"omega_cis_nonpro":[],"omega_twisted_pro":[],"omega_twisted_nonpro":[]},"molprobity_version":"4.4","bond_total":257,"angle_total":347,"ramachandran_outliers":0.0,"ramachandran_favored":100.0,"rotamer_outliers":0.0,"cbeta_deviations":0,"clashscore":4.09,"molprobity_score":1.19,"omega_summary":{"pro":0,"nonpro":31}}} };
+$.cookie('secStruct', 'dssp', { expires: 365, path: '/' });
+
+chainMapping.defaultColourScheme = 'qmean_local';
+
+let membraneData =  null;
+
+
+
+
+
+function updateQmeanCharts(resizing)
+{
+  local_scores = [];
+  let noResidues = 0;
+  for(let t=0; t<modelData[model_id].targets.length; t++)
+  {
+    if(modelData[model_id].targets[t].is_nucleotide)
+      continue;
+
+    let offset = modelData[model_id].targets[t].templates[0].trg_offset?
+                  modelData[model_id].targets[t].templates[0].trg_offset:1;
+    
+    let sortedKeys = Object.keys(modelData[model_id].targets[t].keyseq_annotation).sort();
+    for(let k=0; k<sortedKeys.length; k++)
+    {
+      let chain = sortedKeys[k];
+      let min=99999, max = 0;
+      let qm = modelData[model_id].targets[t].keyseq_annotation[chain].qmean;
+      if(!qm)
+        continue;
+
+      let ls = {'chain':chain, 'scores':[]};
+      for(let r=0; r<qm.length; r++)
+      {
+        if(qm[r])
+        {
+          min = Math.min(r+offset,min);
+          max = Math.max(r+offset,max);
+        }
+        ls.scores.push([r+offset, qm[r]]);
+      }
+      local_scores.push(ls);
+      noResidues += (max-min);
+    }  
+  }
+
+  if(modelData[model_id].qmean_global 
+    && modelData[model_id].qmean_global.avg_local_score_error)
+  {
+    $('#avgLocalScoreError')
+      .html(' &plusmn; '+ modelData[model_id].qmean_global.avg_local_score_error.toFixed(2));
+    $('#avgLocalScore')
+      .text(modelData[model_id].qmean_global.avg_local_score.toFixed(2))
+      .css({'background-color': 
+                        qmeanLocalColour(modelData[model_id].qmean_global.avg_local_score, .9),
+                      padding: '2px 8px 2px 8px',
+                      color: 'white',
+                      margin: '4px',
+                      'border-radius': '1em',
+                      display: 'inline-block'});
+
+    drawQMEANLocal('model_'+model_id, 
+      modelData[model_id].qmean_global.avg_local_score, model_id, null, resizing);
+  }
+  else
+    $('#qmDiscoInfo').hide()
+
+
+  drawQMEANGlobal(modelData[model_id].qmean_global, noResidues, model_id, true, resizing);
+
+  $(`a[rel=lq-${ model_id }],a[href="#qn-chart-${ model_id }"]`)
+    .fancybox(
+      {
+        padding:30, 
+        'cyclic':true,
+        'hideOnContentClick':true,
+        beforeShow:function(a,b)
+        {
+          let id = $(this.content[0]).first().attr('id');
+          if(id.indexOf('lq-chart')>-1)
+            $('#'+id).closest('.fancybox-outer').after(
+               '<a style="color:#666;float:right;" onclick="svgToPNG(\''+id+'\',\'Local_quality_estimate.png\');"><i class="glyphicon glyphicon-camera"></i> Save as PNG</a>'
+               );
+          else if(id.indexOf('qn-chart')>-1)
+            $('#'+id).after(
+               '<a style="color:#666;float:right;" onclick="svgToPNG(\''+id+'\',\'Quality_comparison.png\');"><i class="glyphicon glyphicon-camera"></i> Save as PNG</a>'
+               );
+        }
+      });
+}
+
+function showRamachandran(chartType, id, chain)
+{
+  
+
+  if(modelData[model_id].residues.length===0)
+    return;
+
+  let colours=null;
+  let oldChart = $('#rama_chart').data();
+  if(!chartType)
+    chartType = oldChart.chartData.chartType;
+  if(!id)
+    id = model_id;
+  if(chain == null)
+    chain = oldChart.chartData.chain;
+
+  if(oldChart.chartData)
+    colours = oldChart.chartData.colours;
+
+  $('button.ramaBtn').removeClass('active');
+
+  $('button.ramaBtn').each(
+      function()
+      {
+        if( $(this).text().toLowerCase().substring(0,3)==chartType.substring(0,3) )
+          $(this).addClass('active');
+      });
+
+  $('#rama_chart').ramachandran({
+      chartType: chartType, 
+      residues: modelData[id].residues,
+      struc_id:'model_'+id,
+      chain: chain,
+      imgBaseURL: '../web/images/ramachandran_',
+      colours: colours
+    });
+}
+
+var pv_viewer = pv.Viewer(document.getElementById('pv'), {
+  background: [0/255,0/255,0/255],
+  width: 300,
+  height: 300,
+  antialias: true,
+  quality: 'high',
+  outline: true,
+  fog: true,
+});
+let pvFullStructures = {};
+function renderPV(id, fullStructure)
+{
+  let strucId = (id==='reference'?'reference':'model_'+id);
+  if(fullStructure)
+  {
+    pvFullStructures[strucId] = fullStructure;
+    if(modelData[model_id].reference_scores)
+    {
+      // more chains may exist than in the aligned data
+      let foundChains = fullStructure.chains().map((chn)=>chn.name());
+      let alignedChains = modelData[model_id].reference_scores.lddt.aligned_chains
+                      .map((aln) => aln[id=='reference'?'reference':'model'].chain ); 
+      for(let i=0; i<foundChains.length; i++)
+          if(foundChains[i]!='_' && foundChains[i]!='-' 
+            && alignedChains.indexOf(foundChains[i])==-1)
+            {  $('#mappedChainsLabel').show();  break;  }
+    }
+  }
+  else
+    fullStructure = pvFullStructures[strucId];
+
+  let pv_structure;
+  pv_viewer.rm(strucId+'*');
+  if($('#onlyMappedChains:checked').length==1)
+  {
+    let chains = modelData[model_id].reference_scores.lddt.aligned_chains
+                    .map((aln) => aln[id=='reference'?'reference':'model'].chain ); 
+    pv_structure = fullStructure.select({'chains':chains})
+  }
+  else 
+    pv_structure = fullStructure;
+
+  let protein = pv_structure.select('protein');
+
+  
+  
+  pv_viewer.lines(strucId+'.ligands_lines', pv_structure.select({'chain':'_'}));
+  pv_viewer.hide(strucId+'.ligands_lines');
+  pv_viewer.ballsAndSticks(strucId+'.ligands', pv_structure.select({'chain':'_'}));
+  switch($.cookie('defaultRepr'))
+  {
+    case "trace":pv_viewer.trace(strucId, protein); break;
+    case "lines":pv_viewer.lines(strucId, protein); break;
+    case "tube":pv_viewer.tube(strucId, protein); break;
+    default: pv_viewer.cartoon(strucId, protein);
+  }
+
+  let dna = pv_structure.select('ligand').select({'rnames':['A','C','T','G','U','DA','DC','DG','DT']});
+  if(dna.residueCount()>0)
+  {
+    if(dna.residueCount()>2000)
+      pv_viewer.lines(strucId+'.dna',dna);
+    else   
+    {
+      try{
+        pv_viewer.cartoon(strucId+'.dna', dna,
+            {
+              color: new pv.color.ColorOp(function(atom, out, index)
+              {
+                switch(atom._residue._name){
+                  case "T":
+                  case "DT": out[index+0] = 204.0/256;
+                              out[index+1] = 185.0/256;
+                              out[index+2] = 116.0/256;
+                              break;
+                  case "C":
+                  case "DC": out[index+0] = 196.0/256;
+                              out[index+1] = 78.0/256;
+                              out[index+2] = 82.0/256;
+                              break;
+                  case "A":
+                  case "DA": out[index+0] = 76.0/256;
+                              out[index+1] = 114.0/256;
+                              out[index+2] = 176.0/256; 
+                              break;
+                  case "G":
+                  case "DG": out[index+0] = 85.0/256;
+                              out[index+1] = 168.0/256;
+                              out[index+2] = 104.0/256;
+                              break;
+                  case "U": out[index+0] = 150.0/256;
+                              out[index+1] = 75.0/256;
+                              out[index+2] = 1.0/256;
+                              break;
+                      }
+                  out[index+3] = 1;
+              })
+          });
+      }catch(err)
+      {
+        //PV will complain with certain DNA ligands
+        //This should not affect display of protein
+        //see 3h4b.1
+      }
+    }
+  }
+
+  if(strucId!=='reference')
+  {
+    if(membraneData && $('#membraneCB_01:checked').length==1)
+      showMembrane(strucId, true);
+
+    if(chainMapping.defaultColourScheme=='features')
+      processAnnotations(id);
+  }
+
+  updatecols();
+
+  if(modelData[model_id].superpose)
+  {
+      centerResRangePV(modelData[model_id].superpose.chain,
+          modelData[model_id].superpose.from,
+          modelData[model_id].superpose.to,
+          modelData[model_id].superpose.ref);
+  }
+  else
+      pv_viewer.autoZoom();
+
+}
+function loadModelPV(id, url, centerOnThis)
+{ 
+  let strucId = (id==='reference'?'reference':'model_'+id);
+  
+  let pv_structure = pv.io.pdb(eval(strucId));
+  
+    {
+      let ss = $.cookie('secStruct');
+      if(id==='reference')
+        mol.assignHelixSheet(pv_structure);
+      else
+      {
+        if(ss==null)
+          ss='dssp';
+        if(ss!='none')
+        {
+          for(let t=0; t<modelData[id]['targets'].length; t++)
+          {
+            let target = modelData[id]['targets'][t];
+            for(let c=0; c<target['keyseq_chain_name'].length; c++)
+            {         
+              let kschain = target['keyseq_chain_name'][c];
+              let chain = pv_structure.select({'chain':kschain});
+              let trg_offset = target['templates'][0]['trg_offset'];
+              if(!trg_offset)
+                trg_offset = 1;
+              let anno_string = target.keyseq_annotation
+                            ?target.keyseq_annotation[kschain][ss+'_string']:null;
+                      
+              if(anno_string)
+              {
+                anno_string = anno_string.replace(/[GI]/g,'H').replace(/B/g,'E'); 
+                chain.eachResidue(
+                  function(r)
+                  { 
+                      r.full().setSS(anno_string[r.num()])
+                  });
+              }
+            }
+          }
+        }
+      }
+
+      renderPV(id, pv_structure);
+
+      pv_viewer.options('animateTime', 1500); 
+    }
+  
+}
+
+function renderNGL(id, initialRepr)
+{
+  let strucId = (id==='reference'?'reference':'model_'+id);
+  let comp = getNGLComponentByName(strucId);
+  if(!comp)
+    return;
+
+  ngl_stage.eachRepresentation(
+    function(rep)
+    {
+      if(rep.name==strucId)
+        comp.removeRepresentation(rep);
+      else if(rep.name.indexOf(strucId)==0)
+      {
+        if(rep.name.endsWith('.ligands')
+          || rep.name.endsWith('.dna'))
+          comp.removeRepresentation(rep);
+      }
+      if(rep.name.indexOf('residuesHighlight')>-1
+        || rep.name.indexOf('hover')>-1)
+          rep.setVisibility(false);   
+    });
+
+  let onlyMappedPeptides = [];
+  let onlyMappedNucleotides = [];
+  if($('#onlyMappedChains:checked').length==1)
+  {
+    let mdlChains = modelData[model_id].reference_scores.lddt.aligned_chains
+                    .map((aln) => aln.model.chain ); 
+    let refChains = modelData[model_id].reference_scores.lddt.aligned_chains
+                    .map((aln) => aln.reference.chain ); 
+
+    for(let t=0; t<modelData[model_id].targets.length; t++)
+    {
+      for(let chn of modelData[model_id].targets[t].keyseq_chain_name)
+      { 
+        let alIdx = mdlChains.indexOf(chn);
+        if(alIdx>-1)
+        {
+          if(modelData[model_id].targets[t].is_nucleotide)
+            onlyMappedNucleotides.push(id==='reference'?refChains[alIdx]:mdlChains[alIdx]);
+          else
+            onlyMappedPeptides.push(id==='reference'?refChains[alIdx]:mdlChains[alIdx]);
+        }
+      }
+    }
+  }
+
+  let repr = $.cookie('defaultRepr');
+  if(repr==null)
+    repr='cartoon';
+  else if(repr=='ballAndStick')
+    repr = 'ball+stick';
+  else if(repr=='lines')
+    repr = 'line';
+  
+  schemeId = NGL.ColormakerRegistry
+                .addScheme( function( params )
+                  {
+                    this.atomColor = function( atom )
+                    { return 0xFFFFFF; };
+                  }, id);
+
+  // The main protein representation
+  comp.addRepresentation(repr, {
+      name: strucId,
+      sele: (onlyMappedPeptides.length>0?
+             ':'+onlyMappedPeptides.join(' or :')
+            :"not :_ and not nucleic and not :-"),
+      smoothSheet: true,
+      roughness: 1,
+      surfaceType: "sas",
+      probeRadius: 1.4, 
+      scaleFactor: Math.min( 1.5, Math.max( 0.1, 50000 / comp.structure.atomCount ) ),
+      side: "front",
+      color: schemeId 
+  });
+
+  let closeLigands = [];
+  let closeNucleic = [];
+  if(onlyMappedPeptides.length>0)
+  {
+    let atomProxy = comp.structure.getAtomProxy();
+    let chnAtoms = comp.structure.getAtomSetWithinSelection( 
+        new NGL.Selection(':'+onlyMappedPeptides.join(' or :')), 4).toArray();
+
+    chnAtoms.forEach(function(a)
+       {
+          atomProxy.index = a;
+          if(onlyMappedPeptides.indexOf(atomProxy.chainname)==-1)
+            if(atomProxy.chainname=='_')
+            {
+              if(closeLigands.indexOf(atomProxy.resno)==-1)
+                closeLigands.push(atomProxy.resno);
+            }
+       });
+
+    let struc = comp.structureView;
+    let cp = struc.getChainProxy();
+    let protCount = 0;
+    for(let i=0; i<struc.chainStore.count; i++)
+    {
+      cp.index = i;
+      if(onlyMappedPeptides.indexOf(cp.chainname)>-1)
+        protCount+= cp.residueCount;
+    }
+  }
+
+  if(onlyMappedPeptides.length==0 || closeLigands.length>0)
+    comp.addRepresentation("ball+stick", {
+        name: strucId+ ".ligands",
+        colorScheme: "element",
+        sele: closeLigands.join(':_ ')+":_",
+        side: "front"
+    });
+
+  ['base','tube'].forEach(function(repr)
+  {
+    comp.addRepresentation(repr, {
+        name: strucId + ".dna",
+        colorScheme: 'resname',
+        radiusScale: .5,
+        sele: (onlyMappedNucleotides.length>0?
+             ':'+onlyMappedNucleotides.join(' or :')
+            :'nucleic and not :_')
+    });
+  });
+
+  updatecols();
+
+  if(id==='reference' && modelData[model_id].superpose)
+    centerResRangeNGL(modelData[model_id].superpose.chain,
+            modelData[model_id].superpose.from,
+            modelData[model_id].superpose.to,
+            modelData[model_id].superpose.ref);
+  else
+    ngl_stage.autoView(1000);
+}
+function loadModelNGL(id, url, centerOnThis)
+{ 
+  if(ngl_stage==null)
+      ngl_stage = getNGL();
+  
+  let strucId = (id==='reference'?'reference':'model_'+id);
+  
+  let strucBlob = new Blob( [ eval(strucId) ], { type: 'text/plain'} );
+  ngl_stage.loadFile( strucBlob, { ext: "pdb" } )
+  
+     .then( function(struc)
+    {
+      if(modelData[model_id].reference_scores)
+      {
+        // more chains may exist than in the aligned data
+        let cproxy = struc.structure.getChainProxy();
+        let foundChains = [];
+        for(let i=0; i<cproxy.chainStore.count; i++)
+        {
+          cproxy.index = i;
+          foundChains.push(cproxy.chainname);
+        }
+        let alignedChains = modelData[model_id].reference_scores.lddt.aligned_chains
+                        .map((aln) => aln[id=='reference'?'reference':'model'].chain ); 
+        for(let i=0; i<foundChains.length; i++)
+            if(foundChains[i]!='_' && foundChains[i]!='-' 
+              && alignedChains.indexOf(foundChains[i])==-1)
+              {  $('#mappedChainsLabel').show();  break;  }
+      }
+
+      let ss = $.cookie('secStruct');
+      if(ss==null)
+        ss='dssp';
+      let clearStruc = (ss=='none');
+      if(id!=='reference')
+      {
+        for(let t=0; t<modelData[id]['targets'].length; t++)
+        {
+          let target = modelData[id]['targets'][t];
+          for(let c=0; c<target['keyseq_chain_name'].length; c++)
+          {   
+            let kschain = target['keyseq_chain_name'][c];
+            let trg_offset = target['templates'][0]['trg_offset'];
+            if(!trg_offset)
+              trg_offset = 1;
+            
+            let anno_string = target.keyseq_annotation?
+                         target.keyseq_annotation[kschain][ss+'_string']:null;
+                                
+            if(!anno_string)
+              clearStruc = true;
+            else
+              anno_string = anno_string.replace(/[GI]/g,'H')
+                                  .replace(/B/g,'E'); 
+
+            for(comp in ngl_stage.compList)
+            { 
+              ngl_stage.compList[comp]
+                .structure
+                .eachResidue(function(a)
+                      {
+                        if(a.chainname == kschain) {
+                          if(clearStruc)
+                            a.sstruc = '';
+                          else if(anno_string[a.resno])
+                            a.sstruc = anno_string[a.resno].toLowerCase();
+                        }
+                      });
+              break;
+            }
+          } 
+        }
+      }
+
+      setupNGLRepresentations(struc, strucId);
+
+      renderNGL(id, true);
+
+      if(id!=='reference')
+      {  
+        if(membraneData && $('#membraneCB_'+id+':checked').length==1)
+          showMembrane(strucId, true);
+
+        if(chainMapping.defaultColourScheme=='features')
+          processAnnotations(id);
+      }
+  });
+}
+
+
+
+
+
+
+function editText()
+{
+  if($('#edit').length>0)
+    return;
+  $('#projectTitle')
+    .hide()
+    .after('<div>'
+        +'<input class="form-control" type="text" id="edit" value="'
+        + $('#projectTitle').text().substring(0, $('#projectTitle').text().length-2)
+        +'" maxlength="255" style="width:100%; display:inline" />'
+        +'<button type="button" class="btn btn-default" onclick="saveText(true,event)" >Save</button>'
+        +'<button type="btn" class="btn btn-default" onclick="saveText(false,event)" >Cancel</button>'
+        +'</div>'
+    );
+  $('#edit').focus();
+}
+
+function saveText(save, event)
+{
+  event.stopPropagation();
+  if(save)
+  {
+    let val = $('#edit').val().trim();
+    if(val.length>0)
+    {
+      var split = document.title.lastIndexOf(' | ');
+      document.title = val + (split>-1?document.title.substring(split):'');
+      $.post("/assess/6T8pwb/edit",
+          { 
+            value:val,
+            csrfmiddlewaretoken:'CiW2WvxspCqM5HlLWKKY8pDensGpocvZFk7fkVFGfn994ca72DYeDmD2mvKGuEap' 
+          }, 
+          
+          function(data, s)
+          {
+            if(s=='success' && data.edit=='success')
+            {
+              $('#projectTitle')
+                .text(val+'; ')
+                .css('background-color','#6D6');
+              setTimeout( function(){ $('#projectTitle').css('background-color',''); },1500);   
+            }
+            else
+              $('#projectTitle')
+                .after('<div id="titleEditError" style="color:red; font-size:.8em">Error saving project title!</div>');
+          });
+    }
+  }
+  $('#projectTitle').show();
+  $('#edit').parent().remove();
+}
+
+$('#delProjectDiv').on('shown.bs.modal', function (e) {
+  $('#confirmDeleteButton').focus();
+});
+
+function confirmDeleteProject(id)
+{
+  if($('.loader:visible').length>0)
+  {
+    if($('#cdprunning').length==0)
+    {
+     $('#deleteButton').after(
+      '<div id="cdprunning" class="alert alert-danger text-center" style="margin:12px;">Job still running</div>'
+      )
+     .fadeIn();
+      setTimeout( function(){ 
+            $('#cdprunning').fadeOut(500, function(){$(this).remove();});
+          }, 2000);
+   }
+    return;
+  }
+
+  $('#delProjectDiv').modal('show');   
+  $('#confirmDeleteButton')
+    .off('click')
+    .on('click',function()
+      {
+          $('#delProjectDiv').modal('hide');  
+          
+          //This obfuscation is just to stop bots from following the link
+          
+          var url = ['xx/delete','/asses','s/xxxx'];
+          $.post( (url[1]+url[2]+url[0]).replace('xxxxxx',id),
+              { 
+                csrfmiddlewaretoken:'CiW2WvxspCqM5HlLWKKY8pDensGpocvZFk7fkVFGfn994ca72DYeDmD2mvKGuEap' 
+              },
+              function(d,s)
+              {            
+                window.location = '/assess';
+              });       
+      });
+}
+ 
+
+{
+  let checkThese = '';
+  let localData = localStorage.getItem('model');
+  if(localData)
+  {
+    let models = JSON.parse(localData);
+    for(let i=0; i<models.length; i++)
+      checkThese+=(i==0?'':',')+'#cmp_'+models[i].model_id;
+    if(checkThese.length>0)
+      $(checkThese)
+        .prop('checked','checked')
+        .parent()
+            .after("<a href='/comparison/' class='compareLink' target='_blank'>Compare <i class='glyphicon glyphicon-new-window'/></a>");
+
+
+  }
+  $('.compareCheck').not(checkThese).prop('checked','');
+}
+
+function toggleCompareItem(evt)
+{       
+    if($('input.compareCheck:checked').length>0)
+    {
+        if($('.compareLink').length==0)
+          $('input.compareCheck').closest('label')
+            .after("<a href='/comparison/' class='compareLink' target='_blank'>Compare <i class='glyphicon glyphicon-new-window'/></a>");
+    }
+    else
+        $('.compareLink').remove();
+
+    if(evt.target.checked)
+        $.ajax({
+            type:'POST',
+            url:"/comparison/add/",
+            data: { 
+                    'model_id':evt.target.id.substring(4),
+                    'source': 'assess',
+                    'csrfmiddlewaretoken':csrf
+                },
+            success: function(data) {
+                let locStore = localStorage.getItem('model');
+                if(locStore==null)
+                    locData = [];
+                else
+                {
+                    locData = JSON.parse(locStore);
+                    let exists = false; 
+                    for(var i=0; i<locData.length; i++)
+                        if(locData[i].model_id==data['model_id'])
+                            return;
+                }
+                locData.push(data)
+                localStorage.setItem('model',JSON.stringify(locData));
+            },
+            error: function(response)
+            {
+                $(evt.target)
+                    .prop({'checked':false,'disabled':true})
+                    .after('Could not add this model!')
+                    .parent()
+                    .find('.compareLink')
+                    .remove();
+            }
+        });
+    else
+    {
+        let locStore = localStorage.getItem('model');
+        if(!locStore)
+            return;
+        let model_id = evt.target.id.substring(4);
+        locData = JSON.parse(locStore);
+        for(var i=0; i<locData.length; i++)
+            if(locData[i].model_id==model_id)
+            {
+                locData.splice(i,1);
+                break;
+            }
+        localStorage.setItem('model',JSON.stringify(locData));
+    }
+}
+
+$(window).on('storage', comparison_updated);
+function comparison_updated(ev)
+{
+    if (ev.originalEvent.key!='model') return;
+    var checkThese = ''
+    if(ev.originalEvent.newValue)
+    {
+        var models = JSON.parse(ev.originalEvent.newValue);
+        for(var i=0; i<models.length; i++)
+            checkThese+=(i==0?'':',')+'#cmp_'+models[i].model_id;
+        if(checkThese.length>0)
+            $(checkThese).prop('checked','checked');
+    }
+    $('.compareCheck').not(checkThese).prop('checked','');
+}
+
+$('input.compareCheck').on('change', function(evt) {  toggleCompareItem(evt);  });
+
+
+</script>
+
