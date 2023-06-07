@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../web/css/bootstrap-3.4.1.min.css"/> 
+    <link rel="stylesheet" href="../web/css/bootstrap-theme-3.4.1.min.css"/>
+    <link rel="stylesheet" href="../web/css/master.css"/>
+    <link rel="stylesheet" href="../web/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="../web/css/jquery-ui.min.css"/>  
+    <title>Mechano-growth factor - MGF | Templates</title>
+    <style>
+      .noborder > thead > tr > th,
+      .noborder > tbody > tr > td {
+        border:0px;
+        padding:0px 5px 0px 5px;
+      }
+      .alignTbl tr[keyseqchain] span[nores] {
+        opacity:.3;
+      }
+
+      @media (min-width: 768px) {
+      #flex-panel-container > #left-panel {
+          width: 450px;
+          min-width: 280px;
+          padding-bottom: 16px;
+        }
+      }
+      dl.dl-models {
+        margin-bottom: 0px;
+      }
+      .dl-models dt, dd {
+        border-top: none;
+        padding: 0;
+      }
+      .dl-models dt {
+        font-size: 85%;
+        line-height: 90%;
+      }
+      .dl-models dd {
+        margin: 2px 0px 8px 12px;
+      }
+
+      .noborder tr > th:first-child, .noborder tr > td:first-child {
+        padding-left: 0px;
+      }
+      .noborder tr > th:last-child, .noborder tr > td:last-child {
+        padding-right: 0px;
+      }
+
+      #annotateDiv {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 100;
+        opacity: .7;
+        display: none; 
+        text-align:right;
+      }
+      #annotate {
+        width: 350px; 
+        opacity:.8; 
+        margin-bottom:4px;
+        color: #000
+      }
+      #annotateBtn {
+        margin-right:2px;
+      }
+    </style>
+  </head>
+  <body><div id="alignmentOptions" style="display:none;">
+  <form class="alignmentOptions form form-inline" autocomplete="off">
+    <div id="exportOptions" style="padding-bottom:8px">
+      <b>Export Alignment</b>
+      <br>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('#alignTbl'+$('#currentAlignmentIndex').val()).alignment('exportAlignment', {'format':'FASTA'});">FASTA format</button>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('#alignTbl'+$('#currentAlignmentIndex').val()).alignment('exportAlignment', {'format':'ClustalW'});">Clustal Format</button>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('.alTbl').first().alignment('html2image')">PNG Image</button>
+    </div>
+    <div>
+      <div id="ssOptions">
+        <b>Secondary Structure</b>
+        <br>
+        <label><input type="radio" name="sstype" id="secStruct_none" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'none'})"  >None</label> 
+        <label><input type="radio" name="sstype" id="secStruct_dssp" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'dssp'})" checked="checked" />DSSP</label>  
+        <label><input type="radio" name="sstype" id="secStruct_psipred" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'psipred'})"  />PSIPRED</label>
+        <label><input type="radio" name="sstype" id="secStruct_sspro" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'sspro'})"  />SSpro</label>   
+      </div>
+
+      <div id="colourOptions" style="padding-top:8px">
+        <b>Colour Scheme </b>
+        <a class="smng-help" href="/docs/help#colour_schemes"></a>
+        <div id="fadeMismatches">
+        <label class="inline checkbox" style="margin-right:12px;"><input type="checkbox" id="fadeMismatch_cb" onclick="$('.alignTbl').alignment('targetMismatch',{match:this.checked?'fade':null})" checked="checked" />Fade Mismatches</label>
+        <label class="inline checkbox"><input type="checkbox" id="enhanceMismatch_cb" onclick="$('.alignTbl').alignment('targetMismatch',{match:this.checked?'enhance':null})"  />Enhance Mismatches</label></div>
+        
+        
+
+         
+
+        
+        <label class="confLabel"><input title="Per residue confidence colours" type="radio" name="csRadioGroup" id="qmean_localButton" value="qmean_local" checked="checked" />Confidence<sup>gradient</sup></label>
+        <label class="confLabel"><input title="Confidence classes" type="radio" name="csRadioGroup" id="confClassButton" value="confClass" checked="checked" />Confidence<sup>class</sup></label>
+        <label><input type="radio" name="csRadioGroup" id="indelsButton" value="indels"  />Indels</label>
+
+        <label><input type="radio" name="csRadioGroup" id="chainButton" value="chain" >Chain</label>
+        <label><input type="radio" name="csRadioGroup" id="uniqueChainButton" value="uniqueChain" >Unique Chain</label>
+        <label><input type="radio" name="csRadioGroup" id="rainbowButton" value="rainbow" checked="checked">Rainbow</label>
+        <label><input type="radio" name="csRadioGroup" id="secstrucButton" value="secstruc" checked="checked">2&deg; Structure</label>
+
+        
+
+        
+
+
+        
+        <label><input type="radio" name="csRadioGroup" id="clustalButton" value="clustal"  />Clustal</label>
+        <label><input type="radio" name="csRadioGroup" id="hydrophobicButton" value="hydrophobic"  />Hydrophobic</label>
+        <label><input type="radio" name="csRadioGroup" id="sizeButton" value="size"  />Size</label>
+        <label><input type="radio" name="csRadioGroup" id="chargedButton" value="charged"  />Charged</label>
+        <label><input type="radio" name="csRadioGroup" id="polarButton" value="polar"  />Polar</label>
+        <label><input type="radio" name="csRadioGroup" id="prolineButton" value="proline"  />Proline</label>
+        <label><input type="radio" name="csRadioGroup" id="serThrButton" value="serThr"  />Ser/Thr</label>
+        <label><input type="radio" name="csRadioGroup" id="cysButton" value="cysteine"  />Cysteine</label>      
+        <label><input type="radio" name="csRadioGroup" id="aliphaticButton" value="aliphatic"  />Aliphatic</label>
+        <label><input type="radio" name="csRadioGroup" id="aromaticButton" value="aromatic"  />Aromatic</label>
+        
+        <label><input type="radio" name="csRadioGroup" id="noColourButton" value="none"  />No Colour</label> 
+      </div>
+      
+      
+      <label class="checkbox" style="display: none" id="qmeanbraneLbl">
+        <input type="checkbox" id="qmeanbraneCB" onclick="toggleQMEANBrane($(this).prop('checked'))">Use QMEANBrane values
+      </label>
+
+      <table>
+        <tr>
+          <td><div style="margin-right:16px">Background</div></td>
+          <td><div style="height:16px; width:16px; border:1px solid #777;cursor:pointer;background-color:black" onclick="$('#bgColSlider').slider('value',0);"> </div></td>
+          <td style="width:220px"><div id="bgColSlider" style="margin:8px"></div></td>
+          <td><div style="height:16px; width:16px; border:1px solid #777;cursor:pointer;background-color:white" onclick="$('#bgColSlider').slider('value',255);"> </div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="viewerSelect" style="padding-top:8px">
+      <b>3D Viewer</b><br>
+      <label><input type="radio" name="3dRG" value="NGL" checked="checked" />NGL</label>
+      <label><input type="radio" name="3dRG" value="PV"  />PV</label>
+    </div>
+  </form>
+  <div id="formattedAlignment" style="width:610px;height:470px;" class="fancy_box_swap">
+    <label class="checkbox-inline" >
+      <select style="height:28px;width:150px;" class="form-control" name="alignmentFormatSelect" id="alignmentFormatSelect" onchange="$('.alignTbl').first().alignment('changeExportFormat')">
+        <option value="FASTA" selected="selected">FASTA</option>
+        <option value="Multi FASTA">Multi FASTA</option>
+        <option value="ClustalW">ClustalW</option>
+      </select>
+    </label>
+    <button type="button" class="btn btn-sm btn-default" onclick="$('.alignTbl').first().alignment('html2image')">PNG</button>
+    <div align="center">
+      <textarea name="formattedAlignmentTextarea" id="formattedAlignmentTextarea" style="margin-top:8px;font-family:'Courier New', Courier, monospace; font-size:12px;width:100%;height:400px"></textarea>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="currentAlignmentIndex" value="">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="margin-left:0px;padding:8px 4px 0px 0px;"
+                title="SIB Swiss Institute of Bioinformatics" 
+                href="https://www.sib.swiss" target="_blank"><img src="../web/images/sib_logo_small.png" alt="SIB logo" style="max-height:50px"></a>
+            <a class="hidden-xs hidden-sm navbar-brand" style="margin-left:0px; padding:8px 0px 0px 4px;"
+            title="Biozentrum | University of Basel | The Center for Molecular Life Sciences" 
+            href="http://www.biozentrum.unibas.ch/" target="_blank"><img src="../web/images/biozentrum_en.png" alt="Biozentrum logo" style="max-height:36px"></a>
+            <a class="navbar-brand" href="https://swissmodel.expasy.org" style="margin-left:0px;padding-left:0px;padding-right:0px;font-size:28px;">SWISS-MODEL</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid" style="padding-left:15px">
+      <h3 style="display:inline-block;" id="title_vnLMf3">Mechano-growth factor - MGF
+      </h3>
+      <h3 style="display:inline-block; margin-left:8px;">
+        <small>Created: June 7, 2023, 8:45 p.m. at 20:45</small>
+      </h3>
+    </div>
+      
+    
+<style>
+.odd { 
+  background-color:#BBDDED;
+}
+td { 
+  padding:2px 2px 2px 2px; 
+  cursor: pointer;
+}
+td:first-child {
+  text-align:center;
+}
+th{
+  font-size: .8em;
+  text-align: center;
+}
+.headerSortNone, .headerSortUp, .headerSortDown {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 0px 0px 8px 0px !important;
+}
+
+.btn-xs {
+  margin: 2px;
+}
+</style>
+
+
+<ul class="nav nav-pills" style="margin-bottom:0px; display: inline-block;">
+  <li class="active"><a href="templates.html">Templates</a></li>
+  
+  <li><a href="models.html">Models </a></li>
+</ul>
+
+
+
+<div style="overflow-x:auto">
+  <table id="full_monty_tbl">
+    <thead>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Models</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Name</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Description</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">GMQE</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">QSQE</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Seq Id</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Coverage</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Range</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Method</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Resolution</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Oligo-state</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Ligands</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Found by</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Seq Similarity</th>
+    </thead>
+    <tbody>
+      <tr id="aea3c2af6ef08b72426672054c4821ce33bbf704" class="odd">
+        <td>&#10003;<br>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/5yan.1" target="_blank">5yan.1.B</a></td>
+        <td><div class="text-left">Collagen
+          <br><small><i>Deconstructing the Salt-Bridge Network of a Computationally Designed Collagen Heterotrimer</i></small></div></td>
+        <td>0.00</td>
+        <td>0.00</td>
+        <td>25.00</td>
+        <td>0.03</td>
+        <td> 717-748</td>
+        <td>X-ray</td>
+        <td>1.77</td>
+        <td title="monomer">monomer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.26</td>
+      </tr>
+      <tr id="aea3c2af6ef08b72426672054c4821ce33bbf704_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_aea3c2af6ef08b72426672054c4821ce33bbf704"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>5yan.1    ----------------------------------------------------------------------------YGPD<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>5yan.1    GDPGDPGDPGPDGKPGPDGPDGPDGDPG----------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>5yan.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>5yan.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="5c4c8fb213abe39bdd21c834808724d9386cf3d8" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/6a0c.1" target="_blank">6a0c.1.A</a></td>
+        <td><div class="text-left">collagen type III peptide
+          <br><small><i>Structure of a triple-helix region of human collagen type III</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>28.57</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.50</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.29</td>
+      </tr>
+      <tr id="5c4c8fb213abe39bdd21c834808724d9386cf3d8_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_5c4c8fb213abe39bdd21c834808724d9386cf3d8"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>6a0c.1    ---GPPGPPGFRGPAGPNGIPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>6a0c.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="2986f770eeed9640afca787d507f863c04fb4131" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/6a0c.1" target="_blank">6a0c.1.B</a></td>
+        <td><div class="text-left">collagen type III peptide
+          <br><small><i>Structure of a triple-helix region of human collagen type III</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>28.57</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.50</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.29</td>
+      </tr>
+      <tr id="2986f770eeed9640afca787d507f863c04fb4131_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_2986f770eeed9640afca787d507f863c04fb4131"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>6a0c.1    ---GPPGPPGFRGPAGPNGIPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>6a0c.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="471694a8c8b61b8d50378ab11aa561b99f462870" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/6a0c.1" target="_blank">6a0c.1.C</a></td>
+        <td><div class="text-left">collagen type III peptide
+          <br><small><i>Structure of a triple-helix region of human collagen type III</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>28.57</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.50</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.29</td>
+      </tr>
+      <tr id="471694a8c8b61b8d50378ab11aa561b99f462870_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_471694a8c8b61b8d50378ab11aa561b99f462870"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>6a0c.1    ---GPPGPPGFRGPAGPNGIPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>6a0c.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>6a0c.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="9d8741d8db8e20938506ba94f8878adea90941d3" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/2lbz.1" target="_blank">2lbz.1.A</a></td>
+        <td><div class="text-left">Thuricin17
+          <br><small><i>Thurincin H</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>37.50</td>
+        <td>0.03</td>
+        <td> 348-371</td>
+        <td>NMR</td>
+        <td>0.00</td>
+        <td title="monomer">monomer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.39</td>
+      </tr>
+      <tr id="9d8741d8db8e20938506ba94f8878adea90941d3_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_9d8741d8db8e20938506ba94f8878adea90941d3"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>2lbz.1    ---------------------------CWSCLVCAACSVELLNLVTAATGA-----------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>2lbz.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="3a8e1d6182afd2d238af169b1d483645852ed5c1" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/2lbz.1" target="_blank">2lbz.1.A</a></td>
+        <td><div class="text-left">Thuricin17
+          <br><small><i>Thurincin H</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>37.50</td>
+        <td>0.03</td>
+        <td> 408-431</td>
+        <td>NMR</td>
+        <td>0.00</td>
+        <td title="monomer">monomer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.39</td>
+      </tr>
+      <tr id="3a8e1d6182afd2d238af169b1d483645852ed5c1_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_3a8e1d6182afd2d238af169b1d483645852ed5c1"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>2lbz.1    -------DWTCWSCLVCAACSVELLNLVTAA-------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>2lbz.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>2lbz.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="524b46b45e5f89ccd460c08d11abf56a3ddf0689" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/5ctd.1" target="_blank">5ctd.1.C</a></td>
+        <td><div class="text-left">Collagen alpha-1(I) chain,Collagen alpha-3(IX) chain
+          <br><small><i>Crystal structure of the type IX collagen NC2 hetero-trimerization domain with a guest fragment a2a1a1 of type I collagen</i></small></div></td>
+        <td>0.00</td>
+        <td>0.00</td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 730-757</td>
+        <td>X-ray</td>
+        <td>1.60</td>
+        <td title="monomer">monomer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.26</td>
+      </tr>
+      <tr id="524b46b45e5f89ccd460c08d11abf56a3ddf0689_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_524b46b45e5f89ccd460c08d11abf56a3ddf0689"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>5ctd.1    ---------GARGQAGVMGFPGPPGPPGPPGKEASEQ-------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>5ctd.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>5ctd.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="91066f0bcc059ae5a4962e3ffa89d2ffb4c3d8ce" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/5cva.1" target="_blank">5cva.1.C</a></td>
+        <td><div class="text-left">Collagen alpha-1(I) chain,Collagen alpha-3(IX) chain
+          <br><small><i>Crystal structure of the type IX collagen NC2 hetero-trimerization domain with a guest fragment a1a2a1 of type I collagen</i></small></div></td>
+        <td>0.00</td>
+        <td>0.00</td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 730-757</td>
+        <td>X-ray</td>
+        <td>2.10</td>
+        <td title="monomer">monomer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.26</td>
+      </tr>
+      <tr id="91066f0bcc059ae5a4962e3ffa89d2ffb4c3d8ce_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_91066f0bcc059ae5a4962e3ffa89d2ffb4c3d8ce"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>5cva.1    ---------GARGQAGVMGFPGPPGPPGPPGKEASEQ-------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>5cva.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>5cva.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="c9eb43c1ba68419c1eb75b615d4c6eb595a10ee0" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/5cva.2" target="_blank">5cva.2.C</a></td>
+        <td><div class="text-left">Collagen alpha-1(I) chain,Collagen alpha-3(IX) chain
+          <br><small><i>Crystal structure of the type IX collagen NC2 hetero-trimerization domain with a guest fragment a1a2a1 of type I collagen</i></small></div></td>
+        <td>0.00</td>
+        <td>0.00</td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 730-757</td>
+        <td>X-ray</td>
+        <td>2.10</td>
+        <td title="monomer">monomer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.26</td>
+      </tr>
+      <tr id="c9eb43c1ba68419c1eb75b615d4c6eb595a10ee0_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_c9eb43c1ba68419c1eb75b615d4c6eb595a10ee0"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>5cva.2    ---------GARGQAGVMGFPGPPGPPGPPGKEASEQ-------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>5cva.2    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>5cva.2    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="e6f3bf63a3c66c9bb65e5342e5483a83925a7759" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/5cvb.2" target="_blank">5cvb.2.C</a></td>
+        <td><div class="text-left">Collagen alpha-1(I) chain,Collagen alpha-3(IX) chain
+          <br><small><i>Crystal structure of the type IX collagen NC2 hetero-trimerization domain with a guest fragment a1a1a1 of type I collagen</i></small></div></td>
+        <td>0.00</td>
+        <td>0.00</td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 730-757</td>
+        <td>X-ray</td>
+        <td>2.25</td>
+        <td title="monomer">monomer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.26</td>
+      </tr>
+      <tr id="e6f3bf63a3c66c9bb65e5342e5483a83925a7759_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_e6f3bf63a3c66c9bb65e5342e5483a83925a7759"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>5cvb.2    ---------GARGQAGVMGFPGPPGPPGPPGKEASEQ-------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>5cvb.2    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>5cvb.2    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="42b0673d9b21b1a24bfaa3d8e52e91695d579203" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/1cag.1" target="_blank">1cag.1.A</a></td>
+        <td><div class="text-left">COLLAGEN-LIKE PEPTIDE
+          <br><small><i>CRYSTAL AND MOLECULAR STRUCTURE OF A COLLAGEN-LIKE PEPTIDE AT 1.9 ANGSTROM RESOLUTION</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.85</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.25</td>
+      </tr>
+      <tr id="42b0673d9b21b1a24bfaa3d8e52e91695d579203_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_42b0673d9b21b1a24bfaa3d8e52e91695d579203"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>1cag.1    ---GPPGPPGPPGPPAPPGPPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>1cag.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="4f917f5a6d9a8a4223219e43adabab6157430933" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/1cag.1" target="_blank">1cag.1.B</a></td>
+        <td><div class="text-left">COLLAGEN-LIKE PEPTIDE
+          <br><small><i>CRYSTAL AND MOLECULAR STRUCTURE OF A COLLAGEN-LIKE PEPTIDE AT 1.9 ANGSTROM RESOLUTION</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.85</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.25</td>
+      </tr>
+      <tr id="4f917f5a6d9a8a4223219e43adabab6157430933_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_4f917f5a6d9a8a4223219e43adabab6157430933"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>1cag.1    ---GPPGPPGPPGPPAPPGPPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>1cag.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="2889ad502cbf4e151e72bdc893291bfa0ecdb5c6" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/1cag.1" target="_blank">1cag.1.C</a></td>
+        <td><div class="text-left">COLLAGEN-LIKE PEPTIDE
+          <br><small><i>CRYSTAL AND MOLECULAR STRUCTURE OF A COLLAGEN-LIKE PEPTIDE AT 1.9 ANGSTROM RESOLUTION</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.85</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.25</td>
+      </tr>
+      <tr id="2889ad502cbf4e151e72bdc893291bfa0ecdb5c6_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_2889ad502cbf4e151e72bdc893291bfa0ecdb5c6"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>1cag.1    ---GPPGPPGPPGPPAPPGPPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>1cag.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>1cag.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="8f2f9e323e9feb5341b83866bdf146620bb6c358" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/7lxp.1" target="_blank">7lxp.1.C</a></td>
+        <td><div class="text-left">Collagen mimetic peptide
+          <br><small><i>Collagen Mimetic Peptide with an Xaa-position Aza-proline</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.40</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.24</td>
+      </tr>
+      <tr id="8f2f9e323e9feb5341b83866bdf146620bb6c358_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_8f2f9e323e9feb5341b83866bdf146620bb6c358"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>7lxp.1    ---GPPGPPGPPGXPGPRXPPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>7lxp.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="0bfd03e86cc8269849688127ad0940a78787943f" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/7lxp.1" target="_blank">7lxp.1.B</a></td>
+        <td><div class="text-left">Collagen mimetic peptide
+          <br><small><i>Collagen Mimetic Peptide with an Xaa-position Aza-proline</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.40</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.24</td>
+      </tr>
+      <tr id="0bfd03e86cc8269849688127ad0940a78787943f_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_0bfd03e86cc8269849688127ad0940a78787943f"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>7lxp.1    ---GPPGPPGPPGXPGPRXPPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>7lxp.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="292e91eeb8b39998a8cb0890832f77354cff205b" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/7lxp.1" target="_blank">7lxp.1.A</a></td>
+        <td><div class="text-left">Collagen mimetic peptide
+          <br><small><i>Collagen Mimetic Peptide with an Xaa-position Aza-proline</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.40</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.24</td>
+      </tr>
+      <tr id="292e91eeb8b39998a8cb0890832f77354cff205b_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_292e91eeb8b39998a8cb0890832f77354cff205b"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>7lxp.1    ---GPPGPPGPPGXPGPRXPPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>7lxp.1    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>7lxp.1    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="7d34fe5c2b64241e05dc6f5f818a5ddf8b77669c" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/7lxp.2" target="_blank">7lxp.2.B</a></td>
+        <td><div class="text-left">Collagen mimetic peptide
+          <br><small><i>Collagen Mimetic Peptide with an Xaa-position Aza-proline</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>21.43</td>
+        <td>0.03</td>
+        <td> 724-751</td>
+        <td>X-ray</td>
+        <td>1.40</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.24</td>
+      </tr>
+      <tr id="7d34fe5c2b64241e05dc6f5f818a5ddf8b77669c_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_7d34fe5c2b64241e05dc6f5f818a5ddf8b77669c"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>7lxp.2    ---GPPGPPGPPGXPGPRXPPGPPGPPGPPG-------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>7lxp.2    --------------------------------------------------------------------------------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>7lxp.2    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="c6f3f9e94725da1421c5c1e79fa887ffe87543b8" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/templates/3gxe.2" target="_blank">3gxe.2.B</a></td>
+        <td><div class="text-left">Collagen alpha-1(I) chain
+          <br><small><i>Complex of a Low Affinity Collagen Site with the Fibronectin 8-9FnI Domain Pair</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>36.36</td>
+        <td>0.02</td>
+        <td> 850-871</td>
+        <td>X-ray</td>
+        <td>2.60</td>
+        <td title="hetero-1-1-mer">hetero-1-1-mer</td>
+        <td>1 x NAG</td>
+        <td>HHblits</td>
+        <td>0.33</td>
+      </tr>
+      <tr id="c6f3f9e94725da1421c5c1e79fa887ffe87543b8_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_c6f3f9e94725da1421c5c1e79fa887ffe87543b8"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    METARGTHRSERGLCLYSSERGLNARGARGGLYALAGLCVALLECCYSGLYASPALALECVALGLYGLYLYSLECSERAL<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    ALYSLECLECGLNPHEVALILEGLYGLCGLCLECALALYSGLYILEVALILELECLYSGLYLYSLYSLECGLCLYSPHEA<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    SPILEGLYILEGLCLECARGLECLECGLNGLNASPGLYLYSTHRTHRILESERASNLECLYSLECGLNGLNGLYILEARG<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    VALPHEILEARGGLCGLNGLCGLYLECLECGLCLECLECLYSLYSASPLYSGLYGLYGLYARGGLYGLCGLCLYSLECGL<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    YLYSLECLECLYSLECGLYLECGLCGLCLECLECGLCLYSLYSLECALAGLNALAARGLECLYSARGILEARGGLNSERT<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    HRGLYILELECLECLECALAALAGLNLYSVALALAGLYASPTHRARGTHRARGALALECGLYTHRLECLYSASNGLYLEC<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCGLCTHRSERALAGLYGLYALAGLCGLNSERGLYLECALALECARGLECLECGLNLYSALAGLNGLYTHRGLYAL<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    AGLCILEALAALAGLNTHRALATHRLECALALECLECLECGLCALAALALECGLYALAGLYALAGLCGLNGLYGLCTHRG<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    LCLECALAARGLECALAGLCGLYGLYGLYTHRGLYASPALAALALECGLCGLYTHRTHRGLCTHRGLNLECALAGLNGLY<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    GLYGLCASPTHRALATHRGLNGLYGLYGLYALATHRALAGLNLECGLYGLYGLCALAALAGLCGLYTHRTHRGLYTHRGL<br>3gxe.2    --------------------------------------------------------------------------------<br><br>target    YLECGLYGLCTHRGLYGLYGLYASPALAGLCLECLECGLCGLCLECALAGLCGLNGLYTHRGLYGLCTHRGLCGLCTHRG<br>3gxe.2    -------------------------------------------------GLPGTAGLPGMKGHRGFSGLDG---------<br><br>target    LYGLCGLCGLCGLCTHRGLYTHRGLCGLYGLYGLYTHRGLCTHRGLYGLCLECLECGLYGLYGLCGLC<br>3gxe.2    --------------------------------------------------------------------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+  </body>
+</html> 
+
+<script src="../web/js/jquery-3.7.0.min.js"></script>
+<script src="../web/js/jquery-ui.min.js"></script>
+<script src="../web/js/bootstrap-3.4.1.min.js"></script>
+<script src="../web/js/bio-pv.min.js"></script>
+<script src="../web/js/ngl.js"></script>
+<script src="../web/js/raphael-min.js"></script>
+<script src="../web/js/smng.min.js"></script>
+<script src="../web/js/jquery.fancybox.pack.js"></script> 
+
+
+<script>
+function sortTemplates(col)
+{
+  var col_idx = $('#full_monty_tbl th').index( col );
+  var isRange = false;
+  var isText = true;
+  switch(col.textContent.toLowerCase())
+  {
+   case 'coverage':
+   case 'range': isRange=true;
+   case 'seq id':
+   case 'resolution':
+   case 'seq similarity':
+   case 'gmqe':
+   case 'qsqe':
+   case 'score': isText = false; break;
+   default: isText = true;
+  }  
+  var sortlist = [];
+  $('#full_monty_tbl tr:nth-child(odd)').each(
+  function()
+  {
+    let val = $(this).find('td:eq('+col_idx+')').text();
+    if(isRange)
+      val = val.split('-')[0];
+    else if(!isText)
+    {
+      val = parseFloat(val);
+      if(isNaN(val))
+        val = null;
+    }
+    sortlist.push( [$(this).attr('id'), val] );
+  });
+     
+  if(isText)
+    sortlist.sort(
+      function(a,b){  
+          return  (a[1] < b[1]) ? -1 : (a[1] > b[1]) ? 1 : 0; 
+        }
+    );
+  else           
+    sortlist.sort(
+        function(a,b){   
+          return  (a[1] < b[1]) ? -1 : (a[1] > b[1]) ? 1 : 0;
+        }
+      );
+
+  var asc = false
+  if($(col).hasClass('headerSortDown'))
+    asc = true;
+
+  $('.headerSortUp,.headerSortDown')
+        .removeClass('headerSortUp')
+        .removeClass('headerSortDown')
+        .addClass('headerSortNone');
+
+  if(!asc)
+    $(col).addClass('headerSortDown').removeClass('headerSortNone')
+  else
+  {
+    $(col).addClass('headerSortUp').removeClass('headerSortNone')
+    sortlist.reverse();
+  }
+  var tplTrs = [];
+  var $tmp = $('#full_monty_tbl tr[tpl_id]');
+  for(var i=0; i<sortlist.length; i++)
+  {
+    tplTrs.push(  $('#'+sortlist[i][0]) );
+    tplTrs.push(  $('#'+sortlist[i][0]+'_b') );
+  }
+
+  $('#full_monty_tbl').append(tplTrs);
+
+  $('.odd').removeClass('odd');
+  $('#full_monty_tbl > tbody > tr:nth-child(4n-3), #full_monty_tbl > tbody > tr:nth-child(4n-2)').addClass('odd');
+}
+
+let isDragging = false;
+$('body')
+  .mousedown(function() {
+      isDragging = false;
+  })
+  .mousemove(function() {
+      isDragging = true;
+   })
+  .on('mouseup', 'tr[id]', function(evt) {
+      let wasDragging = isDragging;
+      isDragging = false;
+      if(!wasDragging) 
+      {
+        if(evt.target.localName=='img' 
+          || evt.target.localName=='a'
+          || evt.target.localName=='b'
+          || evt.target.localName=='button')
+          return;
+
+        let id = $(this).attr('id');
+        if(id.indexOf('_b')>-1)
+          id = id.substring(0, id.indexOf('_b'));
+
+        if($('#simple_align_'+id+':visible').length==0)
+        {  
+          $('#simple_align_'+id).show();
+          $('#tpl_img_'+id).attr('src', id+'_s150.png');
+        }
+        else
+          $('#simple_align_'+id).hide();
+      }
+  });
+
+
+
+
+
+</script>
+
