@@ -16,3 +16,10 @@
        the subsequent compression of atomic nuclei into a dense, neutron-rich material.    
         It is not possible to create a neutron star directly from solid rocks without undergoing the processes of   
          stellar evolution, core collapse, and supernova explosion.  
+
+# Collision between neutron stars:  
+   ![img](/assets/docs/universe/space/neutron-stars/imgs/neutronstars.gif)   
+[Source image:](https://www.buzzfeed.com/kellyoakes/scientists-have-seen-gravitational-waves-formed-from)   
+
+# Events:
+  - [NGC4993](/assets/docs/universe/space/galaxies/NGC4993/readme.md)   
