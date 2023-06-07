@@ -1,24 +1,18 @@
 import random
 
-def generate_amino_acid_sequence(category, length):
-    amino_acids = {
-        'polar': ['Ser', 'Thr', 'Asn', 'Gln'],
-        'nonpolar': ['Ala', 'Gly', 'Val', 'Leu'],
-        'charged': ['Arg', 'Lys', 'Asp', 'Glu'],
-        'aromatic': ['Phe', 'Tyr', 'Trp', 'His']
-    }
+def gerador_sequencia():
+    amino_acidos = ["Met", "Arg", "Thr", "Ser", "Glu", "Lys", "Gln", "Gly", "Ala", "Val", "Leu", "Cys", "Asp", "Phe", "Ile", "Asn"]
 
-    if category not in amino_acids:
-        raise ValueError(f"Invalid category: {category}")
+    sequencia = ""
+    comprimento = random.randint(100, 200)  # Defina o comprimento desejado da sequência
 
-    sequence = ""
-    for _ in range(length):
-        sequence += random.choice(amino_acids[category])
+    for _ in range(comprimento):
+        amino_acido = random.choice(amino_acidos)
+        sequencia += amino_acido + "-"
 
-    return sequence
+    sequencia = sequencia[:-1]  # Remove o último hífen
 
-# Example usage
-sequence = generate_amino_acid_sequence('polar', 10)
-formatted_sequence = " ".join([sequence[i:i+3] for i in range(0, len(sequence), 3)])
+    return sequencia
 
-print(formatted_sequence)
+sequencia_gerada = gerador_sequencia()
+print(sequencia_gerada)
