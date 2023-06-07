@@ -120,7 +120,8 @@ One collection of knowledge
 - [Molecules Tools](/assets/addons/python/molecules)  
   - [Simple Molecule Generator](/assets/addons/python/molGenerator)  
 
-
+- Proteins:  
+  - [Sequencer of AminoAcids](/assets/addons/python/proteins/sequencer/readme.md)  
 
 - [Reactor](/assets/addons/python/Reactor)  
   - This is one project of Digital Reactor that generate multiples equations math,  
@@ -133,7 +134,7 @@ One collection of knowledge
         
 1. [Earth Dev Section](/assets/addons/python/dev/earth/readme.md)   
  - 1. Equations:   
-                -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/equations/1.py)   
+         -  [Distribution of Mass/Pression](/assets/addons/python/dev/earth/equations/1.py)   
    
  - 2. Plot:  
          - [Chart Properties Of Earth Layer](/assets/addons/python/dev/earth/plot/earth_layers-proprerties.py)  
