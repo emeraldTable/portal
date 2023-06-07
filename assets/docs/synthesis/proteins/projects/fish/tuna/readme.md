@@ -1,5 +1,9 @@
 [HOME](/README.md)
 
+-----------------
+
+[Web view:](https://emeraldtable.github.io/portal/assets/docs/synthesis/proteins/projects/fish/tuna/1/Histidina_Glutamina_Lisina_Metionina_Arginine/model_01.html)
+
 ----------------
 
 # Tuna
