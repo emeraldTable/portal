@@ -63,6 +63,9 @@ One collection of knowledge
    - [C20 H25 NO4](/assets/docs/synthesis/substances/formulas/syn/2/readme.md)  
 
  - [Proteins](/assets/docs/synthesis/proteins/readme.md)    
+  - Muscular Fibers:  
+  - [Mechano growth factor MGF](/assets/docs/synthesis/proteins/musclefiber/Mechano-growth%20factor-MGF/readme.md)   
+
    - Webtools:   
     - https://swissmodel.expasy.org/interactive   
      
