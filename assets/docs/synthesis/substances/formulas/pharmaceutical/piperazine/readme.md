@@ -20,6 +20,13 @@
    it's important to follow the prescribed dosage and directions provided by a healthcare professional and     
     to be aware of any potential side effects or drug interactions.    
 
+# Original to produce C4H10N2:
+- Structural view:  
+![img](/assets/docs/synthesis/substances/formulas/pharmaceutical/piperazine/imgs/MolView%20(structural%20formula).png)  
+
+- Molecule view:  
+![img](/assets/docs/synthesis/substances/formulas/pharmaceutical/piperazine/imgs/MolView%20(model).png)  
+
 -------------------------
 
 # 1-Methylpiperazine C4H10N2    
@@ -58,3 +65,10 @@ Please note that the information provided here is a general overview,
  and if you require more specific details or have any specific concerns,    
   it is recommended to consult the appropriate references or experts in the field.  
 
+# 1-Methylpiperazine C4H10N2 :
+
+- Structural view:  
+![img](/assets/docs/synthesis/substances/formulas/pharmaceutical/piperazine/imgs/MolView%20(structural%20formula)2.png)  
+
+- Molecule view:  
+![img](/assets/docs/synthesis/substances/formulas/pharmaceutical/piperazine/imgs/MolView%20(model)2.png)  
