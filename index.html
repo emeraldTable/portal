@@ -23,8 +23,6 @@
 <button onclick="onelement11()">Earth Weathers</button>
 <a href="./dev.html" target="_blank" rel="noopener noreferrer"><button>Dev</button></a>
 <span>&nbsp;</span>
-<button onclick="onelement24()">Emerald Table</button>
-<span>&nbsp;</span>
 <button onclick="savePositionsToJson()">Save Positions</button>
 <input type="file" id="jsonFileInput" onchange="handleFileUpload(event)">
 <span>&nbsp;</span>
@@ -222,9 +220,19 @@
 	   </div>
 
 <!-- Knowledges -->
-<div id="divResize24" style="position: absolute; left: 100%; top: 1%; height: 500%; width: 100%; display: none; background-image: url('./css/images/oldpaper.jpg'); background-size: cover; background-repeat: no-repeat;">
- <button onclick="exibirReadme()">Home</button>
- <script src="./js/main/funcs/markdown.js"></script><script type="text/javascript" src="./js/main/funcs/showdown.min.js"></script><script>exibirReadme();</script>
+<div style="position: absolute; left: 100%; top: 1%;">
+	<button onclick="onelement24()">Emerald Table</button>
+	
+</div>
+
+<div style="position: absolute; left: 105%; top: 1%;">	
+	
+	<button onclick="exibirReadme()">Portal Home</button>
+	
+</div>
+
+<div id="divResize24" style="position: absolute; left: 100%; top: 7%; height: 0%; width: 64%; display: none; font-family: Arial, sans-serif; font-weight: bold;">
+  <script src="./js/main/funcs/markdown.js"></script><script type="text/javascript" src="./js/main/funcs/showdown.min.js"></script><script>exibirReadme();</script>
 </div>
 
 

@@ -8,6 +8,11 @@ function exibirReadme() {
       var html = converter.makeHtml(readmeContent);
       document.getElementById("divResize24").innerHTML = html;
       
+                // Aplicar estilos personalizados ao conteúdo importado
+          var importedContent = document.getElementById("divResize24");
+          importedContent.style.fontFamily = "Arial, sans-serif";
+          importedContent.style.fontWeight = "bold";
+      
       // Adicionar um evento de clique a todos os links do conteúdo
       var links = document.getElementsByTagName("a");
       for (var i = 0; i < links.length; i++) {
@@ -33,6 +38,22 @@ function lerReadmeLocal(filePath) {
       var converter = new showdown.Converter();
       var html = converter.makeHtml(readmeContent);
       document.getElementById("divResize24").innerHTML = html;
+      
+                // Aplicar estilos personalizados ao conteúdo importado
+          var importedContent = document.getElementById("divResize24");
+          importedContent.style.fontFamily = "Arial, sans-serif";
+          importedContent.style.fontWeight = "bold";
+      
+      // Adicionar um evento de clique a todos os links do conteúdo
+      var links = document.getElementsByTagName("a");
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          var readmeFilePath = this.getAttribute("href");
+          lerReadmeLocal(readmeFilePath);
+        });
+      }
     }
   };
   xhttp.open("GET", filePath, true);
