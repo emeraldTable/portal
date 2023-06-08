@@ -222,53 +222,9 @@
 	   </div>
 
 <!-- Knowledges -->
-<div id="divResize24" style="position: absolute; left: 100%; top: 1%; height: 500%; width: 100%; display: none">
-  <script>
-    // Função para carregar o conteúdo de um arquivo .md
-    function loadMarkdownFile(file) {
-      axios.get(file)
-        .then(function (response) {
-          // Renderiza o conteúdo do arquivo .md na página
-          document.getElementById('content').innerHTML = marked(response.data);
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
-    }
-
-    // Função para carregar outros arquivos .md
-    function loadOtherReadme(file) {
-      loadMarkdownFile(file);
-    }
-
-    // Função para interceptar os cliques nos links internos
-    function handleLinkClick(event) {
-      event.preventDefault(); // Evita a navegação padrão
-
-      var file = event.target.getAttribute('href');
-      loadOtherReadme(file);
-    }
-  </script>
-  <style>
-    #content {
-      margin-top: 20px;
-    }
-  </style>
-
-   <h1>Menu de Navegação</h1>
-  <ul>
-    <li><a href="#" onclick="loadOtherReadme('README.md')">Home</a></li>
-    <li><a href="docs/page1.md" onclick="handleLinkClick(event)">Página 1</a></li>
-    <li><a href="docs/page2.md" onclick="handleLinkClick(event)">Página 2</a></li>
-    <li><a href="docs/page3.md" onclick="handleLinkClick(event)">Página 3</a></li>
-  </ul>
-  <div id="content">
-    <!-- O conteúdo do arquivo readme.md principal ou outras páginas será carregado aqui -->
-  </div>
-
-  <script src="./js/main/funcs//marked.min.js"></script>
-
- <!--<button onclick="exibirReadme()">Home</button><script src="./js/main/funcs/markdown.js"></script><script type="text/javascript" src="./js/main/funcs/showdown.min.js"></script><script>exibirReadme();</script>-->
+<div id="divResize24" style="position: absolute; left: 100%; top: 1%; height: 500%; width: 100%; display: none; background-image: url('./css/images/oldpaper.jpg'); background-size: cover; background-repeat: no-repeat;">
+ <button onclick="exibirReadme()">Home</button>
+ <script src="./js/main/funcs/markdown.js"></script><script type="text/javascript" src="./js/main/funcs/showdown.min.js"></script><script>exibirReadme();</script>
 </div>
 
 
