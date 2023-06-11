@@ -1,5 +1,6 @@
 import math
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import numpy as np  # Import the numpy module and give it an alias of np
 
@@ -85,6 +86,9 @@ for i, layer in enumerate(cluster):
     print("Pressure: {:.2f} N/m^2".format(layer["Pressure"]))
     print("dP/dr: {:.2f} N/(m^2/m)".format(layer["dP/dr"]))
 
+# Define the colormap for the outer spheres (grayscale)
+gray_cmap = LinearSegmentedColormap.from_list("gray_cmap", [(0, "gray"), (1, "gray")])
+
 # Create the 3D plot of the cluster
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -93,16 +97,20 @@ ax = fig.add_subplot(111, projection='3d')
 for i, layer in enumerate(cluster):
     r = layer["Radius"]
     density = layer["Density"]
-    if max([l["Density"] for l in cluster]) == min([l["Density"] for l in cluster]):
-        color = (0, 0, 0)
+    
+    if i == 0:
+        color = 'red'  # Innermost sphere is red
+        alpha = 0.7  # No transparency for innermost sphere
     else:
-        color = (density - min([l["Density"] for l in cluster])) / (max([l["Density"] for l in cluster]) - min([l["Density"] for l in cluster]))
+        # Grayscale color based on density
+        color = gray_cmap((density - min([l["Density"] for l in cluster])) / (max([l["Density"] for l in cluster]) - min([l["Density"] for l in cluster])))
+        alpha = 0.3  # Complete transparency for outer spheres
+    
     u, v = np.mgrid[0:2*np.pi:20j, 0:np.pi:10j]
     x = r * np.cos(u) * np.sin(v)
     y = r * np.sin(u) * np.sin(v)
     z = r * np.cos(v)
-    ax.plot_surface(x, y, z, color=plt.cm.cool(color), alpha=0.5)
-
+    ax.plot_surface(x, y, z, color=color, alpha=alpha, edgecolor='none')
 
 # Add smaller clusters inside the larger ones
 if i < len(cluster) - 1:
@@ -113,7 +121,6 @@ if i < len(cluster) - 1:
     x2, y2, z2 = np.broadcast_to(np.array([x[i], y[i], z[i]]), x1.shape)
     facecolors = np.broadcast_to(np.array([(color, 0, 1-color)]), x1.shape + (3,))
     ax.voxels(x2, y2, z2, inside, facecolors=facecolors, edgecolor='k', alpha=0.2)
-
 
 # Set the limits of the plot
 max_radius = max([l["Radius"] for l in cluster])
