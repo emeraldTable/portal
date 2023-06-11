@@ -147,7 +147,10 @@ One collection of knowledge
 2. [Moon Dev Section](/assets/addons/python/dev/moon/readme.md)   
  - 1. Plot:  
          - [Chart about Moon Mass](/assets/addons/python/dev/moon/plot/moon_mass.py)  
- 
+    
+3. Planet Tools     
+ - 1. [Planets Mass Calculator](/assets/addons/python/Reactor)   
+     
 --------------  
 # Futuristic Comics:  
 - [SCI-FI](/assets/docs/earth/sci-fi/readme.md)    
