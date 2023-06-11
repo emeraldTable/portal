@@ -1,10 +1,15 @@
 [HOME](/README.md)   
 
 -----------------
-1. Scripts:  
+1. Equation Scripts:  
 - [Tolman-Oppenheimer-Volkoff](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/Tolman-Oppenheimer-Volkoff.py)   
 - [Tolman-Oppenheimer-Volkoff + Fuel of Lithium Deuteride](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/Tolman-Oppenheimer-Volkoff-Fuel.py)   
-   
+- [Tolman-Oppenheimer-Volkoff - Combo: Fuel + Sphere mass with/without Elements](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/Tolman-Oppenheimer-Volkoff-Combo.py)   
+
+2. Alloy Scripts:  
+- [Uranium Amalgam Maker](/assets/docs/nuclear/elements/alloys/uranium-amalgam/scripts/sphere_alloymaker.py)   // To make the equation of sphere density without elements  
+
+
 -----------------   
 
 # Tolman-Oppenheimer-Volkoff (TOV) equation  
