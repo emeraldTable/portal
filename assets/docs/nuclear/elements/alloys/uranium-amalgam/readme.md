@@ -114,5 +114,39 @@ Therefore, the amount of uranium in the sphere is approximately:
                   
 ----------------------
 
+# Equations used in the composition creation:  
+   The equations used in the calculations are based on the formulas for the volume of a sphere and the volume of a solid sphere.   
+    The volume of a sphere is given by the formula:
+
+    Volume of sphere = (4/3) * π * r^3
+
+    where r is the radius of the sphere.
+
+To calculate the volume of the solid sphere, we need to subtract the volume of the empty space inside the sphere.    
+ In this case, the sphere has a thickness,       
+  so we need to subtract the volume of the empty space inside the sphere from the volume of the entire sphere.     
+ 
+To calculate the internal radius, we subtract the thickness from the external radius:    
+
+      Internal radius = External radius - Thickness
+
+Once we have the internal radius,      
+ we can calculate the volume of the solid sphere using the same formula as the volume of a sphere:    
+
+      Volume of solid sphere = (4/3) * π * (internal radius)^3
+
+Finally, to find the volumes of uranium and mercury,     
+ we multiply the volume of the solid sphere by their respective composition percentages:   
+
+      Volume of uranium = Composition of uranium * Volume of solid sphere
+      Volume of mercury = Composition of mercury * Volume of solid sphere
+
+In the given problem, the composition percentages are 80% uranium and 20% mercury, so we use those values in the calculations.    
+
+Please note that π represents the mathematical constant pi, approximately equal to 3.14159.   
+
+
+----------------------
+
 #  Equations of Use:  
  - [The Standard Gibbs Free Energy Change](/assets/docs/universe/equations/Heat-Energy/Energy/1.md)   
