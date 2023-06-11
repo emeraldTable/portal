@@ -18,8 +18,8 @@ def calculate_amalgam_amount(thickness_cm, radius_m):
     volume_mercury = 0.2 * volume_solid_sphere
 
     # Calculate the density of the uranium amalgam
-    mass_uranium = volume_uranium * 19050  # Assuming uranium density of 19,050 kg/m³
-    mass_mercury = volume_mercury * 13534  # Assuming mercury density of 13,534 kg/m³
+    mass_uranium = volume_uranium * 19.050  # Assuming uranium density of 19,050 kg/m³
+    mass_mercury = volume_mercury * 13.534  # Assuming mercury density of 13,534 kg/m³
     total_mass = mass_uranium + mass_mercury
     density = total_mass / (volume_uranium + volume_mercury)
 
