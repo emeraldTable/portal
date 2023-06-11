@@ -9,6 +9,8 @@
 2. Alloy Scripts:  
 - [Uranium Amalgam Maker](/assets/docs/nuclear/elements/alloys/uranium-amalgam/scripts/sphere_alloymaker.py)   // To make the equation of sphere density without elements  
 
+3. Addon Scripts:  
+- [Distribution of mass/pressure in relation the radius / density of sphere](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/distribution_mass-pressure.py)   
 
 -----------------   
 
