@@ -78,6 +78,59 @@ It is noteworthy that the detailed implementation of these equations and numeric
 
 -----------------
 
+![img](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/images/cluster.png)   
+![img](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/images/cluster_properties.png)   
+
+-----------------
+
+# Fussion Fuel / Lithium Deuteride  
+  
+To calculate the amount of lithium-deuterium fuel based on the results, it is necessary to know the chemical composition of the lithium-deuterium fuel and the necessary calculations to determine the amount based on the properties of the cluster.    
+
+Lithium-deuterium fuel is a mixture of lithium-6 (Li-6) and deuterium (H-2). To calculate the amount of fuel, you need to know the mole fraction of these elements in the lithium-deuterium fuel.    
+
+Assuming that the mole fraction of Li-6 is "x" and the mole fraction of H-2 is "1-x", the amount of lithium-deuterium fuel can be calculated by multiplying the total mass of the cluster by the factor corresponding to the fraction Li-6 molar.   
+
+For example, if you want to calculate the amount of lithium-deuterium fuel based on cluster properties, you can do the following:   
+
+1. Calculate the total mass of the cluster by adding the masses of each layer. For example:    
+```
+total_mass = sum(layer["Mass"] for layer in cluster)
+```
+
+2. Calculate the amount of lithium-deuterium fuel by multiplying the total mass by the factor corresponding to the mole fraction of Li-6. For example, if the mole fraction of Li-6 was 0.8 (80%), you could calculate:    
+```
+molar_fraction_Li6 = 0.8
+fuel_quantity = molar_fraction_Li6 * total_mass
+```
+    
+Remember to adjust the Li-6 mole fraction according to the actual composition of the lithium-deuterium fuel you are using.
+
+Hope this helps to calculate the amount of lithium-deuterium fuel based on the cluster results.
+
+
+Molar Fraction of DEUTERIUM H-2:  
+The molar fraction of deuterium (H-2) in Lithium-Deuterium Fuel can be calculated as a complement to the molar fraction of Li-6. Since Lithium-Deutério Fuel is mainly composed of LI-6 and H-2, the sum of molar fractions of both elements should be 1.   
+
+Therefore, if the molar fraction of Li-6 is "x", the molar fraction of H-2 can be calculated as:    
+
+Molar fraction of H-2 = 1-Molar fraction of Li-6    
+ 
+For example, if the molar fraction of LI-6 is 0.1 (or 10%), the molar fraction of H-2 would be:     
+
+Molar fraction of H -2 = 1 - 0.1 = 0.9 (or 90%)    
+
+Remember to check the specifications of the specific lithium-deuterium Fuel you are using, as the molar fraction of deuterium may vary depending on the font and Fuel specifications.     
+
+Molar Fraction of Lithium Li-6:  
+The molar fraction of Li-6 in the Lithium-Deuterium Fuel may vary depending on the font and the specifications of the Fuel used. Generally, the commercial lithium-deuterium Fuel has a molar fraction of LI-6 around 0.05 to 0.1, which corresponds to 5% to 10%.
+
+However, it is important to verify the specifications of the specific lithium-deuterium Fuel you are using, as the molar fraction may vary according to the application and the needs of the project. Fuel supplier or technical information associated with Fuel must provide the proper molar fraction.
+
+Be sure to consult the Documentation or specifications of Lithium-Deutério Fuel you are using to get the molar fraction needs LI-6.
+
+-----------------
+
 # [PT-BR]
  - dP/dr = -G * (ε + P) * (M + 4πr^3P) / (r * (r - 2GM/c^2)),  
   - as variáveis são definidas da seguinte forma:  
