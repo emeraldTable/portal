@@ -71,7 +71,29 @@ Once you have the alloy density, sphere volume, and desired thickness,
   Remember to follow all safety precautions when handling hazardous materials such as uranium and mercury and consult experts or reputable sources    
    before proceeding with any experiments involving these substances.   
 
-------------------
+------------------  
+
+Mixture of composition using 80% / 20%:   
+To determine the density of the alloy with 80% uranium and 20% mercury, we can use a weighted average calculation based on the densities of uranium and mercury.
+
+Given:
+Uranium content: 80% (0.8)
+Mercury content: 20% (0.2)
+Density of uranium: 19,050 kg/m³
+Density of mercury: 13,534 kg/m³
+
+Density of the alloy = (Density of uranium * Uranium content) + (Density of mercury * Mercury content)
+
+Density of the alloy = (19,050 kg/m³ * 0.8) + (13,534 kg/m³ * 0.2)
+
+Density of the alloy = 15,240 kg/m³ + 2,707 kg/m³
+
+Density of the alloy = 17,947 kg/m³
+
+Therefore, with a composition of 80% uranium and 20% mercury,   
+the approximate density of the alloy would be 17,947 kg/m³.
+
+------------------   
 
 Creation of Composition:    
  assuming the desired value of 12 centimeres of thickness and 1.65 meters of radius:    
@@ -84,33 +106,34 @@ Creation of Composition:
 
 - where r is the radius of the sphere.
 
-- Given:
-      Radius (r) = 1.65 meters
-      Volume of the entire sphere = (4/3) * π * (1.65)^3 ≈ 22.494 cubic meters
+- Given:       
+
+      Radius (r) = 1.65 meters      
+      Volume of the entire sphere = (4/3) * π * (1.65)^3 ≈ 22.494 cubic meters        
 
 - Since the sphere has a thickness of 12 centimeters (or 0.12 meters),   
    we need to subtract this thickness from the radius to find the internal radius:
 
 - Internal radius = External radius - Thickness    
                       
-                        1.65 meters - 0.12 meters = 1.53 meters    
+      1.65 meters - 0.12 meters = 1.53 meters    
 
 - Now, let's calculate the volume of the solid sphere:   
 
-                  Volume of solid sphere = (4/3) * π * (1.53)^3 ≈ 18.646 cubic meters
+      Volume of solid sphere = (4/3) * π * (1.53)^3 ≈ 18.646 cubic meters
 
 - Since the composition is 80% uranium and 20% mercury, we can calculate the respective volumes:   
                         
-                  Volume of uranium = 0.8 * Volume of solid sphere ≈ 0.8 * 18.646 cubic meters ≈ 14.917 cubic meters  
-                  Volume of mercury = 0.2 * Volume of solid sphere ≈ 0.2 * 18.646 cubic meters ≈ 3.729 cubic meters  
+      Volume of uranium = 0.8 * Volume of solid sphere ≈ 0.8 * 18.646 cubic meters ≈ 14.917 cubic meters  
+      Volume of mercury = 0.2 * Volume of solid sphere ≈ 0.2 * 18.646 cubic meters ≈ 3.729 cubic meters  
 
 Therefore, the amount of uranium in the sphere is approximately:
 
-                  14.917 cubic meters,   
+      14.917 cubic meters,   
                   
  and the amount of mercury is approximately:  
                    
-                   3.729 cubic meters.
+      3.729 cubic meters.
                   
 ----------------------
 
