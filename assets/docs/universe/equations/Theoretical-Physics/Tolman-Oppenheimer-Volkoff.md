@@ -2,7 +2,8 @@
 
 -----------------
 1. Scripts:  
-- [Tolman-Oppenheimer-Volkoff.py](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.py)   
+- [Tolman-Oppenheimer-Volkoff](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/Tolman-Oppenheimer-Volkoff.py)   
+- [Tolman-Oppenheimer-Volkoff + Fuel of Lithium Deuteride](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff/Tolman-Oppenheimer-Volkoff-Fuel.py)   
    
 -----------------   
 
