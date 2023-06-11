@@ -86,7 +86,9 @@ def create_cluster():
             mass /= 1000000.0
         
         density, pressure, dP_dr = calculate_properties(radius, mass, element)
+
         sphere_weight = calculate_sphere_weight(radius, thickness, sphere_density)
+
         layer = {"Radius": radius, "Thickness": thickness,  "Sphere Density": sphere_density, "Sphere Weight": sphere_weight,  "Mass": mass, "Density": density, "Pressure": pressure, "dP/dr": dP_dr, "Element": element}
         cluster.append(layer)
     
@@ -113,6 +115,7 @@ for i, layer in enumerate(cluster):
     print("Pressure: {:.2f} N/m^2".format(layer["Pressure"]))
     print("dP/dr: {:.2f} N/(m^2/m)".format(layer["dP/dr"]))
 
+
     # Calculate and display the fuel quantity
     fuel_quantity = li6_fraction * layer["Mass"]
     print("Fuel Quantity: {:.2f} kilograms".format(fuel_quantity))
@@ -120,6 +123,10 @@ for i, layer in enumerate(cluster):
 # Calculate and display the total fuel quantity
 total_fuel_quantity = sum(li6_fraction * layer["Mass"] for layer in cluster)
 print("\nTotal Fuel Quantity: {:.2f} kilograms".format(total_fuel_quantity))
+
+# Calculate the total cluster weight including elements
+total_cluster_weight = sum(layer["Sphere Weight"] + layer["Mass"] for layer in cluster)
+print("Total Cluster Weight: {:.2f} kg".format(total_cluster_weight))
 
 
 # Define the colormap for the outer spheres (grayscale)
