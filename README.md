@@ -35,7 +35,8 @@ One collection of knowledge
 
 - Nuclear:
    - [About Nuclear](/assets/docs/nuclear/readme.md)  
-   - [Nuclear Elements](/assets/docs/universe/equations/Heat-Energy/Nuclear/elements/readme.md)  
+   - [Nuclear Elements](/assets/docs/universe/equations/Heat-Energy/Nuclear/elements/readme.md)   
+   - [Alloys](/assets/docs/nuclear/elements/alloys/readme.md)   
    - [Equations](/assets/docs/universe/equations/Heat-Energy/Nuclear/readme.md)    
    - [Nuclear Oxygen](/assets/docs/nuclear/knowledges/nuclear-oxygen.md) / [Nuclear Oxygen Tritium](/assets/docs/nuclear/knowledges/nuclear-oxygen-tritium.md)   
  
