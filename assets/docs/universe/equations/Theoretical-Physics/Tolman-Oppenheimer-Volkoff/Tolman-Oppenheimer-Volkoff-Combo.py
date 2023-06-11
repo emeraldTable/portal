@@ -120,14 +120,13 @@ for i, layer in enumerate(cluster):
     fuel_quantity = li6_fraction * layer["Mass"]
     print("Fuel Quantity: {:.2f} kilograms".format(fuel_quantity))
 
-# Calculate and display the total fuel quantity
-total_fuel_quantity = sum(li6_fraction * layer["Mass"] for layer in cluster)
-print("\nTotal Fuel Quantity: {:.2f} kilograms".format(total_fuel_quantity))
-
 # Calculate the total cluster weight including elements
 total_cluster_weight = sum(layer["Sphere Weight"] + layer["Mass"] for layer in cluster)
 print("Total Cluster Weight: {:.2f} kg".format(total_cluster_weight))
 
+# Calculate and display the total fuel quantity
+total_fuel_quantity = sum(li6_fraction * layer["Mass"] + layer["Sphere Weight"] for layer in cluster)
+print("\nTotal Fuel Quantity: {:.2f} kilograms".format(total_fuel_quantity))
 
 # Define the colormap for the outer spheres (grayscale)
 gray_cmap = LinearSegmentedColormap.from_list("gray_cmap", [(0, "gray"), (1, "gray")])
