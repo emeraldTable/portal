@@ -1,4 +1,5 @@
 import math
+import tabulate
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
@@ -54,6 +55,7 @@ def create_cluster():
         mass_option = int(mass_unit)
         mass = float(input("Enter the mass: "))
         element = input("Choose the element (plutonium, uranium, curium): ")
+        atomic_mass = atomic_masses[element]
         
         # Conversion of units to meters and kilograms
         if radius_option == 2:
@@ -68,7 +70,7 @@ def create_cluster():
             mass /= 1000000.0
         
         density, pressure, dP_dr = calculate_properties(radius, mass, element)
-        layer = {"Radius": radius, "Mass": mass, "Density": density, "Pressure": pressure, "dP/dr": dP_dr}
+        layer = {"Radius": radius, "Mass": mass, "Density": density, "Pressure": pressure, "dP/dr": dP_dr, "Element": element}
         cluster.append(layer)
     
     return cluster
@@ -85,6 +87,7 @@ for i, layer in enumerate(cluster):
     print("Density: {:.2f} kg/m^3".format(layer["Density"]))
     print("Pressure: {:.2f} N/m^2".format(layer["Pressure"]))
     print("dP/dr: {:.2f} N/(m^2/m)".format(layer["dP/dr"]))
+    print("Element: {}".format(layer["Element"]))
 
 # Define the colormap for the outer spheres (grayscale)
 gray_cmap = LinearSegmentedColormap.from_list("gray_cmap", [(0, "gray"), (1, "gray")])
@@ -135,3 +138,31 @@ ax.set_zlabel('Z')
 
 # Save the image in .png format
 plt.savefig("cluster.png")
+
+# Create a new figure for displaying the properties
+fig_prop = plt.figure(figsize=(11, 5))
+text_ax = fig_prop.add_subplot(111)
+text_ax.axis('off')
+table_data = []
+headers = ["Layer", "Radius (m)", "Mass (kg)", "Density (kg/m^3)", "Pressure (N/m^2)", "dP/dr (N/(m^2/m))", "Element"]
+for i, layer in enumerate(cluster):
+    row = [
+        i+1,
+        "{:.2f}".format(layer["Radius"]),
+        "{:.2f}".format(layer["Mass"]),
+        "{:.2f}".format(layer["Density"]),
+        "{:.2f}".format(layer["Pressure"]),
+        "{:.2f}".format(layer["dP/dr"]),
+        layer["Element"]
+    ]
+    table_data.append(row)
+
+table_text = tabulate.tabulate(table_data, headers=headers, tablefmt="pretty")
+text_ax.text(0., 0.7, table_text, fontsize=10)
+
+# Adjust the layout to fill the empty space
+#plt.tight_layout(rect=[0, 0, 0.9, 1])
+plt.tight_layout()
+
+# Save the properties as a separate image
+plt.savefig("cluster_properties.png")
