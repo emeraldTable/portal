@@ -1,6 +1,10 @@
 [HOME](/README.md)   
 
 -----------------
+1. Scripts:  
+- [Tolman-Oppenheimer-Volkoff.py](/assets/docs/universe/equations/Theoretical-Physics/Tolman-Oppenheimer-Volkoff.py)   
+   
+-----------------   
 
 # Tolman-Oppenheimer-Volkoff (TOV) equation  
    - is a set of equations used to describe the structure and stability of a spherically symmetric, non-rotating,   
